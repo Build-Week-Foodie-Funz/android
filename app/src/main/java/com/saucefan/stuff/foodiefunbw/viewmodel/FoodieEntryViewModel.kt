@@ -5,8 +5,8 @@ import androidx.lifecycle.AndroidViewModel
 
 /*
 *
-*       Viewmodel
-* is the go between of
+*         Viewmodel
+*    is the go between of
 *           apps
 *             &
 *           fragments
@@ -19,7 +19,6 @@ import androidx.lifecycle.AndroidViewModel
 *
 *
 * */
-
 
 //View model should:
 //be able to provide

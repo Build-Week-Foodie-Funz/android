@@ -16,7 +16,6 @@ data class FoodieEntry(
     val entryTime: Long,
 
     //actual stuff
-
     var foodEaten:String = "blank",
     var entryText:String = "blank",
     var rating:Int =1,
