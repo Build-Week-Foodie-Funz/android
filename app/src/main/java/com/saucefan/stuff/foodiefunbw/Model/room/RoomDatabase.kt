@@ -6,7 +6,7 @@ import androidx.room.TypeConverters
 import com.saucefan.stuff.foodiefunbw.Model.Converters
 import com.saucefan.stuff.foodiefunbw.Model.FoodieEntry
 
-@Database(entities = [FoodieEntry::class], version = 2, exportSchema = false)
+@Database(entities = [FoodieEntry::class], version = 1, exportSchema = true)
 @TypeConverters(Converters::class)
 abstract class EntryDatabase : RoomDatabase() {
     abstract fun RoomDao(): RoomDao
