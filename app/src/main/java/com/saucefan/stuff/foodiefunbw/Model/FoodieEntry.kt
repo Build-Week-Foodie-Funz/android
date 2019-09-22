@@ -37,11 +37,12 @@ data class FoodieEntry(
 
 
 )
-class Converters {
 
+
+//TODO 30: LOOK INTO IF THIS IS A SERIOUS PERFORMANCE ISSUE OR IF WE CAN MANAGE IT
+class Converters {
     @TypeConverter
     fun listToJson(value: List<String>?): String {
-
         return Gson().toJson(value)
     }
 
