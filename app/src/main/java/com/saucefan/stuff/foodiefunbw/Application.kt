@@ -16,7 +16,7 @@ class MyDebugTree : Timber.DebugTree() {
     }
 }
 
-class ReadingList : Application() {
+class FoodieFun : Application() {
 
     override fun onCreate() {
         super.onCreate()
