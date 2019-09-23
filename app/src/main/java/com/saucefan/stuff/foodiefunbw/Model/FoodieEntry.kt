@@ -9,7 +9,7 @@ import com.google.gson.reflect.TypeToken
 
 
 
-@Entity
+@Entity (tableName = "Foodie_Table")
 data class FoodieEntry(
     //prob the primary key for the room databas
         @PrimaryKey(autoGenerate = true)

@@ -1,15 +1,93 @@
 package com.saucefan.stuff.foodiefunbw.Model.room
 
-import androidx.room.Database
-import androidx.room.RoomDatabase
-import androidx.room.TypeConverters
+import android.app.Application
+import android.content.Context
+import android.os.AsyncTask
+import androidx.room.*
+import androidx.sqlite.db.SupportSQLiteDatabase
 import com.saucefan.stuff.foodiefunbw.Model.Converters
 import com.saucefan.stuff.foodiefunbw.Model.FoodieEntry
+import kotlinx.coroutines.*
+import org.jetbrains.annotations.Async
+import java.security.KeyStore
 
-@Database(entities = [FoodieEntry::class], version = 1, exportSchema = true)
+
+@Database(entities = [FoodieEntry::class], version = 2, exportSchema = true)
 @TypeConverters(Converters::class)
 abstract class EntryDatabase : RoomDatabase() {
     abstract fun RoomDao(): RoomDao
+
+    companion object {
+        private var instance: EntryDatabase? = null
+
+        fun getInstance(context: Context): EntryDatabase? {
+            if (instance == null) {
+                synchronized(EntryDatabase::class) {
+                    instance = Room.databaseBuilder(
+                            context.applicationContext,
+                            EntryDatabase::class.java, "entry_database"
+                    )
+                            .fallbackToDestructiveMigration() // when version increments, it migrates (deletes db and creates new) - else it crashes
+                            .addCallback(roomCallback)
+                            .build()
+                }
+            }
+            return instance as EntryDatabase
+        }
+
+        fun destroyInstance() {
+            instance = null
+        }
+
+
+        // so the hope
+
+        private val roomCallback = object : RoomDatabase.Callback() {
+            override fun onCreate(db: SupportSQLiteDatabase) {
+                super.onCreate(db)
+                PopulateDbAsyncTask(instance)
+                        .execute()
+            }
+        }
+    }
+
+    //Mock Data here
+    class PopulateDbAsyncTask(db: EntryDatabase?) : AsyncTask<Unit, Unit, Unit>() {
+        private val roomDao = db?.RoomDao()
+
+        override fun doInBackground(vararg p0: Unit?) {
+            EntryMockData.entryList.forEach {
+                roomDao?.init(it)
+            }
+        }
+
+    }
 }
+
+/*
+      private val roomCallback = object : RoomDatabase.Callback() {
+            override fun onCreate(db: SupportSQLiteDatabase) {
+                super.onCreate(db)
+
+                GlobalScope.launch {
+                    val roomDao = instance?.RoomDao()
+                    EntryMockData.entryList.forEach() {
+                            roomDao?.insert(it)
+                    }
+                }
+            }
+        }
+*/
+
+
+
+
+
+
+
+
+
+
+
 
 

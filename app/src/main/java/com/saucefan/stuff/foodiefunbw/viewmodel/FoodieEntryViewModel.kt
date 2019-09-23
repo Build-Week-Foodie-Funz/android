@@ -2,6 +2,11 @@ package com.saucefan.stuff.foodiefunbw.viewmodel
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
+import androidx.lifecycle.LiveData
+import androidx.room.Delete
+import com.saucefan.stuff.foodiefunbw.Model.FoodieEntry
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.launch
 
 /*
 *
@@ -33,7 +38,23 @@ import androidx.lifecycle.AndroidViewModel
 //should be able to tell the sync service to update certain files, delete certain files, restore if db is blank
 
 
-class FoodieEntryViewModel (application: Application) : AndroidViewModel(application){
+class FoodieEntryViewModel(application: Application) : AndroidViewModel(application) {
 
+    private var repository: FoodieEntryRepo =
+            FoodieEntryRepo(application)
 
+    suspend fun insertItem(foodieEntry: FoodieEntry) {
+        repository.insertItem(foodieEntry)
+
+    }
+    suspend fun update(foodieEntry: FoodieEntry) {
+         repository.updateItem(foodieEntry)
+    }
+
+    suspend fun delete(foodieEntry: FoodieEntry) {
+        repository.deleteItem(foodieEntry)
+    }
+    suspend fun returnAllItems(): List<FoodieEntry> {
+        return repository.returnAllItems()
+    }
 }
