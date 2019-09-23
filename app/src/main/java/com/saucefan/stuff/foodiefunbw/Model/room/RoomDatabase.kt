@@ -42,33 +42,25 @@ abstract class EntryDatabase : RoomDatabase() {
         }
 
 
-        fun main(instance: Database) {
-            // this: CoroutineScope
-            runBlocking {
-                launch {
 
-                    // launch a new coroutine in the scope of runBlocking
-                    delay(1000L)
-                    println("World!")
-                }
-                println("Hello,")
-            }
-        }
+        // so the hope
+
         suspend fun PopulateDbAsyncTask(db: EntryDatabase?) {
-            val pokemonDao = db?.RoomDao()
+            val roomDao = db?.RoomDao()
 
            EntryMockData.entryList.forEach() {
                 runBlocking {
-                    pokemonDao?.insert(it)
+                    roomDao?.insert(it)
 
+                    val itsa =roomDao?.readAllEntries()
+
+                 var e= "re"
                 }
         }
     }
         private val roomCallback = object : RoomDatabase.Callback() {
             override fun onCreate(db: SupportSQLiteDatabase) {
                 super.onCreate(db)
-
-
             runBlocking {
                 PopulateDbAsyncTask(instance)
             }

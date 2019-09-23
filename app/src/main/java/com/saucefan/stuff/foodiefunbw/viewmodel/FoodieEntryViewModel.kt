@@ -40,7 +40,7 @@ class FoodieEntryViewModel (application: Application) : AndroidViewModel(applica
             FoodieEntryRepo(application)
 
     fun insertItem(foodieEntry:FoodieEntry) {
-
+repository.insertItem(foodieEntry)
     }
 
 }
