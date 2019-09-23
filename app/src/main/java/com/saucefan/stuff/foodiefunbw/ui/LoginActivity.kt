@@ -2,9 +2,11 @@ package com.saucefan.stuff.foodiefunbw.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.saucefan.stuff.foodiefunbw.R
+import android.view.View
+import kotlinx.android.synthetic.main.activity_login.*
 
-class LoginActivity : AppCompatActivity() {
+
+class LoginActivity : AppCompatActivity() { //Ronnie changed xml name to activity login
 
     //check keystore for auto token
     //if auth token, skip login
@@ -12,6 +14,10 @@ class LoginActivity : AppCompatActivity() {
     //else login, on true redirect to dashboard
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(com.saucefan.stuff.foodiefunbw.R.layout.activity_login)
+        //just rotates the wave effect
+        wave.animate().rotation(180f).start()
+
+
     }
 }
