@@ -16,7 +16,7 @@ class LoginActivity : AppCompatActivity() { //Ronnie changed xml name to activit
         super.onCreate(savedInstanceState)
         setContentView(com.saucefan.stuff.foodiefunbw.R.layout.activity_login)
         //just rotates the wave effect
-        wave.animate().rotation(180f).start()
+
 
 
     }

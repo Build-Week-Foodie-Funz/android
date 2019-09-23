@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorBackground"
     tools:context=".ui.LoginActivity">
 
     <TextView
@@ -21,6 +22,8 @@
         android:id="@+id/wave"
         android:layout_width="match_parent"
         android:layout_height="200dp"
+        app:mwhStartColor="@color/colorPrimary"
+        android:rotation="180"
         app:mwhWaves="
             70,25,1.4,1.4,-26
             100,5,1.4,1.2,15
