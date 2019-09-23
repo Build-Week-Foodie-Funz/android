@@ -2,6 +2,7 @@ package com.saucefan.stuff.foodiefunbw.viewmodel
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
+import com.saucefan.stuff.foodiefunbw.Model.FoodieEntry
 
 /*
 *
@@ -35,5 +36,11 @@ import androidx.lifecycle.AndroidViewModel
 
 class FoodieEntryViewModel (application: Application) : AndroidViewModel(application){
 
+    private var repository: FoodieEntryRepo =
+            FoodieEntryRepo(application)
+
+    fun insertItem(foodieEntry:FoodieEntry) {
+
+    }
 
 }

@@ -1,5 +1,6 @@
 package com.saucefan.stuff.foodiefunbw.Model.room
 
+import androidx.lifecycle.LiveData
 import androidx.room.*
 import com.saucefan.stuff.foodiefunbw.Model.FoodieEntry
 
@@ -7,11 +8,14 @@ import com.saucefan.stuff.foodiefunbw.Model.FoodieEntry
 interface RoomDao {
 
     @Insert(onConflict = OnConflictStrategy.ABORT)
-    fun insert(foodieEntry: FoodieEntry)
+    suspend fun insert(foodieEntry: FoodieEntry)
 
     @Update(onConflict = OnConflictStrategy.REPLACE)
-    fun update(foodieEntry: FoodieEntry)
+    suspend fun update(foodieEntry: FoodieEntry)
 
     @Delete
-    fun delete(foodieEntry: FoodieEntry)
+    suspend fun delete(foodieEntry: FoodieEntry)
+    @Query("SELECT * FROM book")
+    suspend fun readAllEntries(): List<FoodieEntry>
+
 }

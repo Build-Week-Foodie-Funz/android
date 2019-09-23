@@ -1,6 +1,7 @@
 package com.saucefan.stuff.foodiefunbw
 
 import android.app.Application
+import com.saucefan.stuff.foodiefunbw.Model.room.EntryDatabase
 
 import timber.log.Timber
 
@@ -23,5 +24,10 @@ class FoodieFun : Application() {
         if (BuildConfig.DEBUG) {
             Timber.plant(MyDebugTree())
         }
+    }
+
+    override fun onTerminate() {
+        super.onTerminate()
+        EntryDatabase.destroyInstance()
     }
 }
