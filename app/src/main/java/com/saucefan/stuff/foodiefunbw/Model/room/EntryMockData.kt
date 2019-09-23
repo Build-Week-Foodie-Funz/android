@@ -9,11 +9,11 @@ object  EntryMockData {
 
             entryList.add(
                     FoodieEntry(
-                            1,
+                            0,
                             "1",
                             1,
                             "sauce",
-                            "oh we sauceyboys",
+                            "fooods additoionalysff",
                             3,
                             "  something else ",
                             stupidList,
@@ -21,7 +21,7 @@ object  EntryMockData {
                             false))
 
             entryList.add(
-                    FoodieEntry(1,
+                    FoodieEntry(0,
                             " ",
                             1,
                             "fooods ",
@@ -35,7 +35,7 @@ object  EntryMockData {
 
             entryList.add(
                     FoodieEntry(
-                            1,
+                            0,
                             "1",
                             1,
                             "sauce",
@@ -47,7 +47,7 @@ object  EntryMockData {
                             false))
 
             entryList.add(
-                    FoodieEntry(1,
+                    FoodieEntry(0,
                             "remote index",
                             1,
                             "fooods additoionaly ",
