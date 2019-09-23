@@ -1,7 +1,12 @@
 package com.saucefan.stuff.foodiefunbw
 
 import android.app.Application
+import androidx.room.RoomDatabase
 import com.saucefan.stuff.foodiefunbw.Model.room.EntryDatabase
+import com.saucefan.stuff.foodiefunbw.Model.room.EntryMockData
+import com.saucefan.stuff.foodiefunbw.Model.room.RoomDao
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.runBlocking
 
 import timber.log.Timber
 
@@ -30,4 +35,14 @@ class FoodieFun : Application() {
         super.onTerminate()
         EntryDatabase.destroyInstance()
     }
+}
+suspend fun kotlinCoroutineRoomExperiemnt(roomDao: RoomDao, instance: RoomDatabase) = runBlocking {
+    launch {
+        for (i in 0..EntryMockData.entryList.size) {
+            val roomDao = roomDao
+            roomDao.insert(EntryMockData.entryList[i])
+        }
+    }
+
+
 }

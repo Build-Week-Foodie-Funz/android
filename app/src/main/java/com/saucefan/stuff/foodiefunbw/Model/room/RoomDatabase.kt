@@ -30,7 +30,7 @@ abstract class EntryDatabase : RoomDatabase() {
                             EntryDatabase::class.java, "entry_database"
                     )
                             .fallbackToDestructiveMigration() // when version increments, it migrates (deletes db and creates new) - else it crashes
-                           // .addCallback(roomCallback)
+                            .addCallback(roomCallback)
                             .build()
                 }
             }
@@ -42,30 +42,49 @@ abstract class EntryDatabase : RoomDatabase() {
         }
 
 
-        fun main() = runBlocking { // this: CoroutineScope
-            launch { // launch a new coroutine in the scope of runBlocking
-                delay(1000L)
-                println("World!")
-            }
-            println("Hello,")
-        }
+        fun main(instance: Database) {
+            // this: CoroutineScope
+            runBlocking {
+                launch {
 
-
-
-
-
-                suspend fun kotlinCoroutineRoomExperiemnt(roomDao: RoomDao,instance:RoomDatabase) = runBlocking {
-                    launch {
-                        for (i in 0.. EntryMockData.entryList.size) {
-                            val roomDao =roomDao
-                            roomDao.insert(EntryMockData.entryList[i])
-                        }
-                    }
+                    // launch a new coroutine in the scope of runBlocking
+                    delay(1000L)
+                    println("World!")
                 }
+                println("Hello,")
             }
+        }
+        suspend fun PopulateDbAsyncTask(db: EntryDatabase?) {
+            val pokemonDao = db?.RoomDao()
 
+           EntryMockData.entryList.forEach() {
+                runBlocking {
+                    pokemonDao?.insert(it)
 
+                }
+        }
     }
+        private val roomCallback = object : RoomDatabase.Callback() {
+            override fun onCreate(db: SupportSQLiteDatabase) {
+                super.onCreate(db)
+
+
+            runBlocking {
+                PopulateDbAsyncTask(instance)
+            }
+            }
+        }
+    }
+
+    //Mock Data here
+}
+
+
+
+
+
+
+
 
 
 

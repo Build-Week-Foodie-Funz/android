@@ -15,7 +15,7 @@ interface RoomDao {
 
     @Delete
     suspend fun delete(foodieEntry: FoodieEntry)
-    @Query("SELECT * FROM book")
+    @Query("SELECT * FROM foodieentry")
     suspend fun readAllEntries(): List<FoodieEntry>
 
 }
