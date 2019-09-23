@@ -3,8 +3,13 @@ package com.saucefan.stuff.foodiefunbw.viewmodel
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
+import androidx.lifecycle.viewModelScope
 import androidx.room.Delete
+import androidx.room.Room
+import androidx.room.RoomDatabase
 import com.saucefan.stuff.foodiefunbw.Model.FoodieEntry
+import com.saucefan.stuff.foodiefunbw.Model.room.EntryDatabase
+import com.saucefan.stuff.foodiefunbw.Model.room.RoomDao
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 
@@ -39,22 +44,32 @@ import kotlinx.coroutines.launch
 
 
 class FoodieEntryViewModel(application: Application) : AndroidViewModel(application) {
+    // The ViewModel maintains a reference to the repository to get data.
 
-    private var repository: FoodieEntryRepo =
-            FoodieEntryRepo(application)
-
-    suspend fun insertItem(foodieEntry: FoodieEntry) {
-        repository.insertItem(foodieEntry)
-
+    // LiveData gives us updated words when they change.
+    private val repository: FoodieEntryRepo
+    val allEntrees: LiveData<List<FoodieEntry>>
+    init {
+        // Gets reference to WordDao from WordRoomDatabase to construct
+        // the correct WordRepository.
+        val roomDao = EntryDatabase.getInstance(application,viewModelScope)?.RoomDao()
+        repository  = FoodieEntryRepo(roomDao as RoomDao)
+        allEntrees = repository.allEntries
     }
-    suspend fun update(foodieEntry: FoodieEntry) {
+
+
+
+   fun insertItem(foodieEntry: FoodieEntry) = viewModelScope.launch {
+            repository.insertItem(foodieEntry)
+    }
+   fun updateItem(foodieEntry: FoodieEntry) = viewModelScope.launch {
          repository.updateItem(foodieEntry)
     }
 
-    suspend fun delete(foodieEntry: FoodieEntry) {
+    fun deleteItem(foodieEntry: FoodieEntry) = viewModelScope.launch {
         repository.deleteItem(foodieEntry)
     }
-    suspend fun returnAllItems(): List<FoodieEntry> {
+    fun returnAllItems(): LiveData<List<FoodieEntry>> {
         return repository.returnAllItems()
     }
 }

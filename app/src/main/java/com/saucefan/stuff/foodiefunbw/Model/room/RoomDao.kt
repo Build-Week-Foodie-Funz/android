@@ -15,8 +15,8 @@ interface RoomDao {
 
     @Delete
     suspend fun delete(foodieEntry: FoodieEntry)
-    @Query("SELECT * FROM Foodie_Table")
-    suspend fun readAllEntries(): List<FoodieEntry>
+    @Query("SELECT * FROM Foodie_Table ORDER by id")
+    fun readAllEntries(): LiveData<List<FoodieEntry>>
 
     @Query("SELECT * FROM Foodie_Table where entryTime like :time")
     suspend fun getEntriesByDate(time:Long): List<FoodieEntry>
