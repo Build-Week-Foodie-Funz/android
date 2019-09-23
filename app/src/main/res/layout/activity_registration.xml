@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorBackground">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:gravity="center"
+        android:layout_alignParentTop="true"
+        android:layout_above="@id/input_group">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif"
+            android:text="SIGN UP"
+            android:textColor="@color/colorAccent"
+            android:textSize="20sp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif"
+            android:text="FOODIE FUN"
+            android:textColor="@color/colorAccent"
+            android:textSize="16sp"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/input_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
+        android:gravity="center">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edit_text_top"
+            android:textColorHint="@color/colorAccent"
+            android:hint="Username"
+            android:inputType="textPersonName"
+            android:padding="15dp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edit_text_middle"
+            android:textColorHint="@color/colorAccent"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:padding="15dp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edit_text_middle"
+            android:textColorHint="@color/colorAccent"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:padding="15dp"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/button"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:text="SIGN UP"
+            android:textAllCaps="false"
+            android:textColor="@color/colorAccent"
+            android:textSize="17sp"/>
+
+        <TextView
+            android:id="@+id/textView_signIn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:padding="10dp"
+            android:text="Already Have an Account?  Sign in"
+            android:textAllCaps="true"
+            android:textSize="13dp"
+            android:textStyle="bold"
+            android:textColor="#FAD0E1"
+            android:fontFamily="sans-serif"/>
+
+        <com.scwang.wave.MultiWaveHeader
+            android:id="@+id/wave"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:rotation="180"
+            app:mwhCloseColor="@color/colorPrimary"
+            app:mwhStartColor="@color/colorPrimary"
+            app:mwhWaves="
+            70,25,1.4,1.4,-26
+            100,5,1.4,1.2,15
+            420,0,1.15,1,-10
+            520,10,1.7,1.5,20
+            220,0,1,1,-15" />
+
+    </LinearLayout>
+</RelativeLayout>
+

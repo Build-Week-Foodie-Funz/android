@@ -73,4 +73,11 @@ dependencies {
 // probably even more stupid jetpack stuff
     implementation "androidx.lifecycle:lifecycle-extensions:2.1.0"
 
+    //For the fancy wave effect
+    implementation 'com.scwang.wave:MultiWaveHeader:1.0.0-alpha-1'
+
+    //For the fancy wave effect
+    implementation 'com.scwang.wave:MultiWaveHeader:1.0.0-alpha-1'
+
+
 }
