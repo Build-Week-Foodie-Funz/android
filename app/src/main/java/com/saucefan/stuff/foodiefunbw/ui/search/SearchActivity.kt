@@ -24,18 +24,8 @@ class SearchActivity : AppCompatActivity() {
 
 
         /// this is test code, to be deleted
-        var foodieViewModel = ViewModelProviders.of(this).get(FoodieEntryViewModel::class.java)
-        var tempCollect = mutableListOf<FoodieEntry>()
-        btn.setOnClickListener {
-            GlobalScope.launch {
-                val collections = foodieViewModel.returnAllItems()
-                for (i in 0 until collections.size) {
-                    tempCollect.add(collections[i])
-                }
-            }
 
 
         }
 
     }
-}

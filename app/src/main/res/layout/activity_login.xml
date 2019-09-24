@@ -74,7 +74,8 @@
             android:text="SIGN IN"
             android:textAllCaps="false"
             android:textColor="@color/colorAccent"
-            android:textSize="17sp" />
+            android:textSize="17sp"
+            android:id="@+id/login"/>
 
         <TextView
             android:id="@+id/textView_signup"

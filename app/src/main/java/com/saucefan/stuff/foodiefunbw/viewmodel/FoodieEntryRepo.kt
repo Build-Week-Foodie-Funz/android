@@ -9,24 +9,19 @@ import com.saucefan.stuff.foodiefunbw.Model.room.EntryDatabase
 import com.saucefan.stuff.foodiefunbw.Model.room.RoomDao
 import kotlinx.coroutines.*
 
-class FoodieEntryRepo (context: Context) {
- private var roomDao:RoomDao
-    init {
-        val database: EntryDatabase = EntryDatabase.getInstance(
-                context
-        )!!
+class FoodieEntryRepo (private val roomDao:RoomDao) {
 
-        roomDao = database.RoomDao()
-    }
+
+    val allEntries: LiveData<List<FoodieEntry>> = roomDao.readAllEntries()
 
 
     suspend fun insertItem(foodieEntry: FoodieEntry) {
-            roomDao.insert(foodieEntry)
+        roomDao.insert(foodieEntry)
     }
     suspend fun updateItem(foodieEntry: FoodieEntry){
         roomDao.update(foodieEntry)
     }
-    suspend fun returnAllItems():List<FoodieEntry>{
+     fun returnAllItems():LiveData<List<FoodieEntry>>{
          return roomDao.readAllEntries()
     }
     suspend fun deleteItem(foodieEntry: FoodieEntry){
