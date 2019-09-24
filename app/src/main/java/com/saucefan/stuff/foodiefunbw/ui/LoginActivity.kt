@@ -1,22 +1,13 @@
 package com.saucefan.stuff.foodiefunbw.ui
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
-import androidx.navigation.ActivityNavigator
+import androidx.appcompat.app.AppCompatActivity
 import com.saucefan.stuff.foodiefunbw.DataBase.UserDatabaseHelper
 import kotlinx.android.synthetic.main.activity_login.*
 import kotlinx.android.synthetic.main.activity_registration.*
-import androidx.lifecycle.ViewModelProviders
-import com.saucefan.stuff.foodiefunbw.Model.FoodieEntry
-import com.saucefan.stuff.foodiefunbw.viewmodel.FoodieEntryViewModel
-import kotlinx.android.synthetic.main.activity_login.*
-import kotlinx.android.synthetic.main.activity_search.*
-import kotlinx.coroutines.GlobalScope
-import kotlinx.coroutines.launch
-
 
 
 class LoginActivity : AppCompatActivity() { //Ronnie changed xml name to activity login

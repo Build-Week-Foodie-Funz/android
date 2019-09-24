@@ -6,11 +6,12 @@ import androidx.room.*
 import androidx.sqlite.db.SupportSQLiteDatabase
 import com.saucefan.stuff.foodiefunbw.Model.Converters
 import com.saucefan.stuff.foodiefunbw.Model.FoodieEntry
+import com.saucefan.stuff.foodiefunbw.Model.FoodieResturant
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
 
 
-@Database(entities = [FoodieEntry::class], version = 2, exportSchema = true)
+@Database(entities = [FoodieEntry::class, FoodieResturant::class], version = 3, exportSchema = false)
 @TypeConverters(Converters::class)
 abstract class EntryDatabase : RoomDatabase() {
     abstract fun RoomDao(): RoomDao

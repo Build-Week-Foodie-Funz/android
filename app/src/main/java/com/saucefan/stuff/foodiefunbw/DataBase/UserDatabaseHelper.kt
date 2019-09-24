@@ -5,6 +5,9 @@ import android.content.Context
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
 
+
+//almost assuredly will be removed whole sale, kept to maintain compatability for now
+
 class UserDatabaseHelper (context: Context): SQLiteOpenHelper(context, dbname, factory, version){
     override fun onCreate(db: SQLiteDatabase?) {
         db?.execSQL("create table user (id integer primary key autoincrement," +
