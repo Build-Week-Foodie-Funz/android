@@ -20,7 +20,6 @@ abstract class EntryDatabase : RoomDatabase() {
     private class EntryDatabaseCallback(
             private val scope: CoroutineScope
     ) : RoomDatabase.Callback() {
-
         override fun onOpen(db: SupportSQLiteDatabase) {
             super.onOpen(db)
             INSTANCE?.let { database ->
@@ -56,8 +55,6 @@ abstract class EntryDatabase : RoomDatabase() {
 
                 }
             }
-
-
         fun destroyInstance() {
             INSTANCE = null
         }
