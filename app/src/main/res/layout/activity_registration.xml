@@ -49,6 +49,15 @@
             android:hint="Username"
             android:inputType="textPersonName"
             android:padding="15dp" />
+        <Spinner
+            android:id="@+id/spinner"
+            android:textColor="@color/colorAccent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edit_text_bottom"
+
+
+            />
 
         <EditText
             android:layout_width="match_parent"
