@@ -49,13 +49,22 @@
             android:textColorHint="@color/colorAccent"
             android:hint="Username"
             android:inputType="textPersonName"
+            android:paddingLeft="20dp"
             android:padding="15dp" />
-        <Spinner
+
+        <salmaan.ahmsal.com.customizablespinner.CustomizableSpinner
             android:id="@+id/spinner"
-            android:textColor="@color/colorAccent"
+
+            app:selectedTextColor="@color/colorAccent"
+            app:dropDownTextColor="@color/colorAccent"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/edit_text_bottom"
+            android:padding="15dp"
+            app:selectedTextSize="17sp"
+            app:dropDownTextSize="17sp"
+
+
 
 
             />

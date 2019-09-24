@@ -10,7 +10,7 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
 
 
-@Database(entities = [FoodieEntry::class], version = 2, exportSchema = true)
+@Database(entities = [FoodieEntry::class], version = 4, exportSchema = false)
 @TypeConverters(Converters::class)
 abstract class EntryDatabase : RoomDatabase() {
     abstract fun RoomDao(): RoomDao
