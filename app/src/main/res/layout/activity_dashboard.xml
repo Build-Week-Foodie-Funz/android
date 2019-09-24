@@ -4,6 +4,40 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorBackground"
     tools:context=".ui.DashboardActivity">
+
+    <ImageView
+        android:id="@+id/img_search"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@drawable/ic_search_accent_24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/img_add"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/img_add"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+       android:background="@drawable/ic_add_circle_accent_24dp"
+        app:layout_constraintEnd_toStartOf="@+id/img_menu"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/img_search"
+        tools:layout_editor_absoluteY="631dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+    <ImageView
+        android:id="@+id/img_menu"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+       android:background="@drawable/ic_restaurant_menu_accent_24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/img_add" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
