@@ -10,13 +10,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aec44ed3-a25c-4116-9e34-8f65d43a4579" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/Model/room/RoomDao.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/Model/room/RoomDao.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/Model/DataClasses.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/Model/DataClasses.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/Model/room/RoomDatabase.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/Model/room/RoomDatabase.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/ui/LoginActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/ui/LoginActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/viewmodel/FoodieEntryViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/viewmodel/FoodieEntryViewModel.kt" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/build/classes/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -49,10 +45,28 @@
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/ui/search/SearchFragment.kt">
+            <entry file="file://$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/Model/DataClasses.kt">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="136">
-                  <caret line="14" column="6" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
+                <state relative-caret-position="1097">
+                  <caret line="71" column="28" selection-start-line="71" selection-start-column="28" selection-end-line="71" selection-end-column="28" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/ui/search/SearchActivity.kt">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="68">
+                  <caret line="18" column="6" selection-start-line="18" selection-start-column="6" selection-end-line="18" selection-end-column="6" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/viewmodel/FoodieRVAdapter.kt">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="51">
+                  <caret line="3" column="37" selection-start-line="3" selection-start-column="37" selection-end-line="3" selection-end-column="37" />
                 </state>
               </provider>
             </entry>
@@ -67,15 +81,6 @@
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/Model/DataClasses.kt">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="302">
-                  <caret line="50" column="26" selection-start-line="50" selection-start-column="26" selection-end-line="50" selection-end-column="26" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/viewmodel/FoodieEntryRepo.kt">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="187">
@@ -85,55 +90,49 @@
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/Model/room/RoomDao.kt">
+            <entry file="file://$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/ui/LoginActivity.kt">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="136">
-                  <caret line="11" column="16" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
+                <state relative-caret-position="207">
+                  <caret line="61" column="18" lean-forward="true" selection-start-line="61" selection-start-column="18" selection-end-line="72" selection-end-column="21" />
                 </state>
               </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/build.gradle">
+            <entry file="file://$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/Model/room/RoomDatabase.kt">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="342">
-                  <caret line="74" column="60" selection-start-line="74" selection-start-column="60" selection-end-line="74" selection-end-column="60" />
+                <state relative-caret-position="85">
+                  <caret line="14" column="79" selection-start-line="14" selection-start-column="79" selection-end-line="14" selection-end-column="79" />
                 </state>
               </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/build/generated/source/kapt/debug/com/saucefan/stuff/foodiefunbw/Model/room/EntryDatabase_Impl.java">
+            <entry file="file://$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/DataBase/UserDatabaseHelper.kt">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="273">
-                  <caret line="142" column="36" lean-forward="true" selection-start-line="142" selection-start-column="36" selection-end-line="142" selection-end-column="36" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.room/room-runtime/2.2.0-rc01/174ebdbe3e7a886906c6e488c230a74c6da0ccea/room-runtime-2.2.0-rc01-sources.jar!/androidx/room/RoomDatabase.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-7">
-                  <caret line="266" selection-start-line="266" selection-end-line="266" />
+                <state relative-caret-position="119">
+                  <caret line="10" column="6" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
                 </state>
               </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/Model/room/RoomDatabase.kt">
+            <entry file="file://$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/Model/room/EntryMockData.kt">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="190">
-                  <caret line="79" column="41" selection-start-line="79" selection-start-column="41" selection-end-line="79" selection-end-column="41" />
+                <state relative-caret-position="527">
+                  <caret line="31" column="9" selection-start-line="31" selection-start-column="9" selection-end-line="42" selection-end-column="13" />
+                  <folding>
+                    <element signature="e#51#167#0" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/ui/LoginActivity.kt">
+            <entry file="file://$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/Model/room/RoomDao.kt">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="394">
-                  <caret line="72" column="21" selection-start-line="72" selection-start-column="21" selection-end-line="72" selection-end-column="21" />
+                <state relative-caret-position="136">
+                  <caret line="11" column="16" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
                 </state>
               </provider>
             </entry>
@@ -189,13 +188,13 @@
         <option value="$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/Model/FoodieEntry.kt" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch_5.kts" />
         <option value="$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/Utils.kt" />
-        <option value="$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/Model/DataClasses.kt" />
         <option value="$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/viewmodel/FoodieEntryRepo.kt" />
         <option value="$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/Model/room/EntryMockData.kt" />
         <option value="$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/Model/room/RoomDao.kt" />
         <option value="$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/ui/LoginActivity.kt" />
         <option value="$PROJECT_DIR$/build.gradle" />
         <option value="$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/viewmodel/FoodieEntryViewModel.kt" />
+        <option value="$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/Model/DataClasses.kt" />
         <option value="$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/Model/room/RoomDatabase.kt" />
       </list>
     </option>
@@ -267,7 +266,22 @@
               <item name="app" type="feadf853:AndroidModuleNode" />
               <item name="java" type="edd41e36:AndroidSourceTypeNode" />
               <item name="foodiefunbw" type="cbb59c9e:AndroidPsiDirectoryNode" />
+              <item name="DataBase" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="app" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="foodiefunbw" type="cbb59c9e:AndroidPsiDirectoryNode" />
               <item name="Model" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="app" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="foodiefunbw" type="cbb59c9e:AndroidPsiDirectoryNode" />
+              <item name="Model" type="462c0819:PsiDirectoryNode" />
+              <item name="remote" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="app" type="1abcf292:AndroidViewProjectNode" />
@@ -283,6 +297,14 @@
               <item name="java" type="edd41e36:AndroidSourceTypeNode" />
               <item name="foodiefunbw" type="cbb59c9e:AndroidPsiDirectoryNode" />
               <item name="ui" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="app" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="foodiefunbw" type="cbb59c9e:AndroidPsiDirectoryNode" />
+              <item name="ui" type="462c0819:PsiDirectoryNode" />
+              <item name="search" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="app" type="1abcf292:AndroidViewProjectNode" />
@@ -310,7 +332,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="TEXT&#10;XML" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../``news111" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Documents/AndroidStudio/DeviceExplorer/emulator-5554/data/data/com.saucefan.stuff.foodiefunbw/databases" />
     <property name="not.eligible.for.single.variant.sync" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.17" />
@@ -513,14 +535,22 @@
       <option name="project" value="LOCAL" />
       <updated>1569359738082</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="model continued, data can prepopulate">
+      <created>1569365296506</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1569365296507</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Captures" order="0" side_tool="true" weight="0.25" />
-      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.33374083" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.33374083" />
       <window_info id="Structure" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="Build Variants" order="4" side_tool="true" />
@@ -538,7 +568,7 @@
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32899022" />
       <window_info anchor="bottom" id="Build" order="8" weight="0.32899022" />
       <window_info anchor="bottom" id="Android Profiler" order="9" />
-      <window_info active="true" anchor="right" id="Device File Explorer" order="0" sideWeight="0.50161815" side_tool="true" visible="true" weight="0.3294621" />
+      <window_info anchor="right" id="Device File Explorer" order="0" sideWeight="0.50161815" side_tool="true" weight="0.3294621" />
       <window_info anchor="right" id="Capture Analysis" order="1" />
       <window_info anchor="right" id="Gradle" order="2" />
       <window_info anchor="right" id="Theme Preview" order="3" />
@@ -554,7 +584,8 @@
     <MESSAGE value="adjusted default db population code to use coroutines instead of async" />
     <MESSAGE value="updating model as we now have api spec" />
     <MESSAGE value="model updated, database not prepoulating, working on that" />
-    <option name="LAST_COMMIT_MESSAGE" value="model updated, database not prepoulating, working on that" />
+    <MESSAGE value="model continued, data can prepopulate" />
+    <option name="LAST_COMMIT_MESSAGE" value="model continued, data can prepopulate" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -630,13 +661,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/viewmodel/FoodieRVAdapter.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="37" selection-start-line="3" selection-start-column="37" selection-end-line="3" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/Documents/AndroidStudio/DeviceExplorer/emulator-5554/data/data/com.lambdaschool.datapersistencesprintchallenge/databases/entry_database">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -703,13 +727,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/DataBase/UserDatabaseHelper.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="8" column="35" lean-forward="true" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_5.kts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="457">
@@ -727,74 +744,8 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/Model/remote/Retrofit.kt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/ui/DashboardActivity.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/ui/viewedit/Editactorfragorwhatever.kt">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/ui/PrefsActivity.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/Model/room/EntryMockData.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="31" column="9" selection-start-line="31" selection-start-column="9" selection-end-line="42" selection-end-column="13" />
-          <folding>
-            <element signature="e#51#167#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/Model/remote/SyncService.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="2" selection-start-line="2" selection-start-column="2" selection-end-line="2" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/ui/search/SearchActivity.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="18" column="6" selection-start-line="18" selection-start-column="6" selection-end-line="18" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/ui/search/SearchFragment.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="14" column="6" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/ui/LoginActivity.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="394">
-          <caret line="72" column="21" selection-start-line="72" selection-start-column="21" selection-end-line="72" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/viewmodel/FoodieEntryRepo.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="14" column="26" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/Model/room/RoomDao.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="11" column="16" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
@@ -817,6 +768,48 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/Model/remote/SyncService.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="2" selection-start-line="2" selection-start-column="2" selection-end-line="2" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/ui/search/SearchFragment.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="14" column="6" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/ui/PrefsActivity.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/ui/DashboardActivity.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/ui/search/SearchActivity.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="18" column="6" selection-start-line="18" selection-start-column="6" selection-end-line="18" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/viewmodel/FoodieRVAdapter.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="37" selection-start-line="3" selection-start-column="37" selection-end-line="3" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/viewmodel/FoodieEntryViewModel.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="265">
@@ -824,17 +817,55 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/viewmodel/FoodieEntryRepo.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="14" column="26" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/Model/DataClasses.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="302">
-          <caret line="50" column="26" selection-start-line="50" selection-start-column="26" selection-end-line="50" selection-end-column="26" />
+        <state relative-caret-position="1097">
+          <caret line="71" column="28" selection-start-line="71" selection-start-column="28" selection-end-line="71" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/Model/room/RoomDao.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="11" column="16" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/Model/room/RoomDatabase.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="79" column="41" selection-start-line="79" selection-start-column="41" selection-end-line="79" selection-end-column="41" />
+        <state relative-caret-position="85">
+          <caret line="14" column="79" selection-start-line="14" selection-start-column="79" selection-end-line="14" selection-end-column="79" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/DataBase/UserDatabaseHelper.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="10" column="6" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/ui/LoginActivity.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="61" column="18" lean-forward="true" selection-start-line="61" selection-start-column="18" selection-end-line="72" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/Model/room/EntryMockData.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="31" column="9" selection-start-line="31" selection-start-column="9" selection-end-line="42" selection-end-column="13" />
+          <folding>
+            <element signature="e#51#167#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

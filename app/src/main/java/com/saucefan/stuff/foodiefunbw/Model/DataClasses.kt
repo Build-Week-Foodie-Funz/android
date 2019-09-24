@@ -44,7 +44,7 @@ data class FoodieRestaurant(
 data class FoodieEntry(
     //prob the primary key for the room databas
         @PrimaryKey(autoGenerate = true)
-    var revId:Int? =0,
+    var revId:Int,
         @ColumnInfo(name = "cuisine_type")
         var cuisineType:String? ="", // "cuisinetype": "American", resturant type?
         @ColumnInfo(name = "item_price")
@@ -69,7 +69,7 @@ data class FoodieEntry(
 
 
 ){
-    constructor() : this(0, "", 0f, "", "", "", null, "0")
+    constructor() : this( 0,"", 0f, "", "", "", null, "0")
 }
 
 /*
