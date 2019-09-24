@@ -11,7 +11,7 @@ interface RoomDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertReview(foodieEntry: FoodieEntry)
 
-    @Insert(onConflict = OnConflictStrategy.ABORT)
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertRest(foodieRestaurant: FoodieRestaurant)
 
     @Update(onConflict = OnConflictStrategy.REPLACE)

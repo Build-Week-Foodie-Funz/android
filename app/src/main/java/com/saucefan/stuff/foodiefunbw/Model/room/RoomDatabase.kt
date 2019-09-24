@@ -8,6 +8,7 @@ import com.saucefan.stuff.foodiefunbw.Model.Converters
 import com.saucefan.stuff.foodiefunbw.Model.FoodieEntry
 import com.saucefan.stuff.foodiefunbw.Model.FoodieRestaurant
 import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 
 
@@ -25,7 +26,7 @@ abstract class EntryDatabase : RoomDatabase() {
         @Volatile
         private var INSTANCE: EntryDatabase? = null
 
-        fun getInstance(context: Context,scope: CoroutineScope): EntryDatabase? {
+        fun getInstance(context: Context): EntryDatabase? {
         val tempInstance = INSTANCE
         if (tempInstance != null) {
             return tempInstance
@@ -35,7 +36,7 @@ abstract class EntryDatabase : RoomDatabase() {
                             context.applicationContext,
                             EntryDatabase::class.java, "entry_database")
                            .fallbackToDestructiveMigration() // when version increments, it migrates (deletes db and creates new) - else it crashes
-                           .addCallback(EntryDatabaseCallback(scope))
+                           .addCallback(EntryDatabaseCallback(GlobalScope))
                             .build()
                     INSTANCE=instance
                     return instance
@@ -75,11 +76,11 @@ abstract class EntryDatabase : RoomDatabase() {
             INSTANCE?.let { database ->
                 scope.launch {
                     var roomDao = database.RoomDao()
-                    database.clearAllTables()
+                  //  database.clearAllTables()
                     populateDatabase(roomDao)
 
 
-                    val sauce = "sauce"
+
                 }
             }
         }

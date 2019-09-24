@@ -52,14 +52,15 @@ class FoodieEntryViewModel(application: Application) : AndroidViewModel(applicat
     init {
         // Gets reference to WordDao from WordRoomDatabase to construct
         // the correct WordRepository.
-        val roomDao = EntryDatabase.getInstance(application,viewModelScope)?.RoomDao()
+        val roomDao = EntryDatabase.getInstance(application)?.RoomDao()
         repository  = FoodieEntryRepo(roomDao as RoomDao)
         allEntrees = repository.allEntries
     }
 
 
 
-   fun insertItem(foodieEntry: FoodieEntry) = viewModelScope.launch {
+   fun insertItem(foodieEntry: FoodieEntry) =
+           viewModelScope.launch {
             repository.insertItem(foodieEntry)
     }
    fun updateItem(foodieEntry: FoodieEntry) = viewModelScope.launch {
