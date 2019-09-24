@@ -6,33 +6,19 @@ import androidx.room.*
 import androidx.sqlite.db.SupportSQLiteDatabase
 import com.saucefan.stuff.foodiefunbw.Model.Converters
 import com.saucefan.stuff.foodiefunbw.Model.FoodieEntry
-import com.saucefan.stuff.foodiefunbw.Model.FoodieResturant
+import com.saucefan.stuff.foodiefunbw.Model.FoodieRestaurant
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
 
 
-@Database(entities = [FoodieEntry::class, FoodieResturant::class], version = 3, exportSchema = false)
+@Database(entities = [FoodieEntry::class, FoodieRestaurant::class], version = 4, exportSchema = false)
 @TypeConverters(Converters::class)
 abstract class EntryDatabase : RoomDatabase() {
     abstract fun RoomDao(): RoomDao
 
 
 
-    private class EntryDatabaseCallback(
-            private val scope: CoroutineScope
-    ) : RoomDatabase.Callback() {
-        override fun onOpen(db: SupportSQLiteDatabase) {
-            super.onOpen(db)
-            INSTANCE?.let { database ->
-                scope.launch {
-                    var roomDao = database.RoomDao()
-                    EntryMockData.entryList.forEach {
-                        roomDao.insert(it)
-                    }
-                }
-            }
-        }
-    }
+
 
 
     companion object {
@@ -81,7 +67,39 @@ abstract class EntryDatabase : RoomDatabase() {
         }
 
     }
+    private class EntryDatabaseCallback(
+            private val scope: CoroutineScope
+    ) : RoomDatabase.Callback() {
+        override fun onOpen(db: SupportSQLiteDatabase) {
+            super.onOpen(db)
+            INSTANCE?.let { database ->
+                scope.launch {
+                    var roomDao = database.RoomDao()
+                    database.clearAllTables()
+                    populateDatabase(roomDao)
+
+
+                    val sauce = "sauce"
+                }
+            }
+        }
+        suspend fun populateDatabase(roomDao: RoomDao) {
+
+          EntryMockData.entryList.forEach {
+                                roomDao.insertReview(it)
+                         }
+                             EntryMockData.restList.forEach{
+                                  roomDao.insertRest(it)
+                              }
+
+            // TODO: Add your own words!
+        }
+    }
+
 }
+
+
+
 
 /*
       private val roomCallback = object : RoomDatabase.Callback() {
@@ -91,7 +109,7 @@ abstract class EntryDatabase : RoomDatabase() {
                 GlobalScope.launch {
                     val roomDao = instance?.RoomDao()
                     EntryMockData.entryList.forEach() {
-                            roomDao?.insert(it)
+                            roomDao?.insertReview(it)
                     }
                 }
             }
