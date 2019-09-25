@@ -9,9 +9,11 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import com.bumptech.glide.Glide
 import com.saucefan.stuff.foodiefunbw.Model.FoodieRestaurant
 import com.saucefan.stuff.foodiefunbw.R
 import com.saucefan.stuff.foodiefunbw.viewmodel.FoodieEntryViewModel
+import kotlinx.android.synthetic.main.fragment_view_rest.*
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
@@ -33,7 +35,7 @@ class ViewRestFrag : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        val viewModel = ViewModelProvider(this).get(FoodieEntryViewModel::class.java)
+         viewModel = ViewModelProvider(this).get(FoodieEntryViewModel::class.java)
 
         arguments?.let {
             chosenResaurantID = it.getInt(ARG_ResaurantID)
@@ -47,10 +49,9 @@ class ViewRestFrag : Fragment() {
             //3. user presumedly wants the details to this object and can not proceed in the app until they can be provided
             //
             // that all being said, I would love to find a better way to do this later if time allows.
-
+            // and if nothing else we can pass the object itself to the fragment, I suppose we may be best served just doing that
             runBlocking {
             chosenRestaurantObj = viewModel.getRestByID(chosenResaurantID as Int)
-
         }
             Timber.i("rest obj set as ${chosenRestaurantObj.toString()}")
         }
@@ -66,12 +67,43 @@ class ViewRestFrag : Fragment() {
                               savedInstanceState: Bundle?): View? {
         return inflater.inflate(R.layout.fragment_view_rest, container, false)
 
+    }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        //if we successfully have a restaurant, fill in the views
+        if (chosenRestaurantObj != null) {
+            // if
+            val finalObj = chosenRestaurantObj as FoodieRestaurant
+            if (!finalObj.restPhotos.isNullOrEmpty()) {
+                //glide the first image in here, should be little more than code like:
+                //val imgString = finalObj.restPhotos!![0]
+            /*    Glide.with(this)
+                        .load(imgString)
+                        .into(imgViewHeader)*/
+
+            }
+            tv_rating.text=finalObj.restRating
+            tv_rest_hours.text = finalObj.restHours
+            tv_rest_location.text=finalObj.restLocation
+            tv_rest_name.text=finalObj.restName
+
+
+
+
+
+            }
+        //else let us know and exit the fragment
+        else {
+            Timber.i("failed at onViewCreated -- obj null -- chosenResaurantID = $chosenResaurantID")
+            activity?.onBackPressed() ?:  Toast.makeText(activity,"no activity found to trigger on back pressed and close fragment",Toast.LENGTH_LONG).show()
+
+        }
 
 
     }
 
-       fun onEditClick(uri: Uri) {
+    fun onEditClick(uri: Uri) {
         listener?.onFragmentInteraction(uri)
     }
 

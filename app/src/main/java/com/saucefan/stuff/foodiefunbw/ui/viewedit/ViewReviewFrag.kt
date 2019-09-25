@@ -35,12 +35,21 @@ class ViewReviewFrag : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        val viewModel = ViewModelProvider(this).get(FoodieEntryViewModel::class.java)
+        viewModel = ViewModelProvider(this).get(FoodieEntryViewModel::class.java)
 
         arguments?.let {
             chosenReviewID = it.getInt(ARG_ReviewID)
         }
         if (chosenReviewID != null && chosenReviewID != -1){
+            // I believe run blocking is the correct choice here for the following reasons:
+            //1. this should be a very simple query, with a single answer and no ambiguity
+            //2. we can be pretty confident that the user will never be the victim of a "bad" query
+            //as they should only ever arrive at this part of the program redirected from another object with a
+            //reasonable ID -- this code will not run if the ID is null or invalid due to being in afor loop
+            //3. user presumedly wants the details to this object and can not proceed in the app until they can be provided
+            //
+            // that all being said, I would love to find a better way to do this later if time allows.
+            // and if nothing else we can pass the object itself to the fragment, I suppose we may be best served just doing that
             runBlocking {
             chosenReviewObj=   viewModel.getReviewsByID(chosenReviewID as Int)
 
