@@ -91,6 +91,10 @@ dependencies {
 
     implementation 'com.github.salmaanahmed:CustomizableSpinner:1.0'
 
+    //Needed for search
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    
+
 
 
 

@@ -54,7 +54,6 @@
 
         <salmaan.ahmsal.com.customizablespinner.CustomizableSpinner
             android:id="@+id/spinner"
-
             app:selectedTextColor="@color/colorAccent"
             app:dropDownTextColor="@color/colorAccent"
             android:layout_width="match_parent"
