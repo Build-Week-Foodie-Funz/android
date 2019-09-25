@@ -9,7 +9,8 @@
 
     >
 
-    <LinearLayout
+
+<LinearLayout
         android:id="@+id/home_ll"
         app:layout_constraintTop_toTopOf="parent"
         android:layout_width="match_parent"
@@ -23,12 +24,15 @@
 
 
         <TextView
+
+
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="sans-serif"
+            android:fontFamily="@font/chineserocksrg"
             android:text="FOODIE FUN"
             android:textColor="@color/colorAccent"
-            android:textSize="20sp" />
+            android:textSize="50sp" />
+
 
 
     </LinearLayout>
@@ -52,6 +56,7 @@
 
 
         <EditText
+            android:fontFamily="@font/zrnic"
             android:id="@+id/login_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -62,6 +67,7 @@
             android:padding="15dp" />
 
         <EditText
+            android:fontFamily="@font/zrnic"
             android:id="@+id/login_password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -74,6 +80,7 @@
 
         <Button
 
+            android:fontFamily="@font/chicamono"
             android:id="@+id/button_signin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -108,7 +115,7 @@
         <com.scwang.wave.MultiWaveHeader
             android:id="@+id/wave"
             android:layout_width="match_parent"
-            android:layout_height="200dp"
+            android:layout_height="100dp"
             android:rotation="180"
             app:mwhCloseColor="@color/colorPrimary"
             app:mwhStartColor="@color/colorPrimary"
@@ -121,7 +128,11 @@
 
 
     </LinearLayout>
-    <include
+
+
+
+
+<include
         android:id="@+id/registration_layout"
         layout="@layout/activity_registration"
         android:visibility="gone"
