@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    tools:context=".ui.viewedit.ViewReviewFrag"
+    tools:context=".ui.viewedit.EditRestFrag"
     android:background="@color/colorPrimary">
 
 
@@ -19,49 +19,40 @@
         app:layout_constraintLeft_toLeftOf="parent"
         />
 
-    <TextView
+    <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="14dp"
-        android:text=" menu item name default"
-        android:id="@+id/tv_item_name"
+        android:text="name default"
+        android:id="@+id/ev_rest_name"
         app:layout_constraintTop_toBottomOf="@id/imgViewHeader"
         app:layout_constraintLeft_toLeftOf="parent" />
 
-    <TextView
+    <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="14dp"
-        android:text="cuisine type default"
-        android:id="@+id/tv_cuisine_type"
-        app:layout_constraintTop_toBottomOf="@id/tv_item_name"
+        android:text="rest name default"
+        android:id="@+id/ev_rest_hours"
+        app:layout_constraintTop_toBottomOf="@id/ev_rest_name"
         app:layout_constraintLeft_toLeftOf="parent" />
 
-    <TextView
+    <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="14dp"
-        android:text="price default"
-        android:id="@+id/tv_item_price"
-        app:layout_constraintTop_toBottomOf="@id/tv_cuisine_type"
+        android:text="location default"
+        android:id="@+id/ev_rest_location"
+        app:layout_constraintTop_toBottomOf="@id/ev_rest_hours"
         app:layout_constraintLeft_toLeftOf="parent" />
 
-    <TextView
+    <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="14dp"
         android:text="rating default"
         android:id="@+id/ev_rating"
-        app:layout_constraintTop_toBottomOf="@id/tv_item_price"
-        app:layout_constraintLeft_toLeftOf="parent" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="14dp"
-        android:text="review default"
-        android:id="@+id/tv_review"
-        app:layout_constraintTop_toBottomOf="@id/ev_rating"
+        app:layout_constraintTop_toBottomOf="@id/ev_rest_location"
         app:layout_constraintLeft_toLeftOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

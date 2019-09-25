@@ -10,13 +10,9 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.saucefan.stuff.foodiefunbw.Model.FoodieEntry
-import com.saucefan.stuff.foodiefunbw.Model.FoodieRestaurant
 import com.saucefan.stuff.foodiefunbw.R
 import com.saucefan.stuff.foodiefunbw.viewmodel.FoodieEntryViewModel
 import kotlinx.android.synthetic.main.fragment_view_review.*
-import kotlinx.coroutines.GlobalScope
-import kotlinx.coroutines.async
-import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
 import timber.log.Timber
 
@@ -87,7 +83,7 @@ class ViewReviewFrag : Fragment() {
                tv_cuisine_type.text=finalObj.cuisineType
                 tv_item_name.text = finalObj.menuItemName
                 tv_item_price.text=finalObj.itemPrice.toString()
-                tv_rating.text=finalObj.rating
+                ev_rating.text=finalObj.rating
                 tv_review.text=finalObj.shortReview
 
 

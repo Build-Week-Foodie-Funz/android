@@ -9,13 +9,10 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import com.bumptech.glide.Glide
 import com.saucefan.stuff.foodiefunbw.Model.FoodieRestaurant
 import com.saucefan.stuff.foodiefunbw.R
 import com.saucefan.stuff.foodiefunbw.viewmodel.FoodieEntryViewModel
 import kotlinx.android.synthetic.main.fragment_view_rest.*
-import kotlinx.coroutines.GlobalScope
-import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
 import timber.log.Timber
 
@@ -84,10 +81,10 @@ class ViewRestFrag : Fragment() {
                         .into(imgViewHeader)*/
 
             }
-            tv_rating.text=finalObj.restRating
-            tv_rest_hours.text = finalObj.restHours
-            tv_rest_location.text=finalObj.restLocation
-            tv_rest_name.text=finalObj.restName
+            ev_rating.text=finalObj.restRating
+            ev_rest_hours.text = finalObj.restHours
+            ev_rest_location.text=finalObj.restLocation
+            ev_rest_name.text=finalObj.restName
 
             }
         //else let us know and exit the fragment
