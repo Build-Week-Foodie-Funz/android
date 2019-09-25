@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorBackground"
@@ -9,7 +10,7 @@
     >
 
 
-    <LinearLayout
+<LinearLayout
         android:id="@+id/home_ll"
         app:layout_constraintTop_toTopOf="parent"
         android:layout_width="match_parent"
@@ -21,24 +22,28 @@
         android:gravity="center"
         android:orientation="vertical">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="sans-serif"
-            android:text="SIGN IN"
-            android:textColor="@color/colorAccent"
-            android:textSize="20sp" />
 
         <TextView
+
+
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="sans-serif"
+            android:fontFamily="@font/chineserocksrg"
             android:text="FOODIE FUN"
             android:textColor="@color/colorAccent"
-            android:textSize="16sp" />
+            android:textSize="50sp" />
+
+
 
     </LinearLayout>
 
+    <ImageView
+        android:layout_width="225dp"
+        android:layout_height="225dp"
+        android:src="@drawable/ic_logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/home_ll" />
 
     <LinearLayout
         app:layout_constraintBottom_toBottomOf="parent"
@@ -51,38 +56,47 @@
 
 
         <EditText
+            android:fontFamily="@font/zrnic"
             android:id="@+id/login_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/edit_text_top"
-            android:hint="Username"
+            android:hint="@string/username"
             android:textColorHint="@color/colorAccent"
             android:inputType="textPersonName"
             android:padding="15dp" />
 
         <EditText
+            android:fontFamily="@font/zrnic"
             android:id="@+id/login_password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/edit_text_bottom"
-            android:hint="Password"
+            android:hint="@string/password"
             android:textColorHint="@color/colorAccent"
             android:inputType="textPassword"
             android:padding="15dp" />
 
 
         <Button
+
+            android:fontFamily="@font/chicamono"
             android:id="@+id/button_signin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
             android:background="@drawable/button"
             android:foreground="?android:attr/selectableItemBackground"
-            android:text="SIGN IN"
+            android:text="@string/sign_in"
             android:textAllCaps="false"
             android:textColor="@color/colorAccent"
             android:textSize="17sp"
             />
+
+
+
+
+
+
 
         <TextView
             android:id="@+id/textView_signup"
@@ -93,7 +107,7 @@
             android:padding="10dp"
             android:text="Don't Have an Account?  Sign Up"
             android:textAllCaps="true"
-            android:textColor="#FAD0E1"
+           android:textColor="@color/colorPrimary"
             android:textSize="13dp"
             android:textStyle="bold" />
 
@@ -101,7 +115,7 @@
         <com.scwang.wave.MultiWaveHeader
             android:id="@+id/wave"
             android:layout_width="match_parent"
-            android:layout_height="200dp"
+            android:layout_height="100dp"
             android:rotation="180"
             app:mwhCloseColor="@color/colorPrimary"
             app:mwhStartColor="@color/colorPrimary"
@@ -114,7 +128,11 @@
 
 
     </LinearLayout>
-    <include
+
+
+
+
+<include
         android:id="@+id/registration_layout"
         layout="@layout/activity_registration"
         android:visibility="gone"

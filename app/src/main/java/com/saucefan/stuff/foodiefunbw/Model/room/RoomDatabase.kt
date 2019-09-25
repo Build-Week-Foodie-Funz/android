@@ -17,11 +17,6 @@ import kotlinx.coroutines.launch
 abstract class EntryDatabase : RoomDatabase() {
     abstract fun RoomDao(): RoomDao
 
-
-
-
-
-
     companion object {
         @Volatile
         private var INSTANCE: EntryDatabase? = null

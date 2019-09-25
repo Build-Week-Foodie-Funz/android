@@ -25,6 +25,9 @@ interface RoomDao {
     @Query("SELECT * FROM restaurant_table where recent_visit like :time")
     suspend fun getEntriesByDate(time:Long): List<FoodieRestaurant>
 
+    @Query("SELECT * FROM restaurant_table where rest_name like :restName ")
+    fun getRestName(restName: String): LiveData<List<FoodieRestaurant>>
+
     @Insert(onConflict = OnConflictStrategy.IGNORE)
     fun init(foodieEntry: FoodieEntry)
 
