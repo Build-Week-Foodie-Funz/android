@@ -9,25 +9,27 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import com.saucefan.stuff.foodiefunbw.Model.FoodieEntry
 import com.saucefan.stuff.foodiefunbw.Model.FoodieRestaurant
 import com.saucefan.stuff.foodiefunbw.R
 import com.saucefan.stuff.foodiefunbw.viewmodel.FoodieEntryViewModel
 import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.async
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
 import timber.log.Timber
 
 
-private const val ARG_ResaurantID = "param1"
+private const val ARG_ReviewID = "param1"
 
 /**
- a fragment to display an individual resaurant and give the user the
- opportunity to choose to nagigate to editing that restaurant
+a fragment to display an individual resaurant and give the user the
+opportunity to choose to nagigate to editing that restaurant
 
  */
-class ViewRestFrag : Fragment() {
-    private var chosenResaurantID: Int? = null
-    private var chosenRestaurantObj:FoodieRestaurant? =null
+class ViewReviewFrag : Fragment() {
+    private var chosenReviewID: Int? = null
+    private var chosenReviewObj:FoodieEntry? =null
     private var listener: ViewRestFragmentListener? = null
     private lateinit var viewModel: FoodieEntryViewModel
 
@@ -36,27 +38,19 @@ class ViewRestFrag : Fragment() {
         val viewModel = ViewModelProvider(this).get(FoodieEntryViewModel::class.java)
 
         arguments?.let {
-            chosenResaurantID = it.getInt(ARG_ResaurantID)
+            chosenReviewID = it.getInt(ARG_ReviewID)
         }
-        if (chosenResaurantID != null && chosenResaurantID != -1) {
-          // I believe run blocking is the correct choice here for the following reasons:
-            //1. this should be a very simple query, with a single answer and no ambiguity
-            //2. we can be pretty confident that the user will never be the victim of a "bad" query
-            //as they should only ever arrive at this part of the program redirected from another object with a
-            //reasonable ID -- this code will not run if the ID is null or invalid due to being in afor loop
-            //3. user presumedly wants the details to this object and can not proceed in the app until they can be provided
-            //
-            // that all being said, I would love to find a better way to do this later if time allows.
-
+        if (chosenReviewID != null && chosenReviewID != -1){
             runBlocking {
-            chosenRestaurantObj = viewModel.getRestByID(chosenResaurantID as Int)
+            chosenReviewObj=   viewModel.getReviewsByID(chosenReviewID as Int)
 
-        }
-            Timber.i("rest obj set as ${chosenRestaurantObj.toString()}")
+            }
+                Timber.i("rest obj set as ${chosenReviewObj.toString()}")
+
         }
         else {
-            Timber.i("chosenResaurantID = $chosenResaurantID")
-            Toast.makeText(activity,"no such restaurant found -- chosenResaurantID = $chosenResaurantID",Toast.LENGTH_LONG).show()
+            Timber.i("chosenResaurantID = $chosenReviewID")
+            Toast.makeText(activity,"no such restaurant found -- chosenResaurantID = $chosenReviewID",Toast.LENGTH_LONG).show()
             activity?.onBackPressed() ?:  Toast.makeText(activity,"no activity found to trigger on back pressed and close fragment",Toast.LENGTH_LONG).show()
 
         }
@@ -71,7 +65,7 @@ class ViewRestFrag : Fragment() {
 
     }
 
-       fun onEditClick(uri: Uri) {
+    fun onEditClick(uri: Uri) {
         listener?.onFragmentInteraction(uri)
     }
 
@@ -92,7 +86,7 @@ class ViewRestFrag : Fragment() {
 
 
     interface ViewRestFragmentListener {
-    // change this once it becomes more clean what, if anything needs to be communicated
+        // change this once it becomes more clean what, if anything needs to be communicated
         fun onFragmentInteraction(uri: Uri)
     }
 
@@ -106,10 +100,10 @@ class ViewRestFrag : Fragment() {
          */
         // TODO: Rename and change types and number of parameters
         @JvmStatic
-        fun newInstance(restID: Int) =
+        fun newInstance(reviewID: Int) =
                 ViewRestFrag().apply {
                     arguments = Bundle().apply {
-                        putInt(ARG_ResaurantID, restID)
+                        putInt(ARG_ReviewID, reviewID)
 
                     }
                 }

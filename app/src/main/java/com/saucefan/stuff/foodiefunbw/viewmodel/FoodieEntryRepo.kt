@@ -1,6 +1,7 @@
 package com.saucefan.stuff.foodiefunbw.viewmodel
 
 import androidx.lifecycle.LiveData
+import androidx.room.Query
 import com.saucefan.stuff.foodiefunbw.Model.FoodieEntry
 import com.saucefan.stuff.foodiefunbw.Model.FoodieRestaurant
 import com.saucefan.stuff.foodiefunbw.Model.room.RoomDao
@@ -26,5 +27,11 @@ class FoodieEntryRepo (private val roomDao:RoomDao) {
     suspend fun getEntriesByDate(time:Long):List<FoodieRestaurant>{
             return roomDao.getEntriesByDate(time)
             }
+    suspend fun getRestByID(id:Int): FoodieRestaurant {
+        return roomDao.getRestByID(id)
+    }
 
+     fun getReviewsByID(id:Int): FoodieEntry {
+         return roomDao.getReviewsByID(id)
+     }
 }
