@@ -135,7 +135,7 @@ class ViewReviewFrag : Fragment() {
          * @param restID ID of the resaurant the user needs to view
          * @return A new instance of fragment ViewRestFrag.
          */
-        // TODO: Rename and change types and number of parameters
+
         @JvmStatic
         fun newInstance(reviewID: Int) =
                 ViewReviewFrag().apply {
