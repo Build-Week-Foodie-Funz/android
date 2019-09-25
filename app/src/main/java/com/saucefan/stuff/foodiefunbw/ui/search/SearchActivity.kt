@@ -51,7 +51,11 @@ class SearchActivity : AppCompatActivity() {
     }
     private fun getNamesFromDb(searchText: String) {
         val searchTextQuery = "%$searchText%"
-        entryDatabase!!.RoomDao().getRestName(searchTextQuery)
+
+
+        GlobalScope.launch {
+            entryDatabase!!.RoomDao().getRestName(searchTextQuery)
+        }
             .observe(this, object : Observer<List<FoodieRestaurant>> {
                 override fun onChanged(chapter: List<FoodieRestaurant>?) {
                     if (chapter == null) {
