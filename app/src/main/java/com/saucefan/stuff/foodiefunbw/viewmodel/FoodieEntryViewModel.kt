@@ -8,6 +8,7 @@ import androidx.room.Delete
 import androidx.room.Room
 import androidx.room.RoomDatabase
 import com.saucefan.stuff.foodiefunbw.Model.FoodieEntry
+import com.saucefan.stuff.foodiefunbw.Model.FoodieRestaurant
 import com.saucefan.stuff.foodiefunbw.Model.room.EntryDatabase
 import com.saucefan.stuff.foodiefunbw.Model.room.RoomDao
 import kotlinx.coroutines.GlobalScope
@@ -72,5 +73,12 @@ class FoodieEntryViewModel(application: Application) : AndroidViewModel(applicat
     }
     fun returnAllItems(): LiveData<List<FoodieEntry>> {
         return repository.returnAllItems()
+    }
+    suspend  fun getRestByID(id:Int): FoodieRestaurant {
+        return repository.getRestByID(id)
+    }
+
+    suspend fun getReviewsByID(id:Int): FoodieEntry {
+        return repository.getReviewsByID(id)
     }
 }
