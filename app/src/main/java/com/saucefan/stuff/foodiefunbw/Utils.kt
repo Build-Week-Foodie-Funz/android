@@ -1,6 +1,10 @@
 package com.saucefan.stuff.foodiefunbw
 
+import android.content.Context
+import androidx.appcompat.app.AppCompatActivity
 import com.saucefan.stuff.foodiefunbw.Model.FoodieRestaurant
+import com.saucefan.stuff.foodiefunbw.ui.viewedit.ViewRestFrag
+import com.saucefan.stuff.foodiefunbw.ui.viewedit.ViewReviewFrag
 
 
 //I don't know if we'll actually need this, but lets keep this file to functions that are
@@ -17,6 +21,39 @@ import com.saucefan.stuff.foodiefunbw.Model.FoodieRestaurant
 *
 *       should be a classless file of generalizable methods
 * */
+
+
+// these functions create appropriate fragments, review or retaurant based on
+// container where they should appear,
+// ID of object you wish to view
+// and context of the activity
+fun displayReviewFragment(container:Int,reviewID:Int,context: Context):String {
+
+    val tag = "reviewFrag$reviewID"
+    val reviewFrag: ViewReviewFrag = ViewReviewFrag.newInstance(1)
+    val ft = (context as AppCompatActivity).supportFragmentManager
+            .beginTransaction()
+            // 2
+            .add(container, reviewFrag, tag)
+            // 3
+            .addToBackStack("review$reviewID") //presumedly re'd name it the id or perhaps "rest$Id"
+            .commit()
+    return tag
+}
+
+fun displayRestFrag(container:Int,restID:Int,context:Context):String  {
+    val tag = "restFrag$restID"
+    val restFrag = ViewRestFrag.newInstance(1)
+    val ft = (context as AppCompatActivity).supportFragmentManager
+            .beginTransaction()
+            // 2
+            .add(container, restFrag, tag)
+            // 3
+            .addToBackStack("rest$restID") //presumedly re'd name it the id or perhaps "rest$Id"
+            .commit()
+    return tag
+
+}
 
 data class User  (
         val id:String, //presumedly this is the id assigned by server at registration

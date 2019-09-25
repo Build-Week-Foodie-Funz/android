@@ -31,4 +31,11 @@ interface RoomDao {
     @Insert(onConflict = OnConflictStrategy.IGNORE)
     fun init(foodieEntry: FoodieEntry)
 
+    @Query("SELECT * FROM restaurant_table where restId like :id")
+    suspend fun getRestByID(id:Int): FoodieRestaurant
+
+    @Query("SELECT * FROM review_table where revId like :id")
+    suspend fun getReviewsByID(id:Int): FoodieEntry
+
+
 }
