@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    tools:context=".ui.viewedit.EditReviewFrag"
+    tools:context=".ui.viewedit.EditRestFrag"
     android:background="@color/colorPrimary">
 
 

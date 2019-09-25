@@ -24,6 +24,7 @@ edit review fragment
  should take an id,
  call any sanitation needed on the data,
  and then either create or update
+ID should be passed as 0 if is new object
  */
 class EditReviewFrag : Fragment() {
     private var chosenReviewID: Int? = null
@@ -66,7 +67,7 @@ class EditReviewFrag : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
-        return inflater.inflate(R.layout.fragment_view_review, container, false)
+        return inflater.inflate(R.layout.fragment_edit_review, container, false)
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -85,7 +86,7 @@ class EditReviewFrag : Fragment() {
             tv_cuisine_type.text=finalObj.cuisineType
             tv_item_name.text = finalObj.menuItemName
             tv_item_price.text=finalObj.itemPrice.toString()
-            tv_rating.text=finalObj.rating
+            ev_rating.text=finalObj.rating
             tv_review.text=finalObj.shortReview
 
 
