@@ -109,8 +109,8 @@ class ViewRestFrag : Fragment() {
         if (context is ViewRestFragmentListener) {
             listener = context
         } else {
-            //we'll leave this here for now
-            throw RuntimeException(context.toString() + " must implement ViewRestFragmentListener")
+
+          //  throw RuntimeException(context.toString() + " must implement ViewRestFragmentListener")
         }
     }
 

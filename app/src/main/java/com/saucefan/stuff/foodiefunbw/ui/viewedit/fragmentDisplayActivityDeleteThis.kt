@@ -18,10 +18,10 @@ class fragmentDisplayActivityDeleteThis : AppCompatActivity(),ViewRestFrag.ViewR
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_fragment_display_delete_this)
         btn_rest.setOnClickListener {
-            displayRestFrag(R.id.fragment_container_view_tag,1,this)
+            displayRestFrag(R.id.fragment_container_view_tag,2,this)
         }
         btn_rev.setOnClickListener {
-            displayReviewFragment(R.id.fragment_container_view_tag,1,this)
+            displayReviewFragment(R.id.fragment_container_view_tag,2,this)
         }
     }
 
