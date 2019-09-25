@@ -22,7 +22,6 @@ import kotlinx.coroutines.*
 import kotlin.coroutines.CoroutineContext
 
 class SearchActivity : AppCompatActivity() {
-
     private var entryDatabase: EntryDatabase? = null
     private lateinit var searchView: SearchView
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -36,7 +35,7 @@ class SearchActivity : AppCompatActivity() {
         val searchItem = menu!!.findItem(R.id.action_search)
         searchView = searchItem.actionView as SearchView
         searchView.setSubmitButtonEnabled(true)
-        searchView.setQueryHint("Search either - MindOrks, GetMeAnApp, BestContentApp, Hackerspace")
+        searchView.setQueryHint("Search Entries By Resturant")
         searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
             override fun onQueryTextChange(newText: String): Boolean {
                 getNamesFromDb(newText)
@@ -51,22 +50,19 @@ class SearchActivity : AppCompatActivity() {
     }
     private fun getNamesFromDb(searchText: String) {
         val searchTextQuery = "%$searchText%"
-
-
-        GlobalScope.launch {
-            entryDatabase!!.RoomDao().getRestName(searchTextQuery)
-        }
-            .observe(this, object : Observer<List<FoodieRestaurant>> {
-                override fun onChanged(chapter: List<FoodieRestaurant>?) {
-                    if (chapter == null) {
-                        return
-                    }
-                    val adapter = SearchAdapter(
-                        this@SearchActivity,
-                        R.layout.search_item,
-                        chapter
-                    )
-                    lvSearchResult.adapter = adapter
+        entryDatabase!!.RoomDao().getRestName(searchTextQuery).observe(this@SearchActivity, object : Observer<List<FoodieRestaurant>>{
+            override fun onChanged(chapter: List<FoodieRestaurant>?) {
+                if (chapter == null) {
+                    return
                 }
-            })
-    }
+                val adapter = SearchAdapter(
+                    this@SearchActivity,
+                    R.layout.search_item,
+                    chapter
+                )
+                lvSearchResult.adapter = adapter
+            }
+        })
+    }}
+
+
