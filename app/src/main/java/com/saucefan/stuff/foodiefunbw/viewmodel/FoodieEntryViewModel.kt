@@ -78,7 +78,7 @@ class FoodieEntryViewModel(application: Application) : AndroidViewModel(applicat
         return repository.getRestByID(id)
     }
 
-    fun getReviewsByID(id:Int): FoodieEntry {
+    suspend fun getReviewsByID(id:Int): FoodieEntry {
         return repository.getReviewsByID(id)
     }
 }

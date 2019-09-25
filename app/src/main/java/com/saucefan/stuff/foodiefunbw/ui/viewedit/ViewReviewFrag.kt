@@ -13,6 +13,7 @@ import com.saucefan.stuff.foodiefunbw.Model.FoodieEntry
 import com.saucefan.stuff.foodiefunbw.Model.FoodieRestaurant
 import com.saucefan.stuff.foodiefunbw.R
 import com.saucefan.stuff.foodiefunbw.viewmodel.FoodieEntryViewModel
+import kotlinx.android.synthetic.main.fragment_view_review.*
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.async
 import kotlinx.coroutines.launch
@@ -30,7 +31,7 @@ opportunity to choose to nagigate to editing that restaurant
 class ViewReviewFrag : Fragment() {
     private var chosenReviewID: Int? = null
     private var chosenReviewObj:FoodieEntry? =null
-    private var listener: ViewRestFragmentListener? = null
+    private var listener: ViewReviewFragmentListener? = null
     private lateinit var viewModel: FoodieEntryViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -58,8 +59,8 @@ class ViewReviewFrag : Fragment() {
 
         }
         else {
-            Timber.i("chosenResaurantID = $chosenReviewID")
-            Toast.makeText(activity,"no such restaurant found -- chosenResaurantID = $chosenReviewID",Toast.LENGTH_LONG).show()
+            Timber.i("chosenRevoewID = $chosenReviewID")
+            Toast.makeText(activity,"no such review found -- chosenResaurantID = $chosenReviewID",Toast.LENGTH_LONG).show()
             activity?.onBackPressed() ?:  Toast.makeText(activity,"no activity found to trigger on back pressed and close fragment",Toast.LENGTH_LONG).show()
 
         }
@@ -67,9 +68,36 @@ class ViewReviewFrag : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
-        return inflater.inflate(R.layout.fragment_view_rest, container, false)
+        return inflater.inflate(R.layout.fragment_view_review, container, false)
+    }
+        override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+            super.onViewCreated(view, savedInstanceState)
+            //if we successfully have a restaurant, fill in the views
+            if (chosenReviewObj != null) {
+                //set the obj as a local val to avoid a whole lot of useless null checking, well, redundant null checking
+                val finalObj = chosenReviewObj as FoodieEntry
+                //if the restaurant has photos in its array, set the first one and then we will likely have to make ImageView Dynamically, and glide them in for the rest
+
+                    //glide the first image in here, should be little more than code like:
+                    //val imgString = finalObj.restPhotos
+                    /*    Glide.with(this)
+                                .load(imgString)
+                                .into(imgViewHeader)*/
+
+               tv_cuisine_type.text=finalObj.cuisineType
+                tv_item_name.text = finalObj.menuItemName
+                tv_item_price.text=finalObj.itemPrice.toString()
+                tv_rating.text=finalObj.rating
+                tv_review.text=finalObj.shortReview
 
 
+            }
+            //else let us know and exit the fragment
+            else {
+                Timber.i("failed at onViewCreated -- obj null -- chosenResaurantID = $chosenReviewID")
+                activity?.onBackPressed() ?:  Toast.makeText(activity,"no activity found to trigger on back pressed and close fragment",Toast.LENGTH_LONG).show()
+
+            }
 
 
     }
@@ -80,7 +108,7 @@ class ViewReviewFrag : Fragment() {
 
     override fun onAttach(context: Context) {
         super.onAttach(context)
-        if (context is ViewRestFragmentListener) {
+        if (context is ViewReviewFragmentListener) {
             listener = context
         } else {
             //we'll leave this here for now
@@ -94,7 +122,7 @@ class ViewReviewFrag : Fragment() {
     }
 
 
-    interface ViewRestFragmentListener {
+    interface ViewReviewFragmentListener {
         // change this once it becomes more clean what, if anything needs to be communicated
         fun onFragmentInteraction(uri: Uri)
     }
@@ -110,7 +138,7 @@ class ViewReviewFrag : Fragment() {
         // TODO: Rename and change types and number of parameters
         @JvmStatic
         fun newInstance(reviewID: Int) =
-                ViewRestFrag().apply {
+                ViewReviewFrag().apply {
                     arguments = Bundle().apply {
                         putInt(ARG_ReviewID, reviewID)
 

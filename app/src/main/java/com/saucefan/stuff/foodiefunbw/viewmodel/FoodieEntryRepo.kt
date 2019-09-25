@@ -31,7 +31,7 @@ class FoodieEntryRepo (private val roomDao:RoomDao) {
         return roomDao.getRestByID(id)
     }
 
-     fun getReviewsByID(id:Int): FoodieEntry {
+    suspend fun getReviewsByID(id:Int): FoodieEntry {
          return roomDao.getReviewsByID(id)
      }
 }

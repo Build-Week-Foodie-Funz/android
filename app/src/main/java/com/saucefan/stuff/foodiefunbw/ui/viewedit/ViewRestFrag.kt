@@ -73,8 +73,9 @@ class ViewRestFrag : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         //if we successfully have a restaurant, fill in the views
         if (chosenRestaurantObj != null) {
-            // if
+            //set the obj as a local val to avoid a whole lot of useless null checking, well, redundant null checking
             val finalObj = chosenRestaurantObj as FoodieRestaurant
+            //if the restaurant has photos in its array, set the first one and then we will likely have to make ImageView Dynamically, and glide them in for the rest
             if (!finalObj.restPhotos.isNullOrEmpty()) {
                 //glide the first image in here, should be little more than code like:
                 //val imgString = finalObj.restPhotos!![0]
@@ -87,10 +88,6 @@ class ViewRestFrag : Fragment() {
             tv_rest_hours.text = finalObj.restHours
             tv_rest_location.text=finalObj.restLocation
             tv_rest_name.text=finalObj.restName
-
-
-
-
 
             }
         //else let us know and exit the fragment

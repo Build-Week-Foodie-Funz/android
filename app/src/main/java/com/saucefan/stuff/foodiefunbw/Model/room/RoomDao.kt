@@ -32,7 +32,7 @@ interface RoomDao {
     suspend fun getRestByID(id:Int): FoodieRestaurant
 
     @Query("SELECT * FROM review_table where revId like :id")
-    fun getReviewsByID(id:Int): FoodieEntry
+    suspend fun getReviewsByID(id:Int): FoodieEntry
 
 
 }
