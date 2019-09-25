@@ -24,8 +24,8 @@ import timber.log.Timber
 private const val ARG_ReviewID = "param1"
 
 /**
-a fragment to display an individual resaurant and give the user the
-opportunity to choose to nagigate to editing that restaurant
+a fragment to display an individual restaurant and give the user the
+opportunity to choose to navigate to editing that restaurant
 
  */
 class ViewReviewFrag : Fragment() {
@@ -112,7 +112,7 @@ class ViewReviewFrag : Fragment() {
             listener = context
         } else {
 
-          //  throw RuntimeException(context.toString() + " must implement ViewRestFragmentListener")
+          //  throw RuntimeException(context.toString() + " must implement EditRestFragmentListener")
         }
     }
 

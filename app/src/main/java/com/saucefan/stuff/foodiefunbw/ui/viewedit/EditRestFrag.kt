@@ -1,5 +1,6 @@
 package com.saucefan.stuff.foodiefunbw.ui.viewedit
 
+
 import android.content.Context
 import android.net.Uri
 import android.os.Bundle
@@ -9,42 +10,38 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import androidx.lifecycle.ViewModelProviders
-import androidx.recyclerview.widget.LinearLayoutManager
-import com.bumptech.glide.Glide
 import com.saucefan.stuff.foodiefunbw.Model.FoodieRestaurant
 import com.saucefan.stuff.foodiefunbw.R
 import com.saucefan.stuff.foodiefunbw.viewmodel.FoodieEntryViewModel
-import kotlinx.android.synthetic.main.activity_restaurant.*
 import kotlinx.android.synthetic.main.fragment_view_rest.*
-import kotlinx.coroutines.GlobalScope
-import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
 import timber.log.Timber
-
 
 private const val ARG_ResaurantID = "param1"
 
 /**
- a fragment to display an individual restaurant and give the user the
- opportunity to choose to navigate to editing that restaurant
-
+edit review fragment
+should take an id,
+call any sanitation needed on the data,
+and then either create or update
  */
-class ViewRestFrag : Fragment() {
+class EditRestFrag : Fragment() {
     private var chosenResaurantID: Int? = null
-    private var chosenRestaurantObj:FoodieRestaurant? =null
-    private var listener: ViewRestFragmentListener? = null
+    private var chosenRestaurantObj: FoodieRestaurant? =null
+    private var listener: EditRestFragmentListener? = null
     private lateinit var viewModel: FoodieEntryViewModel
+    private var isNewObject:Boolean = false
 
+    
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-         viewModel = ViewModelProvider(this).get(FoodieEntryViewModel::class.java)
+        viewModel = ViewModelProvider(this).get(FoodieEntryViewModel::class.java)
 
         arguments?.let {
             chosenResaurantID = it.getInt(ARG_ResaurantID)
         }
         if (chosenResaurantID != null && chosenResaurantID != -1) {
-          // I believe run blocking is the correct choice here for the following reasons:
+            // I believe run blocking is the correct choice here for the following reasons:
             //1. this should be a very simple query, with a single answer and no ambiguity
             //2. we can be pretty confident that the user will never be the victim of a "bad" query
             //as they should only ever arrive at this part of the program redirected from another object with a
@@ -54,14 +51,14 @@ class ViewRestFrag : Fragment() {
             // that all being said, I would love to find a better way to do this later if time allows.
             // and if nothing else we can pass the object itself to the fragment, I suppose we may be best served just doing that
             runBlocking {
-            chosenRestaurantObj = viewModel.getRestByID(chosenResaurantID as Int)
-        }
+                chosenRestaurantObj = viewModel.getRestByID(chosenResaurantID as Int)
+            }
             Timber.i("rest obj set as ${chosenRestaurantObj.toString()}")
         }
         else {
             Timber.i("chosenResaurantID = $chosenResaurantID")
-            Toast.makeText(activity,"no such restaurant found -- chosenResaurantID = $chosenResaurantID",Toast.LENGTH_LONG).show()
-            activity?.onBackPressed() ?:  Toast.makeText(activity,"no activity found to trigger on back pressed and close fragment",Toast.LENGTH_LONG).show()
+            Toast.makeText(activity,"no such restaurant found -- chosenResaurantID = $chosenResaurantID", Toast.LENGTH_LONG).show()
+            activity?.onBackPressed() ?:  Toast.makeText(activity,"no activity found to trigger on back pressed and close fragment", Toast.LENGTH_LONG).show()
 
         }
     }
@@ -82,9 +79,9 @@ class ViewRestFrag : Fragment() {
             if (!finalObj.restPhotos.isNullOrEmpty()) {
                 //glide the first image in here, should be little more than code like:
                 //val imgString = finalObj.restPhotos!![0]
-            /*    Glide.with(this)
-                        .load(imgString)
-                        .into(imgViewHeader)*/
+                /*    Glide.with(this)
+                            .load(imgString)
+                            .into(imgViewHeader)*/
 
             }
             tv_rating.text=finalObj.restRating
@@ -92,11 +89,11 @@ class ViewRestFrag : Fragment() {
             tv_rest_location.text=finalObj.restLocation
             tv_rest_name.text=finalObj.restName
 
-            }
+        }
         //else let us know and exit the fragment
         else {
             Timber.i("failed at onViewCreated -- obj null -- chosenResaurantID = $chosenResaurantID")
-            activity?.onBackPressed() ?:  Toast.makeText(activity,"no activity found to trigger on back pressed and close fragment",Toast.LENGTH_LONG).show()
+            activity?.onBackPressed() ?:  Toast.makeText(activity,"no activity found to trigger on back pressed and close fragment", Toast.LENGTH_LONG).show()
 
         }
 
@@ -109,11 +106,11 @@ class ViewRestFrag : Fragment() {
 
     override fun onAttach(context: Context) {
         super.onAttach(context)
-        if (context is ViewRestFragmentListener) {
+        if (context is EditRestFragmentListener) {
             listener = context
         } else {
 
-          //  throw RuntimeException(context.toString() + " must implement EditRestFragmentListener")
+            //  throw RuntimeException(context.toString() + " must implement EditRestFragmentListener")
         }
     }
 
@@ -123,8 +120,8 @@ class ViewRestFrag : Fragment() {
     }
 
 
-    interface ViewRestFragmentListener {
-    // change this once it becomes more clean what, if anything needs to be communicated
+    interface EditRestFragmentListener {
+        // change this once it becomes more clean what, if anything needs to be communicated
         fun onFragmentInteraction(uri: Uri)
     }
 
@@ -146,5 +143,4 @@ class ViewRestFrag : Fragment() {
                     }
                 }
     }
-
 }
