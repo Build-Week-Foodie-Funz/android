@@ -36,13 +36,6 @@ class FoodieFun : Application() {
         EntryDatabase.destroyInstance()
     }
 }
-suspend fun kotlinCoroutineRoomExperiemnt(roomDao: RoomDao, instance: RoomDatabase) = runBlocking {
-    launch {
-        for (i in 0..EntryMockData.entryList.size) {
-            val roomDao = roomDao
-            roomDao.insertReview(EntryMockData.entryList[i])
-        }
-    }
 
 
 }
