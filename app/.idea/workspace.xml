@@ -12,7 +12,7 @@
     <list default="true" id="aec44ed3-a25c-4116-9e34-8f65d43a4579" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/Model/DataClasses.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/Model/DataClasses.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/Model/room/RoomDatabase.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/Model/room/RoomDatabase.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/Model/room/EntryMockData.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/Model/room/EntryMockData.kt" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/build/classes/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -47,8 +47,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/Model/DataClasses.kt">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1097">
-                  <caret line="71" column="28" selection-start-line="71" selection-start-column="28" selection-end-line="71" selection-end-column="28" />
+                <state relative-caret-position="230">
+                  <caret line="44" selection-start-line="44" selection-end-line="44" />
                 </state>
               </provider>
             </entry>
@@ -98,7 +98,7 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/Model/room/RoomDatabase.kt">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="85">
@@ -116,11 +116,11 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/Model/room/EntryMockData.kt">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="527">
-                  <caret line="31" column="9" selection-start-line="31" selection-start-column="9" selection-end-line="42" selection-end-column="13" />
+                <state relative-caret-position="102">
+                  <caret line="6" column="33" selection-start-line="6" selection-start-column="33" selection-end-line="6" selection-end-column="33" />
                   <folding>
                     <element signature="e#51#167#0" expanded="true" />
                   </folding>
@@ -144,7 +144,7 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_5.kts">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="457">
+                <state relative-caret-position="561">
                   <caret line="33" column="9" selection-start-line="33" selection-start-column="9" selection-end-line="33" selection-end-column="9" />
                 </state>
               </provider>
@@ -189,13 +189,13 @@
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch_5.kts" />
         <option value="$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/Utils.kt" />
         <option value="$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/viewmodel/FoodieEntryRepo.kt" />
-        <option value="$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/Model/room/EntryMockData.kt" />
         <option value="$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/Model/room/RoomDao.kt" />
         <option value="$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/ui/LoginActivity.kt" />
         <option value="$PROJECT_DIR$/build.gradle" />
         <option value="$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/viewmodel/FoodieEntryViewModel.kt" />
-        <option value="$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/Model/DataClasses.kt" />
         <option value="$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/Model/room/RoomDatabase.kt" />
+        <option value="$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/Model/DataClasses.kt" />
+        <option value="$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/Model/room/EntryMockData.kt" />
       </list>
     </option>
   </component>
@@ -542,15 +542,21 @@
       <option name="project" value="LOCAL" />
       <updated>1569365296507</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="noticed exexplainable behavior (foodie reviews ends up with one member instead of expect 5)">
+      <created>1569366825632</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1569366825632</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Captures" order="0" side_tool="true" weight="0.25" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.33374083" />
+      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.33374083" />
       <window_info id="Structure" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="Build Variants" order="4" side_tool="true" />
@@ -560,7 +566,7 @@
       <window_info id="Capture Tool" order="8" />
       <window_info anchor="bottom" id="Find" order="0" weight="0.32899022" />
       <window_info anchor="bottom" id="Run" order="1" />
-      <window_info anchor="bottom" id="Logcat" order="2" visible="true" weight="0.33116177" />
+      <window_info active="true" anchor="bottom" id="Logcat" order="2" visible="true" weight="0.33116177" />
       <window_info anchor="bottom" id="TODO" order="3" />
       <window_info anchor="bottom" id="Debug" order="4" weight="0.32899022" />
       <window_info anchor="bottom" id="Terminal" order="5" />
@@ -585,7 +591,8 @@
     <MESSAGE value="updating model as we now have api spec" />
     <MESSAGE value="model updated, database not prepoulating, working on that" />
     <MESSAGE value="model continued, data can prepopulate" />
-    <option name="LAST_COMMIT_MESSAGE" value="model continued, data can prepopulate" />
+    <MESSAGE value="noticed exexplainable behavior (foodie reviews ends up with one member instead of expect 5)" />
+    <option name="LAST_COMMIT_MESSAGE" value="noticed exexplainable behavior (foodie reviews ends up with one member instead of expect 5)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -637,6 +644,12 @@
           <line>61</line>
           <properties />
           <option name="timeStamp" value="33" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/Model/room/EntryMockData.kt</url>
+          <line>13</line>
+          <properties />
+          <option name="timeStamp" value="34" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -729,7 +742,7 @@
     </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_5.kts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="457">
+        <state relative-caret-position="561">
           <caret line="33" column="9" selection-start-line="33" selection-start-column="9" selection-end-line="33" selection-end-column="9" />
         </state>
       </provider>
@@ -824,27 +837,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/Model/DataClasses.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1097">
-          <caret line="71" column="28" selection-start-line="71" selection-start-column="28" selection-end-line="71" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/Model/room/RoomDao.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="11" column="16" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/Model/room/RoomDatabase.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="14" column="79" selection-start-line="14" selection-start-column="79" selection-end-line="14" selection-end-column="79" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/DataBase/UserDatabaseHelper.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -859,13 +851,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/Model/DataClasses.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="44" selection-start-line="44" selection-end-line="44" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/Model/room/EntryMockData.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="31" column="9" selection-start-line="31" selection-start-column="9" selection-end-line="42" selection-end-column="13" />
+        <state relative-caret-position="102">
+          <caret line="6" column="33" selection-start-line="6" selection-start-column="33" selection-end-line="6" selection-end-column="33" />
           <folding>
             <element signature="e#51#167#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/Model/room/RoomDao.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="11" column="16" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/Model/room/RoomDatabase.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="14" column="79" selection-start-line="14" selection-start-column="79" selection-end-line="14" selection-end-column="79" />
         </state>
       </provider>
     </entry>

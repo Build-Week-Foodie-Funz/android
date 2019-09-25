@@ -4,10 +4,10 @@ import com.saucefan.stuff.foodiefunbw.Model.FoodieEntry
 import com.saucefan.stuff.foodiefunbw.Model.FoodieRestaurant
 
 object EntryMockData {
-    var entryList = mutableListOf<FoodieEntry>(
+    var entryList = mutableListOf(
             FoodieEntry(
                     0,
-                    "american2",
+                    "china2",
                     2.22f,
                     "2/2",
                     "2 plate of 2",
@@ -19,7 +19,7 @@ object EntryMockData {
             ),
             FoodieEntry(
                     0,
-                    "american3",
+                    "japana",
                     3.66f,
                     "3/3",
                     "3 plate of 3",
@@ -31,7 +31,7 @@ object EntryMockData {
             ),
             FoodieEntry(
                     0,
-                    "4american4",
+                    "notaican",
                     46.466f,
                     "41/41",
                     "4one plate of 4one",
@@ -41,8 +41,6 @@ object EntryMockData {
                     "this 4one4",
                     "this place 4bad"
             )
-
-
     )
     var stupidList = listOf<String>("asdfa", "adfasdfas")
     var restList = mutableListOf<FoodieRestaurant>(

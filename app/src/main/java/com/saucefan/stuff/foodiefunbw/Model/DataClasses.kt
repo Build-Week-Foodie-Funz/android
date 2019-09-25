@@ -42,9 +42,9 @@ data class FoodieRestaurant(
 
 @Entity (tableName = "review_table")
 data class FoodieEntry(
-    //prob the primary key for the room databas
+
         @PrimaryKey(autoGenerate = true)
-    var revId:Int,
+         var revId:Int,
         @ColumnInfo(name = "cuisine_type")
         var cuisineType:String? ="", // "cuisinetype": "American", resturant type?
         @ColumnInfo(name = "item_price")
