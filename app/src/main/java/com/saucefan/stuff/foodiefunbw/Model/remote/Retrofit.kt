@@ -63,7 +63,7 @@ interface RetroApi {
                     newMovList?.results?.forEach {
                         tempMovieList.add(it)
                         mutlist.add(it)
-                        insert(it)
+                        insertReview(it)
                     }
                 }
             })

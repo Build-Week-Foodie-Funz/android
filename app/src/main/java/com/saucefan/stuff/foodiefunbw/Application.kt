@@ -40,7 +40,7 @@ suspend fun kotlinCoroutineRoomExperiemnt(roomDao: RoomDao, instance: RoomDataba
     launch {
         for (i in 0..EntryMockData.entryList.size) {
             val roomDao = roomDao
-            roomDao.insert(EntryMockData.entryList[i])
+            roomDao.insertReview(EntryMockData.entryList[i])
         }
     }
 

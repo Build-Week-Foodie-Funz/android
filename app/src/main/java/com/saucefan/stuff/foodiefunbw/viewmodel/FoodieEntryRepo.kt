@@ -1,13 +1,9 @@
 package com.saucefan.stuff.foodiefunbw.viewmodel
 
-import android.content.Context
-import androidx.core.graphics.rotationMatrix
 import androidx.lifecycle.LiveData
-import androidx.room.Room
 import com.saucefan.stuff.foodiefunbw.Model.FoodieEntry
-import com.saucefan.stuff.foodiefunbw.Model.room.EntryDatabase
+import com.saucefan.stuff.foodiefunbw.Model.FoodieRestaurant
 import com.saucefan.stuff.foodiefunbw.Model.room.RoomDao
-import kotlinx.coroutines.*
 
 class FoodieEntryRepo (private val roomDao:RoomDao) {
 
@@ -16,7 +12,7 @@ class FoodieEntryRepo (private val roomDao:RoomDao) {
 
 
     suspend fun insertItem(foodieEntry: FoodieEntry) {
-        roomDao.insert(foodieEntry)
+        roomDao.insertReview(foodieEntry)
     }
     suspend fun updateItem(foodieEntry: FoodieEntry){
         roomDao.update(foodieEntry)
@@ -27,7 +23,7 @@ class FoodieEntryRepo (private val roomDao:RoomDao) {
     suspend fun deleteItem(foodieEntry: FoodieEntry){
         roomDao.delete(foodieEntry)
     }
-    suspend fun getEntriesByDate(time:Long):List<FoodieEntry>{
+    suspend fun getEntriesByDate(time:Long):List<FoodieRestaurant>{
             return roomDao.getEntriesByDate(time)
             }
 
