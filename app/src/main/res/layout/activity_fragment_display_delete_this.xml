@@ -9,12 +9,19 @@
 <EditText
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:text="enter frag id to test here"
+    android:hint="id"
     android:id="@+id/et"
     app:layout_constraintBottom_toBottomOf="parent"
     app:layout_constraintRight_toRightOf="parent"
     />
-
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="name"
+        android:id="@+id/et2"
+        app:layout_constraintBottom_toTopOf="@+id/et"
+        app:layout_constraintRight_toRightOf="parent"
+        />
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -39,4 +46,5 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -23,7 +23,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="14dp"
-        android:text=" menu item name default"
+        android:hint=" menu item name default"
         android:id="@+id/ev_item_name"
         app:layout_constraintTop_toBottomOf="@id/imgViewHeader"
         app:layout_constraintLeft_toLeftOf="parent" />
@@ -32,7 +32,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="14dp"
-        android:text="cuisine type default"
+        android:hint="cuisine type default"
         android:id="@+id/ev_cuisine_type"
         app:layout_constraintTop_toBottomOf="@id/ev_item_name"
         app:layout_constraintLeft_toLeftOf="parent" />
@@ -41,17 +41,16 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="14dp"
-        android:text="price default"
+        android:hint="price default"
         android:id="@+id/ev_item_price"
         app:layout_constraintTop_toBottomOf="@id/ev_cuisine_type"
         app:layout_constraintLeft_toLeftOf="parent" />
 
     <EditText
-        android:hint=""
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="14dp"
-        android:text="rating default"
+        android:hint="rating default"
         android:id="@+id/ev_rating"
         app:layout_constraintTop_toBottomOf="@id/ev_item_price"
         app:layout_constraintLeft_toLeftOf="parent" />
@@ -60,7 +59,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="14dp"
-        android:text="review default"
+        android:hint="review default"
         android:id="@+id/ev_review"
         app:layout_constraintTop_toBottomOf="@id/ev_rating"
         app:layout_constraintLeft_toLeftOf="parent" />

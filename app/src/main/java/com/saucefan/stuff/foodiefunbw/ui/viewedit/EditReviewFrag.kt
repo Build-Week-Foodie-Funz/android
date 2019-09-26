@@ -49,7 +49,10 @@ class EditReviewFrag : Fragment() {
             chosenReviewID = it.getInt(ARG_ReviewID)
             newReviewRestName = it.getString(ARG_RestName)
         }
-        if (chosenReviewID != null && chosenReviewID as Int >= -1){
+        if (chosenReviewID==0) {
+            isNewObject = true
+        }
+        else if (chosenReviewID != null && chosenReviewID as Int >= -1){
             // I believe run blocking is the correct choice here for the following reasons:
             //1. this should be a very simple query, with a single answer and no ambiguity
             //2. we can be pretty confident that the user will never be the victim of a "bad" query
@@ -65,9 +68,6 @@ class EditReviewFrag : Fragment() {
             }
             Timber.i("rest obj set as ${chosenReviewObj.toString()}")
 
-        }
-        else if (chosenReviewID==0) {
-            isNewObject=true
         }
         else {
             Timber.i("chosenRevoewID = $chosenReviewID")
@@ -104,7 +104,7 @@ class EditReviewFrag : Fragment() {
             ev_rating.text="enter rating out of 5"
             ev_cuisine_type.hint="enter type of cuisine"
             ev_item_name.hint="enter name of item ordered"
-            ev_item_price.hint="enter restaurant name"
+            ev_item_price.hint="enter item price"
             ev_review.hint="enter an short review"
 
             //finally, set onclick behavior of buttons

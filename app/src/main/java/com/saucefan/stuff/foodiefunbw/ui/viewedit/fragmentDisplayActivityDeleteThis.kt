@@ -22,7 +22,7 @@ class fragmentDisplayActivityDeleteThis : AppCompatActivity(),ViewRestFrag.ViewR
             editRestFrag(R.id.fragment_container_view_tag,et.text.toString().toInt(),this)
         }
         btn_rev.setOnClickListener {
-            editReviewFragment(R.id.fragment_container_view_tag,et.text.toString().toInt(),this)
+            editReviewFragment(R.id.fragment_container_view_tag,et.text.toString().toInt(),this, et2.text.toString())
         }
     }
 
