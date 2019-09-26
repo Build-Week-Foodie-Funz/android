@@ -68,7 +68,9 @@ class FoodieEntryViewModel(application: Application) : AndroidViewModel(applicat
    fun updateReview(foodieEntry: FoodieEntry) = viewModelScope.launch {
          repository.updateReview(foodieEntry)
     }
-    fun updateReview(foodieRestaurant: FoodieRestaurant) = viewModelScope.launch {
+    fun updateRestaurant(foodieRestaurant: FoodieRestaurant) = viewModelScope.launch {
+
+        //TODO THIS NEEDS TO DELETE ALL REVIEWS WITH THE SAME NAME AS THE PARENT, FIX THIS ASAP
         repository.updateRestaurant(foodieRestaurant)
     }
 
