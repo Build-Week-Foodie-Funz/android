@@ -71,11 +71,9 @@ class EditRestFrag : Fragment() {
             Timber.i("rest obj set as ${chosenRestaurantObj.toString()}")
         }
             else {
-
             Timber.i("chosenRestaurantID = $chosenRestaurantID")
             Toast.makeText(activity,"no such restaurant found -- chosenRestaurantID = $chosenRestaurantID", Toast.LENGTH_LONG).show()
             activity?.onBackPressed() ?:  Toast.makeText(activity,"no activity found to trigger on back pressed and close fragment", Toast.LENGTH_LONG).show()
-
         }
     }
 
@@ -158,8 +156,8 @@ class EditRestFrag : Fragment() {
                             .into(imgViewHeader)*/
             }
             //set buttons and make editviews the previous objects values
-            btn_submit.text="Update Restaurant"
-            btn_delete.text="Delete Restaurant Permanently"
+            btn_submit.text="Update"
+            btn_delete.text="Delete"
 
             ev_rating.text=finalObj.restRating
             ev_rest_hours.text = finalObj.restHours
@@ -223,11 +221,6 @@ class EditRestFrag : Fragment() {
             //but it should work in general
             activity?.onBackPressed() ?:  Toast.makeText(activity,"no activity found to trigger on back pressed and close fragment", Toast.LENGTH_LONG).show()
         }
-
-
-
-
-
 
     }
     fun sanitizeRestaurantData(foodieRestaurant: FoodieRestaurant):FoodieRestaurant {

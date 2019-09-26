@@ -11,12 +11,7 @@
   <component name="ChangeListManager">
     <list default="true" id="aec44ed3-a25c-4116-9e34-8f65d43a4579" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/Utils.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/Utils.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/ui/viewedit/EditRestFrag.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/ui/viewedit/EditRestFrag.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/ui/viewedit/EditReviewFrag.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/ui/viewedit/EditReviewFrag.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/ui/viewedit/ViewRestFrag.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/ui/viewedit/ViewRestFrag.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/ui/viewedit/ViewReviewFrag.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/ui/viewedit/ViewReviewFrag.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/res/layout/fragment_edit_review.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/fragment_edit_review.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/build/classes/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -44,125 +39,108 @@
     </system>
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5">
-      <split-first>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/ui/viewedit/EditRestFrag.kt">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="224">
-                  <caret line="45" lean-forward="true" selection-start-line="45" selection-end-line="45" />
-                  <folding>
-                    <element signature="e#53#1167#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/ui/viewedit/ViewRestFrag.kt">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="323">
-                  <caret line="39" column="72" selection-start-line="39" selection-start-column="72" selection-end-line="39" selection-end-column="72" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/AndroidManifest.xml">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="289">
-                  <caret line="17" column="28" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
-                </state>
-              </provider>
-              <provider editor-type-id="android-manifest" />
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/viewmodel/FoodieEntryRepo.kt">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="197">
-                  <caret line="24" column="6" selection-start-line="24" selection-start-column="6" selection-end-line="24" selection-end-column="6" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/res/layout/activity_fragment_display_delete_this.xml">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-41">
-                  <caret line="14" column="49" selection-start-line="14" selection-start-column="49" selection-end-line="14" selection-end-column="49" />
-                </state>
-              </provider>
-              <provider editor-type-id="android-designer2" />
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/res/layout/fragment_edit_review.xml">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="306">
-                  <caret line="63" column="34" selection-start-line="63" selection-start-column="25" selection-end-line="63" selection-end-column="34" />
-                </state>
-              </provider>
-              <provider editor-type-id="android-designer2" />
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/res/layout/fragment_edit_rest.xml">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="34">
-                  <caret line="2" selection-start-line="2" selection-end-line="4" selection-end-column="50" />
-                </state>
-              </provider>
-              <provider editor-type-id="android-designer2" />
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/Utils.kt">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="316">
-                  <caret line="40" column="8" selection-start-line="40" selection-start-column="8" selection-end-line="40" selection-end-column="8" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/ui/viewedit/EditReviewFrag.kt">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="220">
-                  <caret line="172" lean-forward="true" selection-start-line="172" selection-end-line="172" />
-                  <folding>
-                    <element signature="e#52#1053#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/ui/viewedit/ViewReviewFrag.kt">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="323">
-                  <caret line="39" column="66" selection-start-line="39" selection-start-column="66" selection-end-line="39" selection-end-column="66" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/ui/viewedit/EditRestFrag.kt">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="508">
-                  <caret line="180" column="40" selection-start-line="180" selection-start-column="40" selection-end-line="180" selection-end-column="40" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/ui/viewedit/EditRestFrag.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1427">
+              <caret line="215" column="9" lean-forward="true" selection-start-line="215" selection-start-column="9" selection-end-line="215" selection-end-column="9" />
+              <folding>
+                <element signature="e#53#1167#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/ui/viewedit/ViewRestFrag.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="39" column="72" selection-start-line="39" selection-start-column="72" selection-end-line="39" selection-end-column="72" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/AndroidManifest.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="17" column="28" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
+            </state>
+          </provider>
+          <provider editor-type-id="android-manifest" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/viewmodel/FoodieEntryRepo.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="197">
+              <caret line="24" column="6" selection-start-line="24" selection-start-column="6" selection-end-line="24" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/res/layout/activity_fragment_display_delete_this.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="259">
+              <caret line="17" column="20" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="20" />
+            </state>
+          </provider>
+          <provider editor-type-id="android-designer2" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/res/layout/fragment_edit_review.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="347">
+              <caret line="77" column="20" selection-start-line="77" selection-start-column="16" selection-end-line="77" selection-end-column="20" />
+            </state>
+          </provider>
+          <provider editor-type-id="android-designer2" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/res/layout/fragment_edit_rest.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" selection-start-line="2" selection-end-line="4" selection-end-column="50" />
+            </state>
+          </provider>
+          <provider editor-type-id="android-designer2" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/Utils.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="214">
+              <caret line="34" selection-start-line="34" selection-end-line="34" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/ui/viewedit/EditReviewFrag.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1363">
+              <caret line="151" column="10" selection-start-line="151" selection-start-column="10" selection-end-line="151" selection-end-column="10" />
+              <folding>
+                <element signature="e#52#1053#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/ui/viewedit/ViewReviewFrag.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="39" column="66" selection-start-line="39" selection-start-column="66" selection-end-line="39" selection-end-column="66" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -210,8 +188,6 @@
         <option value="$PROJECT_DIR$/src/main/res/layout/fragment_view_review.xml" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch_4.txt" />
         <option value="$PROJECT_DIR$/src/main/res/layout/activity_prefs.xml" />
-        <option value="$PROJECT_DIR$/src/main/res/layout/activity_fragment_display_delete_this.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/ui/viewedit/fragmentDisplayActivityDeleteThis.kt" />
         <option value="$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/Model/room/RoomDao.kt" />
         <option value="$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/viewmodel/FoodieEntryRepo.kt" />
         <option value="$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/Model/DataClasses.kt" />
@@ -221,6 +197,8 @@
         <option value="$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/ui/viewedit/ViewRestFrag.kt" />
         <option value="$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/ui/viewedit/ViewReviewFrag.kt" />
         <option value="$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/Utils.kt" />
+        <option value="$PROJECT_DIR$/src/main/res/layout/activity_fragment_display_delete_this.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/ui/viewedit/fragmentDisplayActivityDeleteThis.kt" />
         <option value="$PROJECT_DIR$/src/main/res/layout/fragment_edit_review.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/ui/viewedit/EditReviewFrag.kt" />
         <option value="$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/ui/viewedit/EditRestFrag.kt" />
@@ -661,16 +639,30 @@
       <option name="project" value="LOCAL" />
       <updated>1569529485663</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="initial edit review frag lookin ok, little bit of testing then we will have to abandon this thread for a little while">
+      <created>1569532666213</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1569532666213</updated>
+    </task>
+    <task id="LOCAL-00021" summary="ok liitle bug testing and seems like we've made progress --&#10;&#10;still need to be handling Images, but that is a passive? intent -- whatever when you farm the work out and get a URI back. we can return to that later">
+      <created>1569533749019</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1569533749020</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Captures" order="0" sideWeight="0.50247115" side_tool="true" visible="true" weight="0.33374083" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" sideWeight="0.49752882" visible="true" weight="0.33374083" />
-      <window_info id="Structure" order="2" side_tool="true" />
+      <window_info id="Captures" order="0" sideWeight="0.50323623" side_tool="true" weight="0.33374083" />
+      <window_info content_ui="combo" id="Project" order="1" sideWeight="0.49752882" visible="true" weight="0.33374083" />
+      <window_info id="Structure" order="2" sideWeight="0.50247115" side_tool="true" weight="0.33374083" />
       <window_info id="Favorites" order="3" sideWeight="0.50162864" side_tool="true" weight="0.33374083" />
       <window_info id="Build Variants" order="4" side_tool="true" />
       <window_info id="Image Layers" order="5" />
@@ -679,7 +671,7 @@
       <window_info id="Capture Tool" order="8" />
       <window_info anchor="bottom" id="Find" order="0" weight="0.32899022" />
       <window_info anchor="bottom" id="Run" order="1" />
-      <window_info anchor="bottom" id="Logcat" order="2" visible="true" weight="0.34093377" />
+      <window_info active="true" anchor="bottom" id="Logcat" order="2" visible="true" weight="0.34093377" />
       <window_info anchor="bottom" id="TODO" order="3" />
       <window_info anchor="bottom" id="Debug" order="4" weight="0.32899022" />
       <window_info anchor="bottom" id="Terminal" order="5" />
@@ -695,9 +687,9 @@
       <window_info anchor="right" id="Preview" order="5" sideWeight="0.49838188" weight="0.3294621" />
     </layout>
     <layout-to-restore>
-      <window_info id="Captures" order="0" side_tool="true" weight="0.25" />
-      <window_info content_ui="combo" id="Project" order="1" sideWeight="0.49837133" weight="0.33374083" />
-      <window_info id="Structure" order="2" side_tool="true" />
+      <window_info id="Captures" order="0" sideWeight="0.50323623" side_tool="true" weight="0.33374083" />
+      <window_info content_ui="combo" id="Project" order="1" sideWeight="0.49752882" weight="0.33374083" />
+      <window_info id="Structure" order="2" sideWeight="0.50247115" side_tool="true" weight="0.33374083" />
       <window_info id="Favorites" order="3" sideWeight="0.50162864" side_tool="true" weight="0.33374083" />
       <window_info id="Build Variants" order="4" side_tool="true" />
       <window_info id="Image Layers" order="5" />
@@ -706,14 +698,14 @@
       <window_info id="Capture Tool" order="8" />
       <window_info anchor="bottom" id="Find" order="0" weight="0.32899022" />
       <window_info anchor="bottom" id="Run" order="1" />
-      <window_info anchor="bottom" id="Logcat" order="2" weight="0.33333334" />
+      <window_info active="true" anchor="bottom" id="Logcat" order="2" visible="true" weight="0.34093377" />
       <window_info anchor="bottom" id="TODO" order="3" />
       <window_info anchor="bottom" id="Debug" order="4" weight="0.32899022" />
       <window_info anchor="bottom" id="Terminal" order="5" />
       <window_info anchor="bottom" id="Event Log" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32899022" />
-      <window_info anchor="bottom" id="Build" order="8" visible="true" weight="0.32899022" />
-      <window_info anchor="bottom" id="Android Profiler" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Build" order="8" weight="0.32899022" />
+      <window_info anchor="bottom" id="Android Profiler" order="9" />
       <window_info anchor="right" id="Device File Explorer" order="0" sideWeight="0.50161815" side_tool="true" weight="0.3294621" />
       <window_info anchor="right" id="Capture Analysis" order="1" />
       <window_info anchor="right" id="Gradle" order="2" />
@@ -741,7 +733,9 @@
     <MESSAGE value="periodic commit on editrest frag and small changes to data classes pipeline" />
     <MESSAGE value="edit rest frag seems to be in good shape, needs a coat of paint and to be bug tested but at least initially seems ok" />
     <MESSAGE value="edit rest frag, minor changes, seems to work initially -- better, more reliable solution for closing frag on error needed but we can return to this later" />
-    <option name="LAST_COMMIT_MESSAGE" value="edit rest frag, minor changes, seems to work initially -- better, more reliable solution for closing frag on error needed but we can return to this later" />
+    <MESSAGE value="initial edit review frag lookin ok, little bit of testing then we will have to abandon this thread for a little while" />
+    <MESSAGE value="ok liitle bug testing and seems like we've made progress --&#10;&#10;still need to be handling Images, but that is a passive? intent -- whatever when you farm the work out and get a URI back. we can return to that later" />
+    <option name="LAST_COMMIT_MESSAGE" value="ok liitle bug testing and seems like we've made progress --&#10;&#10;still need to be handling Images, but that is a passive? intent -- whatever when you farm the work out and get a URI back. we can return to that later" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -801,12 +795,6 @@
           <option name="timeStamp" value="36" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/ui/viewedit/fragmentDisplayActivityDeleteThis.kt</url>
-          <line>24</line>
-          <properties />
-          <option name="timeStamp" value="37" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="kotlin-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/ui/viewedit/ViewReviewFrag.kt</url>
           <line>50</line>
           <properties />
@@ -814,39 +802,57 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/ui/viewedit/EditRestFrag.kt</url>
-          <line>118</line>
+          <line>117</line>
           <properties />
           <option name="timeStamp" value="62" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/ui/viewedit/EditRestFrag.kt</url>
-          <line>122</line>
+          <line>121</line>
           <properties />
           <option name="timeStamp" value="63" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/ui/viewedit/EditRestFrag.kt</url>
-          <line>134</line>
+          <line>133</line>
           <properties />
           <option name="timeStamp" value="64" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/ui/viewedit/EditReviewFrag.kt</url>
+          <line>71</line>
+          <properties />
+          <option name="timeStamp" value="78" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/ui/viewedit/EditRestFrag.kt</url>
+          <line>57</line>
+          <properties />
+          <option name="timeStamp" value="85" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/ui/viewedit/EditRestFrag.kt</url>
+          <line>73</line>
+          <properties />
+          <option name="timeStamp" value="88" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/ui/viewedit/EditRestFrag.kt</url>
+          <line>145</line>
+          <properties />
+          <option name="timeStamp" value="89" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/ui/viewedit/EditRestFrag.kt</url>
+          <line>89</line>
+          <properties />
+          <option name="timeStamp" value="90" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-field">
           <url>file://$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/ui/viewedit/EditRestFrag.kt</url>
           <line>27</line>
           <properties myFieldName="ARG_ResaurantID" myClassName="com.saucefan.stuff.foodiefunbw.ui.viewedit.EditRestFragKt" />
           <option name="timeStamp" value="45" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="kotlin-field">
-          <url>file://$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/ui/viewedit/EditRestFrag.kt</url>
-          <line>41</line>
-          <properties myFieldName="chosenRestaurantObj" myClassName="com.saucefan.stuff.foodiefunbw.ui.viewedit.EditRestFrag" />
-          <option name="timeStamp" value="46" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="kotlin-field">
-          <url>file://$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/ui/viewedit/EditRestFrag.kt</url>
-          <line>44</line>
-          <properties myFieldName="isNewObject" myClassName="com.saucefan.stuff.foodiefunbw.ui.viewedit.EditRestFrag" />
-          <option name="timeStamp" value="48" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -1091,13 +1097,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/ui/viewedit/fragmentDisplayActivityDeleteThis.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="21" column="19" selection-start-line="21" selection-start-column="19" selection-end-line="21" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
@@ -1120,21 +1119,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/Utils.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="316">
-          <caret line="40" column="8" selection-start-line="40" selection-start-column="8" selection-end-line="40" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/res/layout/activity_fragment_display_delete_this.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-41">
-          <caret line="14" column="49" selection-start-line="14" selection-start-column="49" selection-end-line="14" selection-end-column="49" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/ui/viewedit/ViewReviewFrag.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -1150,18 +1134,40 @@
       </provider>
       <provider editor-type-id="android-designer2" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/res/layout/fragment_edit_review.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/res/layout/activity_fragment_display_delete_this.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="63" column="34" selection-start-line="63" selection-start-column="25" selection-end-line="63" selection-end-column="34" />
+        <state relative-caret-position="259">
+          <caret line="17" column="20" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="20" />
         </state>
       </provider>
       <provider editor-type-id="android-designer2" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/layout/fragment_edit_review.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="347">
+          <caret line="77" column="20" selection-start-line="77" selection-start-column="16" selection-end-line="77" selection-end-column="20" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/Utils.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="214">
+          <caret line="34" selection-start-line="34" selection-end-line="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/ui/viewedit/fragmentDisplayActivityDeleteThis.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/ui/viewedit/EditReviewFrag.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="172" lean-forward="true" selection-start-line="172" selection-end-line="172" />
+        <state relative-caret-position="1363">
+          <caret line="151" column="10" selection-start-line="151" selection-start-column="10" selection-end-line="151" selection-end-column="10" />
           <folding>
             <element signature="e#52#1053#0" expanded="true" />
           </folding>
@@ -1170,8 +1176,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/ui/viewedit/EditRestFrag.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="508">
-          <caret line="180" column="40" selection-start-line="180" selection-start-column="40" selection-end-line="180" selection-end-column="40" />
+        <state relative-caret-position="1427">
+          <caret line="215" column="9" lean-forward="true" selection-start-line="215" selection-start-column="9" selection-end-line="215" selection-end-column="9" />
+          <folding>
+            <element signature="e#53#1167#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
