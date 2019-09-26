@@ -18,7 +18,7 @@
             android:layout_height="100dp"
             android:layout_margin="8dp"
             android:scaleType="fitXY"
-            android:src="" />
+            android:src="@drawable/component" />
 
         <TextView
             android:id="@+id/rest_name_view"
