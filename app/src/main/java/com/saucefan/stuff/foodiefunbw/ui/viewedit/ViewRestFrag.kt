@@ -9,6 +9,8 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.ViewModelProviders
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.bumptech.glide.Glide
 import com.saucefan.stuff.foodiefunbw.Model.FoodieRestaurant
 import com.saucefan.stuff.foodiefunbw.R
@@ -71,6 +73,8 @@ class ViewRestFrag : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        viewModel = ViewModelProviders.of(this).get(FoodieEntryViewModel::class.java)
+        setupRecyclerView(viewModel)
         //if we successfully have a restaurant, fill in the views
         if (chosenRestaurantObj != null) {
             //set the obj as a local val to avoid a whole lot of useless null checking, well, redundant null checking
@@ -143,4 +147,27 @@ class ViewRestFrag : Fragment() {
                     }
                 }
     }
+
+    fun setupRecyclerView(viewModel:FoodieEntryViewModel) {
+        recyclerView_rest.layoutManager = LinearLayoutManager(this) // or grid or whatever
+       /* recyclerView_rest.setHasFixedSize(true) // this actually may need to be false
+
+        var adapter = ViewRestAdapter()
+
+        ViewRestAdapter.adapter = adapter
+
+
+        viewModel.~~~APPROPRIATEVIEWMODEL FUNCTION THAT RETURNS LIVEDATA HERE(ID OR WHATEVER PARAMS HERE)~~~~.observe(this, Observer<List<fOODIEENTRY OR RESTOBJ>> {
+            updateRecyclerView(adapter, it as MutableList<fOODIEENTRY OR RESTOBJ>)
+        })
+*/
+    }
+
+
+/*
+    fun updateRecyclerView(adapter: ~~AdapterClass~~, list: MutableList<of obj >) {
+        adapter.submitList(list as list<of obj type>)
+        adapter.notifyDataSetChanged()
+    }
+    */
 }
