@@ -52,7 +52,10 @@ class EditRestFrag : Fragment() {
         arguments?.let {
             chosenRestaurantID = it.getInt(ARG_ResaurantID)
         }
-        if (chosenRestaurantID != null && chosenRestaurantID as Int >= -1) {
+        if (chosenRestaurantID==0) {
+            isNewObject = true
+        }
+        else if (chosenRestaurantID != null && chosenRestaurantID as Int >= -1) {
             // I believe run blocking is the correct choice here for the following reasons:
             //1. this should be a very simple query, with a single answer and no ambiguity
             //2. we can be pretty confident that the user will never be the victim of a "bad" query
@@ -66,9 +69,6 @@ class EditRestFrag : Fragment() {
                 chosenRestaurantObj = viewModel.getRestByID(chosenRestaurantID as Int)
             }
             Timber.i("rest obj set as ${chosenRestaurantObj.toString()}")
-        }
-        else if (chosenRestaurantID==0) {
-            isNewObject=true
         }
             else {
 
@@ -114,9 +114,10 @@ class EditRestFrag : Fragment() {
 
             btn_submit.setOnClickListener {
                 Timber.i("attempting to insert ${finalObj.toString()}")
+                var objtoupdate = sanitizeRestaurantData(finalObj)
 
                 //insert the restaurant using viewModel
-                viewModel.insertRestaurant(finalObj)
+                viewModel.insertRestaurant(objtoupdate)
 
 
                 //pop a toast to let user know rest has been created, hopefully livedata should handle the new rest in such a way as to make it immediately obvious to the user
