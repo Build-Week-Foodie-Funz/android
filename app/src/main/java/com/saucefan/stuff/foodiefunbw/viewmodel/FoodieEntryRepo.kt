@@ -12,16 +12,16 @@ class FoodieEntryRepo (private val roomDao:RoomDao) {
     val allEntries: LiveData<List<FoodieEntry>> = roomDao.readAllEntries()
 
 
-    suspend fun insertItem(foodieEntry: FoodieEntry) {
+    suspend fun insertReview(foodieEntry: FoodieEntry) {
         roomDao.insertReview(foodieEntry)
     }
-    suspend fun updateItem(foodieEntry: FoodieEntry){
+    suspend fun updateReview(foodieEntry: FoodieEntry){
         roomDao.update(foodieEntry)
     }
-     fun returnAllItems():LiveData<List<FoodieEntry>>{
+     fun returnAllReviews():LiveData<List<FoodieEntry>>{
          return roomDao.readAllEntries()
     }
-    suspend fun deleteItem(foodieEntry: FoodieEntry){
+    suspend fun deleteReview(foodieEntry: FoodieEntry){
         roomDao.delete(foodieEntry)
     }
     suspend fun getEntriesByDate(time:Long):List<FoodieRestaurant>{

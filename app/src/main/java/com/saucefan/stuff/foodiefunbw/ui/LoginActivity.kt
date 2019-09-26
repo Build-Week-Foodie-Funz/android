@@ -5,15 +5,12 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import com.saucefan.stuff.foodiefunbw.DataBase.UserDatabaseHelper
 import com.saucefan.stuff.foodiefunbw.Model.FoodieEntry
 import com.saucefan.stuff.foodiefunbw.viewmodel.FoodieEntryViewModel
 import kotlinx.android.synthetic.main.activity_login.*
 import kotlinx.android.synthetic.main.activity_registration.*
-import kotlinx.coroutines.GlobalScope
-import kotlinx.coroutines.launch
 
 
 class LoginActivity : AppCompatActivity() { //Ronnie changed xml name to activity login
@@ -59,7 +56,7 @@ class LoginActivity : AppCompatActivity() { //Ronnie changed xml name to activit
            } else{
                Toast.makeText(this, "Username or password is incorrect", Toast.LENGTH_SHORT).show()
 
-                   foodieEntryViewModel.insertItem(FoodieEntry(
+                   foodieEntryViewModel.insertReview(FoodieEntry(
                            0,
                            "4american4",
                            46.466f,
@@ -75,14 +72,14 @@ class LoginActivity : AppCompatActivity() { //Ronnie changed xml name to activit
            }
 
 
-         /*   val itsa = foodieEntryViewModel.returnAllItems()
+         /*   val itsa = foodieEntryViewModel.returnAllReviews()
 
         for (i in 0 until itsa.value?.size as Int) {
             val temp = itsa.value
 
         }*/
 
-     //   foodieEntryViewModel.returnAllItems().observe(this,
+     //   foodieEntryViewModel.returnAllReviews().observe(this,
     //            Observer<List<FoodieEntry>> { Toast.makeText(this,foodieEntryViewModel.allEntrees.value!![0].restName,Toast.LENGTH_LONG) .show()
      //   })
 
