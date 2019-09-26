@@ -52,7 +52,7 @@ class EditRestFrag : Fragment() {
         arguments?.let {
             chosenRestaurantID = it.getInt(ARG_ResaurantID)
         }
-        if (chosenRestaurantID != null && chosenRestaurantID != 0) {
+        if (chosenRestaurantID != null && chosenRestaurantID as Int >= -1) {
             // I believe run blocking is the correct choice here for the following reasons:
             //1. this should be a very simple query, with a single answer and no ambiguity
             //2. we can be pretty confident that the user will never be the victim of a "bad" query
@@ -95,9 +95,9 @@ class EditRestFrag : Fragment() {
             val formatted = current.format(formatter)
             var finalObj =FoodieRestaurant()
             finalObj.restRating ="5 of 5"
-            finalObj.restHours
-            finalObj.restLocation
-            finalObj.restName
+            finalObj.restHours ="left blank"
+            finalObj.restLocation ="left blank"
+            finalObj.restName ="left blank"
             finalObj.restId
             finalObj.recentVisit=formatted
             finalObj.user= User("id","location","username","--","email",null)
@@ -181,7 +181,7 @@ class EditRestFrag : Fragment() {
                 Timber.i("attempting to update ${finalObj.toString()}")
 
                 //update the restaurant using viewModel
-                viewModel.updateRestaurant(finalObj)
+                viewModel.updateRestaurant(objtoupdate)
 
                 //pop a toast to let user know rest has been updated, hopefully livedata should handle the updated rest in such a way as to make it immediately obvious to the user
                 Toast.makeText(view.context,"${finalObj.restName} updated successfully!", Toast.LENGTH_SHORT).show()

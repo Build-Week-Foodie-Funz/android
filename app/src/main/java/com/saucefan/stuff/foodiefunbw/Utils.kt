@@ -29,10 +29,17 @@ import com.saucefan.stuff.foodiefunbw.ui.viewedit.ViewReviewFrag
 // container where they should appear,
 // ID of object you wish to view
 // and context of the activity
-fun editReviewFragment(container:Int,reviewID:Int,context: Context):String {
-
+fun editReviewFragment(container:Int,reviewID:Int,context: Context,restName:String?):String {
+    var reviewFrag:EditReviewFrag
     val tag = "reviewFrag$reviewID"
-    val reviewFrag = EditReviewFrag.newInstance(reviewID)
+    if (restName != null && reviewID==0){
+        //if this method is passed a string for restName and an ID of 0, we know it's trying to build a review for the restaurant with the name restName,
+        // so we passs that on on to the fragment
+       reviewFrag = EditReviewFrag.newInstance(reviewID,restName)
+    }
+    else {
+        reviewFrag = EditReviewFrag.newInstance(reviewID, null)
+    }
     val ft = (context as AppCompatActivity).supportFragmentManager
             .beginTransaction()
             // 2
