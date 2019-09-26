@@ -18,14 +18,14 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="sans-serif"
+            android:fontFamily="@font/chineserocksrg"
             android:text="SIGN UP"
             android:textColor="@color/colorAccent"
-            android:textSize="20sp"/>
+            android:textSize="50sp"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="sans-serif"
+            android:fontFamily="@font/zrnic"
             android:text="FOODIE FUN"
             android:textColor="@color/colorAccent"
             android:textSize="16sp"/>
@@ -52,7 +52,10 @@
             android:paddingLeft="20dp"
             android:padding="15dp" />
 
-        <salmaan.ahmsal.com.customizablespinner.CustomizableSpinner
+      <!--
+      Country spinner
+
+      <salmaan.ahmsal.com.customizablespinner.CustomizableSpinner
             android:id="@+id/spinner"
             app:selectedTextColor="@color/colorAccent"
             app:dropDownTextColor="@color/colorAccent"
@@ -67,6 +70,8 @@
 
 
             />
+
+            -->
 
         <EditText
             android:id="@+id/email"

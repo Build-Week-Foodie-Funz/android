@@ -8,6 +8,7 @@ import android.widget.ArrayAdapter
 import android.widget.TextView
 import com.saucefan.stuff.foodiefunbw.Model.FoodieRestaurant
 import com.saucefan.stuff.foodiefunbw.R
+import com.saucefan.stuff.foodiefunbw.displayRestFrag
 
 class SearchAdapter(context: Context, val layout: Int, val chapter: List<FoodieRestaurant>) : ArrayAdapter<FoodieRestaurant>(context, layout, chapter) {
     override fun getCount(): Int {
@@ -27,6 +28,10 @@ class SearchAdapter(context: Context, val layout: Int, val chapter: List<FoodieR
         var chapterItem = getItem(position)
         val chapterName = retView.findViewById(R.id.tvSearch) as TextView
         chapterName.text = chapterItem!!.restName
+        chapterName.setOnClickListener {
+
+            displayRestFrag(R.id.fragment_container_view_tag, (getItem(position)!!.restId),chapterName.context)
+        }
         return retView
     }
 }
