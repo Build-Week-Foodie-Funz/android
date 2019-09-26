@@ -23,8 +23,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="14dp"
-        android:text="name default"
-        android:id="@+id/ev_rest_name"
+        android:text=" menu item name default"
+        android:id="@+id/ev_item_name"
         app:layout_constraintTop_toBottomOf="@id/imgViewHeader"
         app:layout_constraintLeft_toLeftOf="parent" />
 
@@ -32,18 +32,18 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="14dp"
-        android:text="rest name default"
-        android:id="@+id/ev_rest_hours"
-        app:layout_constraintTop_toBottomOf="@id/ev_rest_name"
+        android:text="cuisine type default"
+        android:id="@+id/ev_cuisine_type"
+        app:layout_constraintTop_toBottomOf="@id/ev_item_name"
         app:layout_constraintLeft_toLeftOf="parent" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="14dp"
-        android:text="location default"
-        android:id="@+id/ev_rest_location"
-        app:layout_constraintTop_toBottomOf="@id/ev_rest_hours"
+        android:text="price default"
+        android:id="@+id/ev_item_price"
+        app:layout_constraintTop_toBottomOf="@id/ev_cuisine_type"
         app:layout_constraintLeft_toLeftOf="parent" />
 
     <EditText
@@ -52,7 +52,16 @@
         android:textSize="14dp"
         android:text="rating default"
         android:id="@+id/ev_rating"
-        app:layout_constraintTop_toBottomOf="@id/ev_rest_location"
+        app:layout_constraintTop_toBottomOf="@id/ev_item_price"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14dp"
+        android:text="review default"
+        android:id="@+id/ev_review"
+        app:layout_constraintTop_toBottomOf="@id/ev_rating"
         app:layout_constraintLeft_toLeftOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

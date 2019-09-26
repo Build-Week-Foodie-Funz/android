@@ -4,9 +4,7 @@ import android.content.Context
 import android.net.Uri
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.saucefan.stuff.foodiefunbw.R
-import com.saucefan.stuff.foodiefunbw.displayRestFrag
-import com.saucefan.stuff.foodiefunbw.displayReviewFragment
+import com.saucefan.stuff.foodiefunbw.*
 import kotlinx.android.synthetic.main.activity_prefs.*
 
 class fragmentDisplayActivityDeleteThis : AppCompatActivity(),ViewRestFrag.ViewRestFragmentListener, ViewReviewFrag.ViewReviewFragmentListener {
@@ -18,10 +16,10 @@ class fragmentDisplayActivityDeleteThis : AppCompatActivity(),ViewRestFrag.ViewR
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_fragment_display_delete_this)
         btn_rest.setOnClickListener {
-            displayRestFrag(R.id.fragment_container_view_tag,2,this)
+            editRestFrag(R.id.fragment_container_view_tag,2,this)
         }
         btn_rev.setOnClickListener {
-            displayReviewFragment(R.id.fragment_container_view_tag,2,this)
+            editReviewFragment(R.id.fragment_container_view_tag,2,this)
         }
     }
 

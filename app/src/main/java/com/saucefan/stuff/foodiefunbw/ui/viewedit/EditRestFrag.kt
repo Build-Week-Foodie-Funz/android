@@ -141,7 +141,7 @@ class EditRestFrag : Fragment() {
 
         @JvmStatic
         fun newInstance(restID: Int) =
-                ViewRestFrag().apply {
+                EditRestFrag().apply {
                     arguments = Bundle().apply {
                         putInt(ARG_ResaurantID, restID)
 

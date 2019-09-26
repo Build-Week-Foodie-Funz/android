@@ -13,7 +13,9 @@ import com.saucefan.stuff.foodiefunbw.Model.FoodieEntry
 
 import com.saucefan.stuff.foodiefunbw.R
 import com.saucefan.stuff.foodiefunbw.viewmodel.FoodieEntryViewModel
+import kotlinx.android.synthetic.main.fragment_edit_review.*
 import kotlinx.android.synthetic.main.fragment_view_review.*
+import kotlinx.android.synthetic.main.fragment_view_review.ev_rating
 import kotlinx.coroutines.runBlocking
 import timber.log.Timber
 
@@ -57,6 +59,9 @@ class EditReviewFrag : Fragment() {
             Timber.i("rest obj set as ${chosenReviewObj.toString()}")
 
         }
+        else if (chosenReviewID==0) {
+            isNewObject=true
+        }
         else {
             Timber.i("chosenRevoewID = $chosenReviewID")
             Toast.makeText(activity,"no such review found -- chosenResaurantID = $chosenReviewID", Toast.LENGTH_LONG).show()
@@ -83,11 +88,11 @@ class EditReviewFrag : Fragment() {
                         .load(imgString)
                         .into(imgViewHeader)*/
 
-            tv_cuisine_type.text=finalObj.cuisineType
-            tv_item_name.text = finalObj.menuItemName
-            tv_item_price.text=finalObj.itemPrice.toString()
-            ev_rating.text=finalObj.rating
-            tv_review.text=finalObj.shortReview
+            ev_cuisine_type.hint=finalObj.cuisineType
+            ev_item_name.hint = finalObj.menuItemName
+            ev_item_price.hint=finalObj.itemPrice.toString()
+            ev_rating.hint=finalObj.rating
+            ev_review.hint=finalObj.shortReview
 
 
         }
@@ -137,7 +142,7 @@ class EditReviewFrag : Fragment() {
 
         @JvmStatic
         fun newInstance(reviewID: Int) =
-                ViewReviewFrag().apply {
+                EditReviewFrag().apply {
                     arguments = Bundle().apply {
                         putInt(ARG_ReviewID, reviewID)
 
