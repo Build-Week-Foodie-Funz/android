@@ -12,15 +12,28 @@ interface RoomDao {
     suspend fun insertReview(foodieEntry: FoodieEntry)
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun insertRest(foodieRestaurant: FoodieRestaurant)
+    suspend fun insertRestaurant(foodieRestaurant: FoodieRestaurant)
 
     @Update(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun update(foodieEntry: FoodieEntry)
+    suspend fun updateReview(foodieEntry: FoodieEntry)
+
+    @Update(onConflict = OnConflictStrategy.REPLACE)
+    suspend fun updateRestaurant(foodieRestaurant: FoodieRestaurant)
 
     @Delete
-    suspend fun delete(foodieEntry: FoodieEntry)
+    suspend fun deleteReview(foodieEntry: FoodieEntry)
+
+    @Delete
+    suspend fun deleteRestaurant(foodieRestaurant: FoodieRestaurant)
+
     @Query("SELECT * FROM review_table ORDER by revId desc")
-    fun readAllEntries(): LiveData<List<FoodieEntry>>
+    fun returnAllReviewss(): LiveData<List<FoodieEntry>>
+
+    @Query("SELECT * FROM restaurant_table ORDER by rest_id desc")
+    fun returnAllRestaurants(): LiveData<List<FoodieRestaurant>>
+
+    @Query("SELECT * FROM review_table where rest_name like :name")
+    fun returnReviewByRestName(name:String): LiveData<List<FoodieEntry>>
 
     @Query("SELECT * FROM restaurant_table where recent_visit like :time")
     suspend fun getEntriesByDate(time:Long): List<FoodieRestaurant>

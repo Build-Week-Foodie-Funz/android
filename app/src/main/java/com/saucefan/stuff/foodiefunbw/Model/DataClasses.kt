@@ -35,7 +35,7 @@ data class FoodieRestaurant(
         //2:if in later code writing they are convenient, they can be used
 
         @Ignore var restReviews:List<FoodieEntry>? = null, // recusive (self referential? whatever) definition in api, may be usefull at some point to have this capable of taking on reviews, but we do not want to store them like this"reviews": "Some Review, Some Review,...",
-        @Ignore val user: User? = null//a fully formed resturant under the api at current spec will contain a user object, however all objects for an android instance should belong to one users, hence the database will ignore this complicated data type to avoid unecessary processing and work
+        @Ignore var user: User? = null//a fully formed resturant under the api at current spec will contain a user object, however all objects for an android instance should belong to one users, hence the database will ignore this complicated data type to avoid unecessary processing and work
 ){
     constructor() : this(0, "", "", "", "", "", "", null,null,null)
 }

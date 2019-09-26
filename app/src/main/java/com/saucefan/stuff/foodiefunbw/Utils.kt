@@ -3,6 +3,8 @@ package com.saucefan.stuff.foodiefunbw
 import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import com.saucefan.stuff.foodiefunbw.Model.FoodieRestaurant
+import com.saucefan.stuff.foodiefunbw.ui.viewedit.EditRestFrag
+import com.saucefan.stuff.foodiefunbw.ui.viewedit.EditReviewFrag
 import com.saucefan.stuff.foodiefunbw.ui.viewedit.ViewRestFrag
 import com.saucefan.stuff.foodiefunbw.ui.viewedit.ViewReviewFrag
 
@@ -27,10 +29,46 @@ import com.saucefan.stuff.foodiefunbw.ui.viewedit.ViewReviewFrag
 // container where they should appear,
 // ID of object you wish to view
 // and context of the activity
+fun editReviewFragment(container:Int,reviewID:Int,context: Context,restName:String?):String {
+    var reviewFrag:EditReviewFrag
+    val tag = "reviewFrag$reviewID"
+    if (restName != null && reviewID==0){
+        //if this method is passed a string for restName and an ID of 0, we know it's trying to build a review for the restaurant with the name restName,
+        // so we passs that on on to the fragment
+       reviewFrag = EditReviewFrag.newInstance(reviewID,restName)
+    }
+    else {
+        reviewFrag = EditReviewFrag.newInstance(reviewID, null)
+    }
+    val ft = (context as AppCompatActivity).supportFragmentManager
+            .beginTransaction()
+            // 2
+            .add(container, reviewFrag, tag)
+            // 3
+            .addToBackStack("review$reviewID") //presumedly re'd name it the id or perhaps "rest$Id"
+            .commit()
+    return tag
+}
+
+fun editRestFrag(container:Int,restID:Int,context:Context):String  {
+    val tag = "restFrag$restID"
+    val restFrag = EditRestFrag.newInstance(restID)
+    val ft = (context as AppCompatActivity).supportFragmentManager
+            .beginTransaction()
+            // 2
+            .add(container, restFrag, tag)
+            // 3
+            .addToBackStack("rest$restID") //presumedly re'd name it the id or perhaps "rest$Id"
+            .commit()
+    return tag
+
+}
+
+
 fun displayReviewFragment(container:Int,reviewID:Int,context: Context):String {
 
     val tag = "reviewFrag$reviewID"
-    val reviewFrag: ViewReviewFrag = ViewReviewFrag.newInstance(1)
+    val reviewFrag = ViewReviewFrag.newInstance(reviewID)
     val ft = (context as AppCompatActivity).supportFragmentManager
             .beginTransaction()
             // 2
@@ -43,7 +81,7 @@ fun displayReviewFragment(container:Int,reviewID:Int,context: Context):String {
 
 fun displayRestFrag(container:Int,restID:Int,context:Context):String  {
     val tag = "restFrag$restID"
-    val restFrag = ViewRestFrag.newInstance(1)
+    val restFrag = ViewRestFrag.newInstance(restID)
     val ft = (context as AppCompatActivity).supportFragmentManager
             .beginTransaction()
             // 2
@@ -61,7 +99,7 @@ data class User  (
         val username:String, //user chosen username
         var password:String, // same but for a password
         var email:String, //why is there an email and a username?
-        var restaurant: List<FoodieRestaurant>
+        var restaurant: List<FoodieRestaurant>? = null
 
 /*
 * I got a bad feeling about this spec...
