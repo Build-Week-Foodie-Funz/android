@@ -32,7 +32,7 @@ import com.saucefan.stuff.foodiefunbw.ui.viewedit.ViewReviewFrag
 fun editReviewFragment(container:Int,reviewID:Int,context: Context):String {
 
     val tag = "reviewFrag$reviewID"
-    val reviewFrag = EditReviewFrag.newInstance(1)
+    val reviewFrag = EditReviewFrag.newInstance(reviewID)
     val ft = (context as AppCompatActivity).supportFragmentManager
             .beginTransaction()
             // 2
@@ -45,7 +45,7 @@ fun editReviewFragment(container:Int,reviewID:Int,context: Context):String {
 
 fun editRestFrag(container:Int,restID:Int,context:Context):String  {
     val tag = "restFrag$restID"
-    val restFrag = EditRestFrag.newInstance(1)
+    val restFrag = EditRestFrag.newInstance(restID)
     val ft = (context as AppCompatActivity).supportFragmentManager
             .beginTransaction()
             // 2
@@ -61,7 +61,7 @@ fun editRestFrag(container:Int,restID:Int,context:Context):String  {
 fun displayReviewFragment(container:Int,reviewID:Int,context: Context):String {
 
     val tag = "reviewFrag$reviewID"
-    val reviewFrag = ViewReviewFrag.newInstance(1)
+    val reviewFrag = ViewReviewFrag.newInstance(reviewID)
     val ft = (context as AppCompatActivity).supportFragmentManager
             .beginTransaction()
             // 2
@@ -74,7 +74,7 @@ fun displayReviewFragment(container:Int,reviewID:Int,context: Context):String {
 
 fun displayRestFrag(container:Int,restID:Int,context:Context):String  {
     val tag = "restFrag$restID"
-    val restFrag = ViewRestFrag.newInstance(1)
+    val restFrag = ViewRestFrag.newInstance(restID)
     val ft = (context as AppCompatActivity).supportFragmentManager
             .beginTransaction()
             // 2
