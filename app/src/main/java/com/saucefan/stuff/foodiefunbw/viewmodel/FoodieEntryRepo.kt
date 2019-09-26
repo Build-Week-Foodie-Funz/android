@@ -8,7 +8,23 @@ import com.saucefan.stuff.foodiefunbw.Model.FoodieRestaurant
 import com.saucefan.stuff.foodiefunbw.Model.room.RoomDao
 import kotlinx.coroutines.launch
 
+/*
+*
+* since we have a one-to-many relationship between restaurants and reviews,
+* and every review should have a restaurant parent, I anticipate there will be some issues
+* with changing restaurant names, deleting restaurants and then leaving behind orphaned reviews,
+* etc -- however, we will simply have to minimize these issues as they present themselves
+* in the future, the next time we have to model this style of relationship. We would be well served by having
+* additional knowledge of sqlite, foriegn keys and best practices in one-to-many situations.
+*
+* for now I think we can plow through.
+*
+* */
+
+
 class FoodieEntryRepo (private val roomDao:RoomDao) {
+
+
 
 
     val allEntries: LiveData<List<FoodieEntry>> = roomDao.returnAllReviewss()

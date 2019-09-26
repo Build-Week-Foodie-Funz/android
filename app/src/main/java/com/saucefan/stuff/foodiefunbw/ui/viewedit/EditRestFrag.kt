@@ -12,10 +12,18 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.saucefan.stuff.foodiefunbw.Model.FoodieRestaurant
 import com.saucefan.stuff.foodiefunbw.R
+import com.saucefan.stuff.foodiefunbw.User
 import com.saucefan.stuff.foodiefunbw.viewmodel.FoodieEntryViewModel
+import kotlinx.android.synthetic.main.fragment_edit_rest.*
 import kotlinx.android.synthetic.main.fragment_view_rest.*
+import kotlinx.android.synthetic.main.fragment_view_rest.ev_rating
+import kotlinx.android.synthetic.main.fragment_view_rest.ev_rest_hours
+import kotlinx.android.synthetic.main.fragment_view_rest.ev_rest_location
+import kotlinx.android.synthetic.main.fragment_view_rest.ev_rest_name
 import kotlinx.coroutines.runBlocking
 import timber.log.Timber
+import java.time.LocalDateTime
+import java.time.format.DateTimeFormatter
 
 private const val ARG_ResaurantID = "param1"
 
@@ -77,10 +85,67 @@ class EditRestFrag : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        //if we are making a new restaurant, make a an object to eventually be
+        //also change the text of the the buttons or whatever other housekeeping is needed
+        if (isNewObject) {
+            val current = LocalDateTime.now()
+            val formatter = DateTimeFormatter.ofPattern("dd-MM--yyyy")
+            val formatted = current.format(formatter)
+            var finalObj =FoodieRestaurant()
+            finalObj.restRating ="5 of 5"
+            finalObj.restHours
+            finalObj.restLocation
+            finalObj.restName
+            finalObj.restId
+            finalObj.recentVisit=formatted
+            finalObj.user= User("id","location","username","--","email",null)
+
+            btn_submit.text="Create"
+            btn_delete.text="Cancel"
+
+            ev_rating.text="enter rating out of 5"
+            ev_rest_hours.text = "enter hours of operation"
+            ev_rest_location.text="enter address or location"
+            ev_rest_name.text="enter restaurant name"
+
+            //finally, set onclick behavior of buttons
+
+            btn_submit.setOnClickListener {
+                Timber.i("attempting to insert ${finalObj.toString()}")
+
+                //insert the restaurant using viewModel
+                viewModel.insertRestaurant(finalObj)
+
+
+                //pop a toast to let user know rest has been created, hopefully livedata should handle the new rest in such a way as to make it immediately obvious to the user
+                Toast.makeText(view.context,"${finalObj.restName} created successfully! add a review!", Toast.LENGTH_SHORT).show()
+
+                //for the sake of symetry, we'll set isNewObject to false
+                !isNewObject
+                //trigger back press to close fragment
+                activity?.onBackPressed() ?:  Toast.makeText(activity,"no activity found to trigger on back pressed and close fragment", Toast.LENGTH_LONG).show()
+
+            }
+
+            btn_delete.setOnClickListener {
+                // we shouldn't have to do much of anything besides simply ditch the fragment
+                //pop a toast to let use know no rest was created
+                 Toast.makeText(view.context,"Restaurant not created", Toast.LENGTH_SHORT).show()
+
+                //for the sake of symetry, we'll set isNewObject to false
+                !isNewObject
+                //trigger back press to close fragment
+                activity?.onBackPressed() ?:  Toast.makeText(activity,"no activity found to trigger on back pressed and close fragment", Toast.LENGTH_LONG).show()
+
+            }
+
+
+        }
         //if we successfully have a restaurant and it is not a new object, fill in the views
-        if (chosenRestaurantObj != null && !isNewObject) {
+        else if (chosenRestaurantObj != null && !isNewObject) {
             //set the obj as a local val to avoid a whole lot of useless null checking, well, redundant null checking
-            val finalObj = chosenRestaurantObj as FoodieRestaurant
+            // as well as to allow us to make a meaningful diff of the old object and the new object changed by the user
+            var finalObj = chosenRestaurantObj as FoodieRestaurant
             //if the restaurant has photos in its array, set the first one and then we will likely have to make ImageView Dynamically, and glide them in for the rest
             if (!finalObj.restPhotos.isNullOrEmpty()) {
                 //glide the first image in here, should be little more than code like:
@@ -89,18 +154,63 @@ class EditRestFrag : Fragment() {
                             .load(imgString)
                             .into(imgViewHeader)*/
             }
+            //set buttons and make editviews the previous objects values
+            btn_submit.text="Update Restaurant"
+            btn_delete.text="Delete Restaurant Permanently"
+
             ev_rating.text=finalObj.restRating
             ev_rest_hours.text = finalObj.restHours
             ev_rest_location.text=finalObj.restLocation
             ev_rest_name.text=finalObj.restName
 
+            //finally set behavior of buttons
+            btn_submit.setOnClickListener {
+                Timber.i("attempting to insert ${finalObj.toString()}")
+
+                //insert the restaurant using viewModel
+                viewModel.insertRestaurant(finalObj)
+
+
+                //pop a toast to let user know rest has been created, hopefully livedata should handle the new rest in such a way as to make it immediately obvious to the user
+                Toast.makeText(view.context,"${finalObj.restName} created successfully! add a review!", Toast.LENGTH_SHORT).show()
+
+                //for the sake of symetry, we'll set isNewObject to false
+                !isNewObject
+                //trigger back press to close fragment
+                activity?.onBackPressed() ?:  Toast.makeText(activity,"no activity found to trigger on back pressed and close fragment", Toast.LENGTH_LONG).show()
+
+            }
+
+            btn_delete.setOnClickListener {
+                // we shouldn't have to do much of anything besides simply ditch the fragment
+                //pop a toast to let use know no rest was created
+                Toast.makeText(view.context,"Restaurant not created", Toast.LENGTH_SHORT).show()
+
+                //for the sake of symetry, we'll set isNewObject to false
+                !isNewObject
+                //trigger back press to close fragment
+                activity?.onBackPressed() ?:  Toast.makeText(activity,"no activity found to trigger on back pressed and close fragment", Toast.LENGTH_LONG).show()
+
+            }
+
         }
         //else let us know and exit the fragment
         else {
-            Timber.i("failed at onViewCreated -- obj null -- chosenRestaurantID = $chosenRestaurantID")
+            Timber.i("failed at onViewCreated -- obj null and not a new object -- how did we get here?-- chosenRestaurantID = $chosenRestaurantID")
+            //this code effectively presses the back button hence closing the fragment, there is some potential issues I could imagine here, esspecially with search view,
+            //but it should work in general
             activity?.onBackPressed() ?:  Toast.makeText(activity,"no activity found to trigger on back pressed and close fragment", Toast.LENGTH_LONG).show()
+        }
+
+        private fun sanitizeRestaurantData(foodieRestaurant: FoodieRestaurant):FoodieRestaurant {
+            //take in some rest data,
+            //analyze it for issues
+            //spit it back out
+            return sanitizeRestaurantData()
 
         }
+
+
 
 
     }
