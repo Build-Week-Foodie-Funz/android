@@ -89,10 +89,10 @@ class EditRestFrag : Fragment() {
                             .load(imgString)
                             .into(imgViewHeader)*/
             }
-            ev_rating.hint=finalObj.restRating
-            ev_rest_hours.hint = finalObj.restHours
-            ev_rest_location.hint=finalObj.restLocation
-            ev_rest_name.hint=finalObj.restName
+            ev_rating.text=finalObj.restRating
+            ev_rest_hours.text = finalObj.restHours
+            ev_rest_location.text=finalObj.restLocation
+            ev_rest_name.text=finalObj.restName
 
         }
         //else let us know and exit the fragment
