@@ -11,11 +11,9 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.saucefan.stuff.foodiefunbw.Model.FoodieRestaurant
-import com.saucefan.stuff.foodiefunbw.R
 import com.saucefan.stuff.foodiefunbw.User
 import com.saucefan.stuff.foodiefunbw.viewmodel.FoodieEntryViewModel
 import kotlinx.android.synthetic.main.fragment_edit_rest.*
-import kotlinx.android.synthetic.main.fragment_view_rest.*
 import kotlinx.android.synthetic.main.fragment_view_rest.ev_rating
 import kotlinx.android.synthetic.main.fragment_view_rest.ev_rest_hours
 import kotlinx.android.synthetic.main.fragment_view_rest.ev_rest_location
@@ -24,10 +22,14 @@ import kotlinx.coroutines.runBlocking
 import timber.log.Timber
 import java.time.LocalDateTime
 import java.time.format.DateTimeFormatter
+import android.app.AlertDialog
+
 
 private const val ARG_ResaurantID = "param1"
 
 /**
+ *
+ * TODO ADD PASSIVE INTENT GET PHOTO URI, THE CODE FOR THAT IS IN RECEIPTTRACKER FROM LAST TIMING IF NOTHING ELSE
 edit review fragment
 should take an id,
 call any sanitation needed on the data,
@@ -79,7 +81,7 @@ class EditRestFrag : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
-        return inflater.inflate(R.layout.fragment_edit_rest, container, false)
+        return inflater.inflate(com.saucefan.stuff.foodiefunbw.R.layout.fragment_edit_rest, container, false)
 
     }
 
@@ -165,32 +167,51 @@ class EditRestFrag : Fragment() {
 
             //finally set behavior of buttons
             btn_submit.setOnClickListener {
-                Timber.i("attempting to insert ${finalObj.toString()}")
+                // we make a new obj where by we take in data from the ev forms and alter the preexisting finalObj
+                var objtoupdate = sanitizeRestaurantData(finalObj)
 
-                //insert the restaurant using viewModel
-                viewModel.insertRestaurant(finalObj)
+                // great, now we need to see if we're changing the name of the restaurant
 
+                if (objtoupdate.restName != finalObj.restName) {
+                    Timber.i("update object ${objtoupdate.restName} != ${finalObj.restName}")
 
-                //pop a toast to let user know rest has been created, hopefully livedata should handle the new rest in such a way as to make it immediately obvious to the user
-                Toast.makeText(view.context,"${finalObj.restName} created successfully! add a review!", Toast.LENGTH_SHORT).show()
+                    //trigger cascading update of all reviews with the same name as the old restaurant
+                    //TODO: UPDATE THIS CRUCIAL PIECE OF UPDATE CODE (heh)
+                }
+                Timber.i("attempting to update ${finalObj.toString()}")
 
-                //for the sake of symetry, we'll set isNewObject to false
-                !isNewObject
+                //update the restaurant using viewModel
+                viewModel.updateRestaurant(finalObj)
+
+                //pop a toast to let user know rest has been updated, hopefully livedata should handle the updated rest in such a way as to make it immediately obvious to the user
+                Toast.makeText(view.context,"${finalObj.restName} updated successfully!", Toast.LENGTH_SHORT).show()
+
                 //trigger back press to close fragment
                 activity?.onBackPressed() ?:  Toast.makeText(activity,"no activity found to trigger on back pressed and close fragment", Toast.LENGTH_LONG).show()
 
             }
 
             btn_delete.setOnClickListener {
-                // we shouldn't have to do much of anything besides simply ditch the fragment
-                //pop a toast to let use know no rest was created
-                Toast.makeText(view.context,"Restaurant not created", Toast.LENGTH_SHORT).show()
+                //on delete press, we'd like to confirm with the user
+                val builder = AlertDialog.Builder(view.context)
+                builder.setTitle("Delete restaurant and all it's reviews?")
+                builder.setMessage("You are about to delete all records of ${finalObj.restName} and all reviews you've recorded for the this restaurant. Do you really want to proceed?")
+                builder.setCancelable(false)
+               builder.setPositiveButton("YES"){dialog, which ->
+                //they've confirmed the delete
+                    Toast.makeText(view.context,"You've choosen to delete ${finalObj.restName} and all saved reviews",Toast.LENGTH_SHORT).show()
+                    viewModel.deleteRestaurant(finalObj)
+                   //and we leave the fragment
+                   activity?.onBackPressed() ?:  Toast.makeText(activity,"no activity found to trigger on back pressed and close fragment", Toast.LENGTH_LONG).show()
 
-                //for the sake of symetry, we'll set isNewObject to false
-                !isNewObject
-                //trigger back press to close fragment
-                activity?.onBackPressed() ?:  Toast.makeText(activity,"no activity found to trigger on back pressed and close fragment", Toast.LENGTH_LONG).show()
+               }
 
+                builder.setNegativeButton("cancel"){dialog,which ->
+                    //cancel delete code here
+                    Toast.makeText(view.context,"Delete Canceled",Toast.LENGTH_SHORT).show()
+                    activity?.onBackPressed() ?:  Toast.makeText(activity,"no activity found to trigger on back pressed and close fragment", Toast.LENGTH_LONG).show()
+                }
+                builder.show()
             }
 
         }
@@ -202,19 +223,33 @@ class EditRestFrag : Fragment() {
             activity?.onBackPressed() ?:  Toast.makeText(activity,"no activity found to trigger on back pressed and close fragment", Toast.LENGTH_LONG).show()
         }
 
-        private fun sanitizeRestaurantData(foodieRestaurant: FoodieRestaurant):FoodieRestaurant {
-            //take in some rest data,
-            //analyze it for issues
-            //spit it back out
-            return sanitizeRestaurantData()
 
-        }
 
 
 
 
     }
+    fun sanitizeRestaurantData(foodieRestaurant: FoodieRestaurant):FoodieRestaurant {
+        //take in some rest data,
+        //analyze it for issues
+        //spit it back out
+        if (ev_rating.text.toString() != "") {
+            foodieRestaurant.restRating = ev_rating.text.toString()
+        }
+        if (ev_rest_hours.text.toString() != "") {
+            foodieRestaurant.restHours = ev_rest_hours.text.toString()
+        }
+            if (ev_rest_location.text.toString() != "") {
+                foodieRestaurant.restLocation = ev_rest_location.text.toString()
+            }
+                if (ev_rest_name.text.toString() != "") {
+                    foodieRestaurant.restName = ev_rest_name.text.toString()
+                }
 
+
+        return foodieRestaurant
+
+    }
     fun onEditClick(uri: Uri) {
         listener?.onFragmentInteraction(uri)
     }
