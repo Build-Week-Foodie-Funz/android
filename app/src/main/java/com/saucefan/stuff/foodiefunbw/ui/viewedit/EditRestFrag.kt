@@ -52,7 +52,7 @@ class EditRestFrag : Fragment() {
         arguments?.let {
             chosenRestaurantID = it.getInt(ARG_ResaurantID)
         }
-        if (chosenRestaurantID != null && chosenRestaurantID != -1) {
+        if (chosenRestaurantID != null && chosenRestaurantID != 0) {
             // I believe run blocking is the correct choice here for the following reasons:
             //1. this should be a very simple query, with a single answer and no ambiguity
             //2. we can be pretty confident that the user will never be the victim of a "bad" query
