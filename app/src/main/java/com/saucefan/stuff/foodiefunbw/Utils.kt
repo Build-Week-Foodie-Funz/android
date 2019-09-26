@@ -3,6 +3,8 @@ package com.saucefan.stuff.foodiefunbw
 import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import com.saucefan.stuff.foodiefunbw.Model.FoodieRestaurant
+import com.saucefan.stuff.foodiefunbw.ui.viewedit.EditRestFrag
+import com.saucefan.stuff.foodiefunbw.ui.viewedit.EditReviewFrag
 import com.saucefan.stuff.foodiefunbw.ui.viewedit.ViewRestFrag
 import com.saucefan.stuff.foodiefunbw.ui.viewedit.ViewReviewFrag
 
@@ -27,10 +29,39 @@ import com.saucefan.stuff.foodiefunbw.ui.viewedit.ViewReviewFrag
 // container where they should appear,
 // ID of object you wish to view
 // and context of the activity
+fun editReviewFragment(container:Int,reviewID:Int,context: Context):String {
+
+    val tag = "reviewFrag$reviewID"
+    val reviewFrag = EditReviewFrag.newInstance(1)
+    val ft = (context as AppCompatActivity).supportFragmentManager
+            .beginTransaction()
+            // 2
+            .add(container, reviewFrag, tag)
+            // 3
+            .addToBackStack("review$reviewID") //presumedly re'd name it the id or perhaps "rest$Id"
+            .commit()
+    return tag
+}
+
+fun editRestFrag(container:Int,restID:Int,context:Context):String  {
+    val tag = "restFrag$restID"
+    val restFrag = EditRestFrag.newInstance(1)
+    val ft = (context as AppCompatActivity).supportFragmentManager
+            .beginTransaction()
+            // 2
+            .add(container, restFrag, tag)
+            // 3
+            .addToBackStack("rest$restID") //presumedly re'd name it the id or perhaps "rest$Id"
+            .commit()
+    return tag
+
+}
+
+
 fun displayReviewFragment(container:Int,reviewID:Int,context: Context):String {
 
     val tag = "reviewFrag$reviewID"
-    val reviewFrag: ViewReviewFrag = ViewReviewFrag.newInstance(1)
+    val reviewFrag = ViewReviewFrag.newInstance(1)
     val ft = (context as AppCompatActivity).supportFragmentManager
             .beginTransaction()
             // 2
