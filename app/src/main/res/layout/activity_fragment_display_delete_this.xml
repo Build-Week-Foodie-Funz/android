@@ -6,7 +6,14 @@
     android:layout_height="match_parent"
     tools:context=".ui.viewedit.fragmentDisplayActivityDeleteThis"
     android:elevation="0dp">
-
+<EditText
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="enter frag id to test here"
+    android:id="@+id/et"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    />
 
     <Button
         android:layout_width="wrap_content"
