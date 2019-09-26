@@ -10,13 +10,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aec44ed3-a25c-4116-9e34-8f65d43a4579" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/Model/room/RoomDao.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/Model/room/RoomDao.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/Model/room/RoomDatabase.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/Model/room/RoomDatabase.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/Model/DataClasses.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/Model/DataClasses.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/Utils.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/Utils.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/ui/viewedit/EditRestFrag.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/ui/viewedit/EditRestFrag.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/ui/viewedit/EditReviewFrag.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/ui/viewedit/EditReviewFrag.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/viewmodel/FoodieEntryRepo.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/viewmodel/FoodieEntryRepo.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/viewmodel/FoodieEntryViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/viewmodel/FoodieEntryViewModel.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/fragment_edit_rest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/fragment_edit_rest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/fragment_edit_review.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/fragment_edit_review.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/build/classes/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -45,74 +47,75 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/ui/viewedit/EditRestFrag.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="309">
-              <caret line="101" lean-forward="true" selection-start-line="101" selection-end-line="101" />
+            <state relative-caret-position="525">
+              <caret line="193" column="13" selection-start-line="193" selection-start-column="13" selection-end-line="193" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/viewmodel/FoodieRVAdapter.kt">
+        <entry file="file://$PROJECT_DIR$/src/main/res/layout/activity_login.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="37" selection-start-line="3" selection-start-column="37" selection-end-line="3" selection-end-column="37" />
+            <state relative-caret-position="319">
+              <caret line="81" column="39" selection-start-line="81" selection-start-column="39" selection-end-line="81" selection-end-column="39" />
+            </state>
+          </provider>
+          <provider editor-type-id="android-designer2" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/res/layout/activity_dashboard.xml">
+          <provider selected="true" editor-type-id="text-editor" />
+          <provider editor-type-id="android-designer2" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/res/layout/fragment_edit_rest.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="364">
+              <caret line="68" column="35" selection-start-line="68" selection-start-column="25" selection-end-line="68" selection-end-column="35" />
+            </state>
+          </provider>
+          <provider editor-type-id="android-designer2" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/res/layout/fragment_edit_review.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="500">
+              <caret line="81" column="10" selection-start-line="81" selection-start-column="10" selection-end-line="81" selection-end-column="10" />
+            </state>
+          </provider>
+          <provider editor-type-id="android-designer2" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/res/layout/activity_fragment_display_delete_this.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="14" column="49" selection-start-line="14" selection-start-column="49" selection-end-line="14" selection-end-column="49" />
+            </state>
+          </provider>
+          <provider editor-type-id="android-designer2" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/Model/DataClasses.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="30" selection-start-line="30" selection-end-line="30" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/viewmodel/FoodieEntryViewModel.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="567">
-              <caret line="87" column="5" lean-forward="true" selection-start-line="87" selection-start-column="5" selection-end-line="87" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/viewmodel/FoodieEntryRepo.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="771">
-              <caret line="98" selection-start-line="98" selection-end-line="98" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.lifecycle/lifecycle-livedata-core/2.2.0-alpha05/6dcd7f31093b360c4a8bced748159e6fd237ba52/lifecycle-livedata-core-2.2.0-alpha05-sources.jar!/androidx/lifecycle/LiveData.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="298">
-              <caret line="58" column="22" selection-start-line="58" selection-start-column="22" selection-end-line="58" selection-end-column="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/Model/room/RoomDao.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="544">
-              <caret line="35" column="30" selection-start-line="35" selection-start-column="8" selection-end-line="35" selection-end-column="30" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/Model/room/RoomDatabase.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="197">
-              <caret line="88" selection-start-line="88" selection-end-line="88" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/ui/viewedit/fragmentDisplayActivityDeleteThis.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="23" column="36" selection-start-line="23" selection-start-column="36" selection-end-line="23" selection-end-column="36" />
+            <state relative-caret-position="221">
+              <caret line="19" column="38" selection-start-line="19" selection-start-column="38" selection-end-line="19" selection-end-column="38" />
             </state>
           </provider>
         </entry>
@@ -120,8 +123,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/Utils.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1190">
-              <caret line="76" column="50" selection-start-line="76" selection-start-column="50" selection-end-line="76" selection-end-column="50" />
+            <state relative-caret-position="383">
+              <caret line="96" column="2" selection-start-line="96" selection-start-column="2" selection-end-line="96" selection-end-column="2" />
             </state>
           </provider>
         </entry>
@@ -129,7 +132,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/ui/viewedit/EditReviewFrag.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-272">
+            <state relative-caret-position="17">
               <caret line="14" column="60" selection-start-line="14" selection-start-column="60" selection-end-line="14" selection-end-column="60" />
             </state>
           </provider>
@@ -170,7 +173,6 @@
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch_5.kts" />
         <option value="$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/ui/LoginActivity.kt" />
         <option value="$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/Model/room/RoomDatabase.kt" />
-        <option value="$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/Model/DataClasses.kt" />
         <option value="$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/Model/room/EntryMockData.kt" />
         <option value="$PROJECT_DIR$/build.gradle" />
         <option value="$PROJECT_DIR$/src/main/res/layout/activity_search.xml" />
@@ -185,15 +187,18 @@
         <option value="$PROJECT_DIR$/src/main/res/layout/fragment_view_review.xml" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch_4.txt" />
         <option value="$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/ui/viewedit/ViewReviewFrag.kt" />
-        <option value="$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/Utils.kt" />
         <option value="$PROJECT_DIR$/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/src/main/res/layout/activity_prefs.xml" />
         <option value="$PROJECT_DIR$/src/main/res/layout/activity_fragment_display_delete_this.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/ui/viewedit/fragmentDisplayActivityDeleteThis.kt" />
-        <option value="$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/ui/viewedit/EditRestFrag.kt" />
         <option value="$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/Model/room/RoomDao.kt" />
         <option value="$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/viewmodel/FoodieEntryViewModel.kt" />
         <option value="$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/viewmodel/FoodieEntryRepo.kt" />
+        <option value="$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/Utils.kt" />
+        <option value="$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/Model/DataClasses.kt" />
+        <option value="$PROJECT_DIR$/src/main/res/layout/fragment_edit_review.xml" />
+        <option value="$PROJECT_DIR$/src/main/res/layout/fragment_edit_rest.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/ui/viewedit/EditRestFrag.kt" />
       </list>
     </option>
   </component>
@@ -325,12 +330,6 @@
             <path>
               <item name="app" type="1abcf292:AndroidViewProjectNode" />
               <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-              <item name="foodiefunbw" type="cbb59c9e:AndroidPsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="app" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
               <item name="res" type="d4f16f75:AndroidResFolderNode" />
             </path>
             <path>
@@ -358,6 +357,7 @@
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="PsdUISettings">
+    <option name="MODULE_TAB" value="Default Config" />
     <option name="LAST_EDITED_BUILD_TYPE" value="release" />
   </component>
   <component name="RecentsManager">
@@ -622,8 +622,8 @@
     <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Captures" order="0" side_tool="true" weight="0.25" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" sideWeight="0.49837133" visible="true" weight="0.33374083" />
+      <window_info id="Captures" order="0" sideWeight="0.50247115" side_tool="true" visible="true" weight="0.33374083" />
+      <window_info content_ui="combo" id="Project" order="1" sideWeight="0.49752882" visible="true" weight="0.33374083" />
       <window_info id="Structure" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" sideWeight="0.50162864" side_tool="true" weight="0.33374083" />
       <window_info id="Build Variants" order="4" side_tool="true" />
@@ -633,7 +633,7 @@
       <window_info id="Capture Tool" order="8" />
       <window_info anchor="bottom" id="Find" order="0" weight="0.32899022" />
       <window_info anchor="bottom" id="Run" order="1" />
-      <window_info anchor="bottom" id="Logcat" order="2" weight="0.34093377" />
+      <window_info active="true" anchor="bottom" id="Logcat" order="2" visible="true" weight="0.34093377" />
       <window_info anchor="bottom" id="TODO" order="3" />
       <window_info anchor="bottom" id="Debug" order="4" weight="0.32899022" />
       <window_info anchor="bottom" id="Terminal" order="5" />
@@ -765,61 +765,61 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/ui/viewedit/EditRestFrag.kt</url>
-          <line>41</line>
+          <line>49</line>
           <properties />
           <option name="timeStamp" value="41" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/ui/viewedit/EditRestFrag.kt</url>
-          <line>39</line>
+          <line>47</line>
           <properties />
           <option name="timeStamp" value="42" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/ui/viewedit/EditRestFrag.kt</url>
-          <line>44</line>
+          <line>52</line>
           <properties />
           <option name="timeStamp" value="53" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/ui/viewedit/EditRestFrag.kt</url>
-          <line>57</line>
+          <line>65</line>
           <properties />
           <option name="timeStamp" value="54" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-field">
           <url>file://$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/ui/viewedit/EditRestFrag.kt</url>
-          <line>30</line>
+          <line>38</line>
           <properties myFieldName="chosenRestaurantID" myClassName="com.saucefan.stuff.foodiefunbw.ui.viewedit.EditRestFrag" />
           <option name="timeStamp" value="43" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-field">
           <url>file://$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/ui/viewedit/EditRestFrag.kt</url>
-          <line>19</line>
+          <line>27</line>
           <properties myFieldName="ARG_ResaurantID" myClassName="com.saucefan.stuff.foodiefunbw.ui.viewedit.EditRestFragKt" />
           <option name="timeStamp" value="45" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-field">
           <url>file://$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/ui/viewedit/EditRestFrag.kt</url>
-          <line>31</line>
+          <line>39</line>
           <properties myFieldName="chosenRestaurantObj" myClassName="com.saucefan.stuff.foodiefunbw.ui.viewedit.EditRestFrag" />
           <option name="timeStamp" value="46" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-field">
           <url>file://$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/ui/viewedit/EditRestFrag.kt</url>
-          <line>34</line>
+          <line>42</line>
           <properties myFieldName="isNewObject" myClassName="com.saucefan.stuff.foodiefunbw.ui.viewedit.EditRestFrag" />
           <option name="timeStamp" value="48" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-field">
           <url>file://$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/ui/viewedit/EditRestFrag.kt</url>
-          <line>33</line>
+          <line>41</line>
           <properties myFieldName="viewModel" myClassName="com.saucefan.stuff.foodiefunbw.ui.viewedit.EditRestFrag" />
           <option name="timeStamp" value="49" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-field">
           <url>file://$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/ui/viewedit/EditRestFrag.kt</url>
-          <line>32</line>
+          <line>40</line>
           <properties myFieldName="listener" myClassName="com.saucefan.stuff.foodiefunbw.ui.viewedit.EditRestFrag" />
           <option name="timeStamp" value="50" />
         </line-breakpoint>
@@ -917,14 +917,6 @@
     <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_3.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/res/layout/activity_login.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="523">
-          <caret line="81" column="39" selection-start-line="81" selection-start-column="39" selection-end-line="81" selection-end-column="39" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/res/layout/fragment_view_rest.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -975,16 +967,6 @@
       </provider>
       <provider editor-type-id="android-designer2" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/res/layout/activity_dashboard.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/Model/DataClasses.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="29" column="22" selection-start-line="29" selection-start-column="12" selection-end-line="29" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/ui/DashboardActivity.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -1022,22 +1004,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/res/layout/fragment_edit_review.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" column="32" selection-start-line="25" selection-start-column="32" selection-end-line="25" selection-end-column="32" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/res/layout/fragment_edit_rest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="36" column="62" selection-end-line="57" selection-end-column="52" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/res/layout/fragment_view_review.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="969">
@@ -1068,49 +1034,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/res/layout/activity_fragment_display_delete_this.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="14" column="49" selection-start-line="14" selection-start-column="49" selection-end-line="14" selection-end-column="49" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/Utils.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1190">
-          <caret line="76" column="50" selection-start-line="76" selection-start-column="50" selection-end-line="76" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/ui/viewedit/EditReviewFrag.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-272">
-          <caret line="14" column="60" selection-start-line="14" selection-start-column="60" selection-end-line="14" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/ui/viewedit/fragmentDisplayActivityDeleteThis.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="23" column="36" selection-start-line="23" selection-start-column="36" selection-end-line="23" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/Model/room/RoomDatabase.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="197">
-          <caret line="88" selection-start-line="88" selection-end-line="88" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/ui/viewedit/EditRestFrag.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="309">
-          <caret line="101" lean-forward="true" selection-start-line="101" selection-end-line="101" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/viewmodel/FoodieRVAdapter.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
@@ -1120,7 +1043,7 @@
     </entry>
     <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.lifecycle/lifecycle-livedata-core/2.2.0-alpha05/6dcd7f31093b360c4a8bced748159e6fd237ba52/lifecycle-livedata-core-2.2.0-alpha05-sources.jar!/androidx/lifecycle/LiveData.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
+        <state relative-caret-position="578">
           <caret line="58" column="22" selection-start-line="58" selection-start-column="22" selection-end-line="58" selection-end-column="22" />
         </state>
       </provider>
@@ -1132,17 +1055,95 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/Model/room/RoomDatabase.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1343">
+          <caret line="88" selection-start-line="88" selection-end-line="88" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/ui/viewedit/fragmentDisplayActivityDeleteThis.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="23" column="36" selection-start-line="23" selection-start-column="36" selection-end-line="23" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/viewmodel/FoodieEntryViewModel.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="567">
-          <caret line="87" column="5" lean-forward="true" selection-start-line="87" selection-start-column="5" selection-end-line="87" selection-end-column="5" />
+        <state relative-caret-position="695">
+          <caret line="85" column="2" selection-start-line="85" selection-start-column="2" selection-end-line="91" selection-end-column="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/viewmodel/FoodieEntryRepo.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="771">
-          <caret line="98" selection-start-line="98" selection-end-line="98" />
+        <state relative-caret-position="221">
+          <caret line="19" column="38" selection-start-line="19" selection-start-column="38" selection-end-line="19" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/ui/viewedit/EditReviewFrag.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="14" column="60" selection-start-line="14" selection-start-column="60" selection-end-line="14" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/Utils.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="383">
+          <caret line="96" column="2" selection-start-line="96" selection-start-column="2" selection-end-line="96" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/Model/DataClasses.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="30" selection-start-line="30" selection-end-line="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/layout/fragment_edit_review.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="500">
+          <caret line="81" column="10" selection-start-line="81" selection-start-column="10" selection-end-line="81" selection-end-column="10" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/layout/activity_login.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="319">
+          <caret line="81" column="39" selection-start-line="81" selection-start-column="39" selection-end-line="81" selection-end-column="39" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/layout/activity_dashboard.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/layout/activity_fragment_display_delete_this.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="14" column="49" selection-start-line="14" selection-start-column="49" selection-end-line="14" selection-end-column="49" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/layout/fragment_edit_rest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="68" column="35" selection-start-line="68" selection-start-column="25" selection-end-line="68" selection-end-column="35" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/saucefan/stuff/foodiefunbw/ui/viewedit/EditRestFrag.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="193" column="13" selection-start-line="193" selection-start-column="13" selection-end-line="193" selection-end-column="13" />
         </state>
       </provider>
     </entry>

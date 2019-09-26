@@ -92,7 +92,7 @@ data class User  (
         val username:String, //user chosen username
         var password:String, // same but for a password
         var email:String, //why is there an email and a username?
-        var restaurant: List<FoodieRestaurant>
+        var restaurant: List<FoodieRestaurant>? = null
 
 /*
 * I got a bad feeling about this spec...
