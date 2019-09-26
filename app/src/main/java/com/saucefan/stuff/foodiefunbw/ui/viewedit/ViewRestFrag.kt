@@ -37,7 +37,7 @@ class ViewRestFrag : Fragment() {
         arguments?.let {
             chosenResaurantID = it.getInt(ARG_ResaurantID)
         }
-        if (chosenResaurantID != null && chosenResaurantID != -1) {
+        if (chosenResaurantID != null && chosenResaurantID as Int >= -1) {
           // I believe run blocking is the correct choice here for the following reasons:
             //1. this should be a very simple query, with a single answer and no ambiguity
             //2. we can be pretty confident that the user will never be the victim of a "bad" query
