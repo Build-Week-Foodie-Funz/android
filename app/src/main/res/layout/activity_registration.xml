@@ -52,7 +52,10 @@
             android:paddingLeft="20dp"
             android:padding="15dp" />
 
-        <salmaan.ahmsal.com.customizablespinner.CustomizableSpinner
+      <!--
+      Country spinner
+
+      <salmaan.ahmsal.com.customizablespinner.CustomizableSpinner
             android:id="@+id/spinner"
             app:selectedTextColor="@color/colorAccent"
             app:dropDownTextColor="@color/colorAccent"
@@ -67,6 +70,8 @@
 
 
             />
+
+            -->
 
         <EditText
             android:id="@+id/email"
