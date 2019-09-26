@@ -22,12 +22,17 @@ import kotlinx.coroutines.*
 import kotlin.coroutines.CoroutineContext
 
 class SearchActivity : AppCompatActivity() {
+
     private var entryDatabase: EntryDatabase? = null
     private lateinit var searchView: SearchView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_search)
+        val actionBar = supportActionBar
+        actionBar!!.title = "Click the icon to search by restaurant"
         entryDatabase = EntryDatabase.getInstance(this)!!
+
+
     }
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         val inflater = menuInflater

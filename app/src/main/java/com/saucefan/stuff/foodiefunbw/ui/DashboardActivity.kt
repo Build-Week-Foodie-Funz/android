@@ -3,9 +3,12 @@ package com.saucefan.stuff.foodiefunbw.ui
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.fragment.app.FragmentManager
 import com.saucefan.stuff.foodiefunbw.Model.FoodieEntry
 import com.saucefan.stuff.foodiefunbw.R
 import com.saucefan.stuff.foodiefunbw.ui.search.SearchActivity
+import com.saucefan.stuff.foodiefunbw.ui.viewedit.ViewRestFrag
+import com.saucefan.stuff.foodiefunbw.ui.viewedit.ViewReviewFrag
 import kotlinx.android.synthetic.main.activity_dashboard.*
 
 class DashboardActivity : AppCompatActivity() {
