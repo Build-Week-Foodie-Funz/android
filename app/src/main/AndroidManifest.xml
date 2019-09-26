@@ -25,7 +25,6 @@
         <activity android:name=".ui.LoginActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"
             >
-        <activity android:name=".ui.viewedit.fragmentDisplayActivityDeleteThis">
    
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
