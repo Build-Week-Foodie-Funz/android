@@ -92,5 +92,14 @@ dependencies {
     //For the fancy wave effect
     implementation 'com.scwang.wave:MultiWaveHeader:1.0.0-alpha-1'
 
+    implementation 'com.github.salmaanahmed:CustomizableSpinner:1.0'
+
+    //Needed for search
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    
+
+
+
+
 
 }
