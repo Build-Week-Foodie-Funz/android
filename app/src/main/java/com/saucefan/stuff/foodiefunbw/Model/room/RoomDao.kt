@@ -37,5 +37,8 @@ interface RoomDao {
     @Query("SELECT * FROM review_table where revId like :id")
     suspend fun getReviewsByID(id:Int): FoodieEntry
 
+    @Query("SELECT * FROM restaurant_table")
+    fun getAllRest(): LiveData<List<FoodieRestaurant>>
+
 
 }

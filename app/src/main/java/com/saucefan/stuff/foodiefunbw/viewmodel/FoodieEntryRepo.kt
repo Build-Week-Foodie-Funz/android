@@ -34,4 +34,12 @@ class FoodieEntryRepo (private val roomDao:RoomDao) {
     suspend fun getReviewsByID(id:Int): FoodieEntry {
          return roomDao.getReviewsByID(id)
      }
+
+    fun returnAllRestaurants(): LiveData<List<FoodieRestaurant>> {
+        return roomDao.getAllRest()
+    }
+
+
+
+
 }
