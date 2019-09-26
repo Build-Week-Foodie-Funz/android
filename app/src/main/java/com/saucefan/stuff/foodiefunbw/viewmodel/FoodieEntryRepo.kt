@@ -1,28 +1,52 @@
 package com.saucefan.stuff.foodiefunbw.viewmodel
 
 import androidx.lifecycle.LiveData
+import androidx.lifecycle.viewModelScope
 import androidx.room.Query
 import com.saucefan.stuff.foodiefunbw.Model.FoodieEntry
 import com.saucefan.stuff.foodiefunbw.Model.FoodieRestaurant
 import com.saucefan.stuff.foodiefunbw.Model.room.RoomDao
+import kotlinx.coroutines.launch
 
 class FoodieEntryRepo (private val roomDao:RoomDao) {
 
 
-    val allEntries: LiveData<List<FoodieEntry>> = roomDao.readAllEntries()
+    val allEntries: LiveData<List<FoodieEntry>> = roomDao.returnAllReviewss()
 
 
     suspend fun insertReview(foodieEntry: FoodieEntry) {
         roomDao.insertReview(foodieEntry)
     }
+    suspend fun insertRestaurant(foodieRestaurant: FoodieRestaurant) {
+        roomDao.insertRestaurant(foodieRestaurant)
+    }
+
     suspend fun updateReview(foodieEntry: FoodieEntry){
-        roomDao.update(foodieEntry)
+        roomDao.updateReview(foodieEntry)
+
     }
-     fun returnAllReviews():LiveData<List<FoodieEntry>>{
-         return roomDao.readAllEntries()
+    suspend fun updateRestaurant(foodieRestaurant: FoodieRestaurant){
+        roomDao.updateRestaurant(foodieRestaurant)
     }
+
+
     suspend fun deleteReview(foodieEntry: FoodieEntry){
-        roomDao.delete(foodieEntry)
+        roomDao.deleteReview(foodieEntry)
+    }
+
+    suspend fun deleteRestaurant(foodieRestaurant: FoodieRestaurant){
+        roomDao.deleteRestaurant(foodieRestaurant)
+    }
+
+    fun returnAllReviews():LiveData<List<FoodieEntry>>{
+    return roomDao.returnAllReviewss()
+}
+    fun returnAllRestaurants(): LiveData<List<FoodieRestaurant>> {
+        return roomDao.returnAllRestaurants()
+    }
+
+    fun returnReviewByRestName(name:String): LiveData<List<FoodieEntry>> {
+        return roomDao.returnReviewByRestName(name)
     }
     suspend fun getEntriesByDate(time:Long):List<FoodieRestaurant>{
             return roomDao.getEntriesByDate(time)
@@ -34,4 +58,41 @@ class FoodieEntryRepo (private val roomDao:RoomDao) {
     suspend fun getReviewsByID(id:Int): FoodieEntry {
          return roomDao.getReviewsByID(id)
      }
+
 }
+
+
+/*
+    fun insertRestaurant(foodieRestaurant: FoodieRestaurant) =
+            viewModelScope.launch {
+                repository.insertRestaurant(foodieRestaurant)
+            }
+    fun updateReview(foodieEntry: FoodieEntry) = viewModelScope.launch {
+        repository.updateReview(foodieEntry)
+    }
+    fun updateReview(foodieRestaurant: FoodieRestaurant) = viewModelScope.launch {
+        repository.updateRestaurant(foodieRestaurant)
+    }
+
+    fun deleteReview(foodieEntry: FoodieEntry) = viewModelScope.launch {
+        repository.deleteReview(foodieEntry)
+    }
+
+    fun deleteRestaurant(foodieRestaurant: FoodieRestaurant) = viewModelScope.launch {
+        repository.deleteResaurant(foodieRestaurant)
+    }
+
+    fun returnAllReviews(): LiveData<List<FoodieEntry>> {
+        return repository.returnAllReviews()
+    }
+    fun returnAllRestaurants(): LiveData<List<FoodieRestaurant>> {
+        return repository.returnAllRestaurants()
+    }
+
+    fun returnReviewByRestName(name:String): LiveData<List<FoodieEntry>> {
+        return repository.returnReviewByRestName()
+    }
+
+    */
+
+

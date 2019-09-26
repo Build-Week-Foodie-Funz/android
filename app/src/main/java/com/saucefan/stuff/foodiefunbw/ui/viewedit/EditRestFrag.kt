@@ -23,7 +23,7 @@ private const val ARG_ResaurantID = "param1"
 edit review fragment
 should take an id,
 call any sanitation needed on the data,
-and then either create or update
+and then either create or updateReview
 
  ID should be passed as 0 if is new object
  */

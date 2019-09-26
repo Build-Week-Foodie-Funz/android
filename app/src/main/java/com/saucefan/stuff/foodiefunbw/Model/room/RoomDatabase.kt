@@ -90,7 +90,7 @@ abstract class EntryDatabase : RoomDatabase() {
                                 roomDao.insertReview(it)
                          }
                              EntryMockData.restList.forEach{
-                                  roomDao.insertRest(it)
+                                  roomDao.insertRestaurant(it)
                               }
 
             // TODO: Add your own words!
