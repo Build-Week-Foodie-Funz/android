@@ -37,7 +37,7 @@ import kotlinx.coroutines.launch
 //
 
 //should be able to dispatch a create event to the database
-//should be able to tell the sync service to update certain files, delete certain files, restore if db is blank
+//should be able to tell the sync service to updateReview certain files, deleteReview certain files, restore if db is blank
 
 
 class FoodieEntryViewModel(application: Application) : AndroidViewModel(application) {
@@ -77,7 +77,7 @@ class FoodieEntryViewModel(application: Application) : AndroidViewModel(applicat
     }
 
     fun deleteRestaurant(foodieRestaurant: FoodieRestaurant) = viewModelScope.launch {
-        repository.deleteResaurant(foodieRestaurant)
+        repository.deleteRestaurant(foodieRestaurant)
     }
 
     fun returnAllReviews(): LiveData<List<FoodieEntry>> {
@@ -88,7 +88,7 @@ class FoodieEntryViewModel(application: Application) : AndroidViewModel(applicat
     }
 
     fun returnReviewByRestName(name:String): LiveData<List<FoodieEntry>> {
-        return repository.returnAllReviews()
+        return repository.returnReviewByRestName(name)
     }
     suspend  fun getRestByID(id:Int): FoodieRestaurant {
         return repository.getRestByID(id)
