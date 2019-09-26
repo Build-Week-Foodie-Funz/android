@@ -41,6 +41,7 @@
         android:layout_width="225dp"
         android:layout_height="225dp"
         android:src="@drawable/ic_logo"
+        app:layout_constraintBottom_toTopOf="@+id/input_group"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/home_ll" />
