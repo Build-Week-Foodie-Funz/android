@@ -46,12 +46,14 @@ class FoodieEntryViewModel(application: Application) : AndroidViewModel(applicat
     // LiveData gives us updated words when they change.
     private val repository: FoodieEntryRepo
     val allReviews: LiveData<List<FoodieEntry>>
+    val allRestaurants:LiveData<List<FoodieRestaurant>>
     init {
         // Gets reference to WordDao from WordRoomDatabase to construct
         // the correct WordRepository.
         val roomDao = EntryDatabase.getInstance(application)?.RoomDao()
         repository  = FoodieEntryRepo(roomDao as RoomDao)
         allReviews = repository.allEntries
+        allRestaurants =repository.allRestaurants
     }
 
 

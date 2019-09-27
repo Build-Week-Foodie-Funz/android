@@ -28,6 +28,7 @@ class FoodieEntryRepo (private val roomDao:RoomDao) {
 
 
     val allEntries: LiveData<List<FoodieEntry>> = roomDao.returnAllReviewss()
+    val allRestaurants:LiveData<List<FoodieRestaurant>> = roomDao.returnAllRestaurants()
 
 
     suspend fun insertReview(foodieEntry: FoodieEntry) {

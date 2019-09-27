@@ -2,6 +2,8 @@ package com.saucefan.stuff.foodiefunbw.Model.room
 
 import com.saucefan.stuff.foodiefunbw.Model.FoodieEntry
 import com.saucefan.stuff.foodiefunbw.Model.FoodieRestaurant
+import com.saucefan.stuff.foodiefunbw.R
+import kotlinx.android.synthetic.main.activity_registration.view.*
 
 object EntryMockData {
     var entryList = mutableListOf(
@@ -42,7 +44,7 @@ object EntryMockData {
                     "this place 4bad"
             )
     )
-    var stupidList = listOf<String>("asdfa", "adfasdfas")
+    var stupidList = R.drawable.btn_shape_capsule.toString()
     var restList = mutableListOf<FoodieRestaurant>(
             FoodieRestaurant(
                     0,
@@ -50,7 +52,7 @@ object EntryMockData {
                     "09/10/1985",
                     "9-5",
                     "greenwitches,constant",
-                    "this one place",
+                    "mcdonalds",
                     "6 out 2",
                     stupidList),
             FoodieRestaurant(
@@ -59,7 +61,7 @@ object EntryMockData {
                     "09/10/1985",
                     "9-522",
                     "entry 2 location",
-                    "this one place",
+                    "the other mcdonalds",
                     "2/2",
                     stupidList),
             FoodieRestaurant(
@@ -68,7 +70,7 @@ object EntryMockData {
                     "09/10/1985",
                     "9-522",
                     "entry 3 location",
-                    "that 3 place",
+                    "the subway where they were rude to me",
                     "3 / 3",
                     stupidList),
             FoodieRestaurant(
@@ -77,7 +79,7 @@ object EntryMockData {
                     "09/10/1985",
                     "9-522",
                     "entry 4 locationt",
-                    "this 4 place",
+                    "my friends house (he has eggs a lot)",
                     "4 out 4",
                     stupidList)
 
