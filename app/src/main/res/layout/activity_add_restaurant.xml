@@ -3,6 +3,32 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.viewedit.AddRestaurantActivity">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.viewedit.AddRestaurantActivity"
+    android:background="@color/colorBackground"
+    >
 
+    <androidx.recyclerview.widget.RecyclerView
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/recyclerView__notes_past"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="182dp"
+        tools:layout_editor_absoluteY="201dp"
+        android:scrollbars="vertical"
+
+        />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_add_note"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="16sp"
+        app:fabSize="normal"
+        android:background="@drawable/ic_add_circle_accent_24dp"
+        app:srcCompat="@drawable/ic_add_circle_accent_24dp"
+        />
 </androidx.constraintlayout.widget.ConstraintLayout>
