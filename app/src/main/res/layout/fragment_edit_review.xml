@@ -18,62 +18,67 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
+        android:textSize="25dp"
+        android:layout_width="match_parent"
+        android:textAlignment="center"
         android:id="@+id/ev_item_name"
-        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/chineserocksrg"
         android:hint=" menu item name default"
         android:textColor="@color/colorAccent"
         android:textColorHint="@color/colorAccent"
-        android:textSize="14dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@id/imgViewHeader" />
 
     <EditText
+        android:textSize="25dp"
+        android:layout_width="match_parent"
+        android:textAlignment="center"
         android:textColorHint="@color/colorAccent"
         android:id="@+id/ev_cuisine_type"
-        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/chineserocksrg"
         android:hint="cuisine type default"
         android:textColor="@color/colorAccent"
-        android:textSize="14dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@id/ev_item_name" />
 
     <EditText
+        android:textSize="25dp"
+        android:layout_width="match_parent"
+        android:textAlignment="center"
         android:textColorHint="@color/colorAccent"
         android:id="@+id/ev_item_price"
-        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/chineserocksrg"
         android:hint="price default"
         android:textColor="@color/colorAccent"
-        android:textSize="14dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@id/ev_cuisine_type" />
 
     <EditText
+        android:textSize="25dp"
+        android:layout_width="match_parent"
+        android:textAlignment="center"
         android:textColorHint="@color/colorAccent"
         android:id="@+id/ev_rating"
-        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/chineserocksrg"
         android:hint="rating default"
         android:textColor="@color/colorAccent"
-        android:textSize="14dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@id/ev_item_price" />
 
     <EditText
+        android:textSize="25dp"
+        android:layout_width="match_parent"
+        android:textAlignment="center"
         android:textColorHint="@color/colorAccent"
         android:textColor="@color/colorAccent"
         android:id="@+id/ev_review"
-        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/chineserocksrg"
         android:hint="review default"
-        android:textSize="14dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@id/ev_rating" />
 

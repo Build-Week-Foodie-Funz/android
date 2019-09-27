@@ -20,46 +20,50 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
+        android:textSize="25dp"
+        android:layout_width="match_parent"
+        android:textAlignment="center"
         android:id="@+id/ev_rest_name"
-        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/chineserocksrg"
         android:text="name default"
         android:textColor="@color/colorAccent"
-        android:textSize="14dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@id/imgViewHeader" />
 
     <EditText
+        android:textSize="25dp"
+        android:layout_width="match_parent"
+        android:textAlignment="center"
         android:id="@+id/ev_rest_hours"
-        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/chineserocksrg"
         android:text="rest name default"
         android:textColor="@color/colorAccent"
-        android:textSize="14dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@id/ev_rest_name" />
 
     <EditText
+        android:textSize="25dp"
+        android:layout_width="match_parent"
+        android:textAlignment="center"
         android:id="@+id/ev_rest_location"
-        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/chineserocksrg"
         android:text="location default"
         android:textColor="@color/colorAccent"
-        android:textSize="14dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@id/ev_rest_hours" />
 
     <EditText
+        android:textSize="25dp"
+        android:layout_width="match_parent"
+        android:textAlignment="center"
         android:id="@+id/ev_rating"
-        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/chineserocksrg"
         android:text="rating default"
         android:textColor="@color/colorAccent"
-        android:textSize="14dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@id/ev_rest_location" />
 
