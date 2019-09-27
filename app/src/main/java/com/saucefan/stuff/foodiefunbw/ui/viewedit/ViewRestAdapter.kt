@@ -9,17 +9,32 @@ import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.LiveData
+import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.saucefan.stuff.foodiefunbw.Model.FoodieEntry
 import com.saucefan.stuff.foodiefunbw.Model.FoodieRestaurant
+import com.saucefan.stuff.foodiefunbw.Model.room.EntryMockData.restList
 import com.saucefan.stuff.foodiefunbw.R
 import kotlinx.android.synthetic.main.activity_prefs.view.*
 import kotlinx.android.synthetic.main.rest_recyclerview_item_row.view.*
 
-class ViewRestAdapter(context: Context, val restList: List<FoodieRestaurant>): RecyclerView.Adapter<ViewRestAdapter.ViewHolder>(){
+class ViewRestAdapter: androidx.recyclerview.widget.ListAdapter<FoodieRestaurant,ViewRestAdapter.ViewHolder>(DIFF_CALLBACK){
 
+    //this is
+    companion object {
+        private val DIFF_CALLBACK = object : DiffUtil.ItemCallback<FoodieRestaurant>() {
+            override fun areItemsTheSame(oldItem: FoodieRestaurant, newItem: FoodieRestaurant): Boolean {
+                return oldItem.restId == newItem.restId
+            }
 
-    val context = context
+            override fun areContentsTheSame(oldItem: FoodieRestaurant, newItem: FoodieRestaurant): Boolean {
+                return oldItem.restId == newItem.restId &&
+                        oldItem.restName == newItem.restName &&
+                        oldItem.restHours == newItem.restHours &&
+                        oldItem.restRating == newItem.restRating
+            }
+        }
+    }
 
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
 
@@ -32,20 +47,25 @@ class ViewRestAdapter(context: Context, val restList: List<FoodieRestaurant>): R
 
 
     }
+    fun getItemAt(position: Int): FoodieRestaurant {
+        return getItem(position)
+    }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         return ViewHolder(LayoutInflater.from(parent.context)
-            .inflate(R.layout.fragment_view_rest, parent, false) as View)
+            .inflate(R.layout.rest_recyclerview_item_row, parent, false) as View)
+
     }
 
 
-    override fun getItemCount(): Int {
-        return restList.size
-    }
 
     override fun onBindViewHolder(holder: ViewRestAdapter.ViewHolder, position: Int) {
-        val restList: FoodieRestaurant = restList[position]
-        holder.restName.text = restList.restName
+        val restList: FoodieRestaurant
+        if (position != RecyclerView.NO_POSITION) {
+            restList=getItemAt(position)
+            holder.restName.text = restList.restName
+        }
+
 
     }
 

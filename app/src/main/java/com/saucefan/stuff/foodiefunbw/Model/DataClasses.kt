@@ -28,7 +28,7 @@ data class FoodieRestaurant(
         @ColumnInfo(name = "rest_rating")
         var restRating:String="", // "restrating": "9/10",
         @ColumnInfo(name = "rest_photos")
-        var restPhotos:List<String>? = null, // "restphotos": "http://www.fnstatic.co.uk/images/content/recipe/three-egg-omelette.jpeg, http://www.fnstatic.co.uk/images/content/recipe/three-egg-omelette.jpeg",
+        var restPhotos:String? = null, // "restphotos": "http://www.fnstatic.co.uk/images/content/recipe/three-egg-omelette.jpeg, http://www.fnstatic.co.uk/images/content/recipe/three-egg-omelette.jpeg",
 
         // for the sake of the db we will be ignoring these often redudant objects
         //they exist here primarily:
@@ -38,7 +38,7 @@ data class FoodieRestaurant(
 
 
         @Ignore var restReviews:List<FoodieEntry>? = null, // recusive (self referential? whatever) definition in api, may be usefull at some point to have this capable of taking on reviews, but we do not want to store them like this"reviews": "Some Review, Some Review,...",
-        @Ignore val user: User? = null//a fully formed resturant under the api at current spec will contain a user object, however all objects for an android instance should belong to one users, hence the database will ignore this complicated data type to avoid unecessary processing and work
+        @Ignore var user: User? = null//a fully formed resturant under the api at current spec will contain a user object, however all objects for an android instance should belong to one users, hence the database will ignore this complicated data type to avoid unecessary processing and work
 ){
     constructor() : this(0, "", "", "", "", "", "", null,null,null)
 }
@@ -110,10 +110,16 @@ class Converters {
     }
 
     @TypeConverter
-    fun jsonToList(value: String): List<String>? {
-
+    fun jsonToList(value: String?): List<String>? {
+        var list:List<String>
+    if (value!=null) {
         val objects = Gson().fromJson(value, Array<String>::class.java) as Array<String>
-        val list = objects.toList()
+
+         list = objects.toList()
+    }
+        else {
+         list = listOf(" "," ")
+    }
         return list
     }
 }

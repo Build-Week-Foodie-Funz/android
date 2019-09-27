@@ -4,14 +4,10 @@ import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.viewModelScope
-import androidx.room.Delete
-import androidx.room.Room
-import androidx.room.RoomDatabase
 import com.saucefan.stuff.foodiefunbw.Model.FoodieEntry
 import com.saucefan.stuff.foodiefunbw.Model.FoodieRestaurant
 import com.saucefan.stuff.foodiefunbw.Model.room.EntryDatabase
 import com.saucefan.stuff.foodiefunbw.Model.room.RoomDao
-import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 
 /*
@@ -41,7 +37,7 @@ import kotlinx.coroutines.launch
 //
 
 //should be able to dispatch a create event to the database
-//should be able to tell the sync service to update certain files, delete certain files, restore if db is blank
+//should be able to tell the sync service to updateReview certain files, deleteReview certain files, restore if db is blank
 
 
 class FoodieEntryViewModel(application: Application) : AndroidViewModel(application) {
@@ -49,30 +45,54 @@ class FoodieEntryViewModel(application: Application) : AndroidViewModel(applicat
 
     // LiveData gives us updated words when they change.
     private val repository: FoodieEntryRepo
-    val allEntrees: LiveData<List<FoodieEntry>>
+    val allReviews: LiveData<List<FoodieEntry>>
+    val allRestaurants:LiveData<List<FoodieRestaurant>>
     init {
         // Gets reference to WordDao from WordRoomDatabase to construct
         // the correct WordRepository.
         val roomDao = EntryDatabase.getInstance(application)?.RoomDao()
         repository  = FoodieEntryRepo(roomDao as RoomDao)
-        allEntrees = repository.allEntries
+        allReviews = repository.allEntries
+        allRestaurants =repository.allRestaurants
     }
 
 
 
-   fun insertItem(foodieEntry: FoodieEntry) =
+   fun insertReview(foodieEntry: FoodieEntry) =
            viewModelScope.launch {
-            repository.insertItem(foodieEntry)
-    }
-   fun updateItem(foodieEntry: FoodieEntry) = viewModelScope.launch {
-         repository.updateItem(foodieEntry)
+            repository.insertReview(foodieEntry)
     }
 
-    fun deleteItem(foodieEntry: FoodieEntry) = viewModelScope.launch {
-        repository.deleteItem(foodieEntry)
+    fun insertRestaurant(foodieRestaurant: FoodieRestaurant) =
+            viewModelScope.launch {
+                repository.insertRestaurant(foodieRestaurant)
+            }
+   fun updateReview(foodieEntry: FoodieEntry) = viewModelScope.launch {
+         repository.updateReview(foodieEntry)
     }
-    fun returnAllItems(): LiveData<List<FoodieEntry>> {
-        return repository.returnAllItems()
+    fun updateRestaurant(foodieRestaurant: FoodieRestaurant) = viewModelScope.launch {
+
+        //TODO THIS NEEDS TO DELETE ALL REVIEWS WITH THE SAME NAME AS THE PARENT, FIX THIS ASAP
+        repository.updateRestaurant(foodieRestaurant)
+    }
+
+    fun deleteReview(foodieEntry: FoodieEntry) = viewModelScope.launch {
+        repository.deleteReview(foodieEntry)
+    }
+
+    fun deleteRestaurant(foodieRestaurant: FoodieRestaurant) = viewModelScope.launch {
+        repository.deleteRestaurant(foodieRestaurant)
+    }
+
+    fun returnAllReviews(): LiveData<List<FoodieEntry>> {
+        return repository.returnAllReviews()
+    }
+    fun returnAllRestaurants(): LiveData<List<FoodieRestaurant>> {
+        return repository.returnAllRestaurants()
+    }
+
+    fun returnReviewByRestName(name:String): LiveData<List<FoodieEntry>> {
+        return repository.returnReviewByRestName(name)
     }
     suspend  fun getRestByID(id:Int): FoodieRestaurant {
         return repository.getRestByID(id)

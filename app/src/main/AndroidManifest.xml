@@ -12,26 +12,25 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.viewedit.AddRestaurantActivity"></activity>
-        <activity android:name=".ui.viewedit.RestaurantActivity" />
-        <activity android:name=".ui.search.SearchActivity" />
-        <activity
-            android:name=".ui.viewedit.fragmentDisplayActivityDeleteThis"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
-        <activity
-            android:name=".ui.PrefsActivity"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
-        <activity
-            android:name=".ui.DashboardActivity"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
-        <activity
-            android:name=".ui.LoginActivity"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        <activity android:name=".ui.viewedit.RestaurantActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name=".ui.viewedit.fragmentDisplayActivityDeleteThis">
+
+        </activity>
+        <activity android:name=".ui.search.SearchActivity">
+
+        </activity>
+        <activity android:name=".ui.PrefsActivity">
+
+        </activity>
+        <activity android:name=".ui.DashboardActivity" />
+        <activity android:name=".ui.LoginActivity">
+
         </activity>
     </application>
 

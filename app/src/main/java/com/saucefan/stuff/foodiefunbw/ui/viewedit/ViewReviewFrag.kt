@@ -10,13 +10,9 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.saucefan.stuff.foodiefunbw.Model.FoodieEntry
-import com.saucefan.stuff.foodiefunbw.Model.FoodieRestaurant
 import com.saucefan.stuff.foodiefunbw.R
 import com.saucefan.stuff.foodiefunbw.viewmodel.FoodieEntryViewModel
 import kotlinx.android.synthetic.main.fragment_view_review.*
-import kotlinx.coroutines.GlobalScope
-import kotlinx.coroutines.async
-import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
 import timber.log.Timber
 
@@ -24,8 +20,8 @@ import timber.log.Timber
 private const val ARG_ReviewID = "param1"
 
 /**
-a fragment to display an individual resaurant and give the user the
-opportunity to choose to nagigate to editing that restaurant
+a fragment to display an individual restaurant and give the user the
+opportunity to choose to navigate to editing that restaurant
 
  */
 class ViewReviewFrag : Fragment() {
@@ -41,7 +37,7 @@ class ViewReviewFrag : Fragment() {
         arguments?.let {
             chosenReviewID = it.getInt(ARG_ReviewID)
         }
-        if (chosenReviewID != null && chosenReviewID != -1){
+        if (chosenReviewID != null && chosenReviewID as Int >= -1){
             // I believe run blocking is the correct choice here for the following reasons:
             //1. this should be a very simple query, with a single answer and no ambiguity
             //2. we can be pretty confident that the user will never be the victim of a "bad" query
@@ -87,7 +83,7 @@ class ViewReviewFrag : Fragment() {
                tv_cuisine_type.text=finalObj.cuisineType
                 tv_item_name.text = finalObj.menuItemName
                 tv_item_price.text=finalObj.itemPrice.toString()
-                tv_rating.text=finalObj.rating
+                ev_rating.text=finalObj.rating
                 tv_review.text=finalObj.shortReview
 
 
@@ -112,7 +108,7 @@ class ViewReviewFrag : Fragment() {
             listener = context
         } else {
 
-          //  throw RuntimeException(context.toString() + " must implement ViewRestFragmentListener")
+          //  throw RuntimeException(context.toString() + " must implement EditRestFragmentListener")
         }
     }
 
@@ -135,7 +131,7 @@ class ViewReviewFrag : Fragment() {
          * @param restID ID of the resaurant the user needs to view
          * @return A new instance of fragment ViewRestFrag.
          */
-        // TODO: Rename and change types and number of parameters
+
         @JvmStatic
         fun newInstance(reviewID: Int) =
                 ViewReviewFrag().apply {
