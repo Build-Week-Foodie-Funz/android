@@ -52,7 +52,7 @@ object EntryMockData {
                     "09/10/1985",
                     "9-5",
                     "greenwitches,constant",
-                    "this one place",
+                    "mcdonalds",
                     "6 out 2",
                     stupidList),
             FoodieRestaurant(
@@ -61,7 +61,7 @@ object EntryMockData {
                     "09/10/1985",
                     "9-522",
                     "entry 2 location",
-                    "this one place",
+                    "the other mcdonalds",
                     "2/2",
                     stupidList),
             FoodieRestaurant(
@@ -70,7 +70,7 @@ object EntryMockData {
                     "09/10/1985",
                     "9-522",
                     "entry 3 location",
-                    "that 3 place",
+                    "the subway where they were rude to me",
                     "3 / 3",
                     stupidList),
             FoodieRestaurant(
@@ -79,7 +79,7 @@ object EntryMockData {
                     "09/10/1985",
                     "9-522",
                     "entry 4 locationt",
-                    "this 4 place",
+                    "my friends house (he has eggs a lot)",
                     "4 out 4",
                     stupidList)
 
