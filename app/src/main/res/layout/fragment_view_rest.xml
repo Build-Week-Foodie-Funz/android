@@ -55,4 +55,23 @@
         app:layout_constraintTop_toBottomOf="@id/tv_rest_location"
         app:layout_constraintLeft_toLeftOf="parent" />
 
+    <Button
+
+        android:layout_margin="15dp"
+        android:padding="15dp"
+        android:id="@+id/button_signin"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_shape_capsule"
+        android:fontFamily="@font/chicamono"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:text="@string/edit_entry"
+        android:textAllCaps="false"
+        android:textColor="@color/colorAccent"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
