@@ -26,6 +26,9 @@ class LoginActivity : AppCompatActivity() { //Ronnie changed xml name to activit
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(com.saucefan.stuff.foodiefunbw.R.layout.activity_login)
+        if (supportActionBar != null)
+            supportActionBar?.hide()
+
 
         handler = UserDatabaseHelper(this)
 
@@ -106,4 +109,6 @@ class LoginActivity : AppCompatActivity() { //Ronnie changed xml name to activit
         login_layout.visibility = View.VISIBLE
 
     }
+
+
 }

@@ -100,7 +100,7 @@
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:background="@drawable/btn_shape_capsule"
-            android:fontFamily="@font/chicamono"
+            android:fontFamily="@font/chineserocksrg"
             android:foreground="?android:attr/selectableItemBackground"
             android:text="@string/sign_up"
             android:textAllCaps="false"

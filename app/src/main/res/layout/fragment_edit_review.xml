@@ -1,83 +1,111 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    tools:context=".ui.viewedit.EditReviewFrag"
-    android:background="@color/colorPrimary">
+    android:background="@color/colorBackground"
+    tools:context=".ui.viewedit.EditReviewFrag">
 
 
     <ImageView
+        android:id="@+id/imgViewHeader"
         android:layout_width="match_parent"
         android:layout_height="200dp"
-        android:id="@+id/imgViewHeader"
-        android:src="@drawable/ic_launcher_background"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+        android:background="@drawable/ic_header"
         app:layout_constraintLeft_toLeftOf="parent"
-        />
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="14dp"
-        android:hint=" menu item name default"
         android:id="@+id/ev_item_name"
-        app:layout_constraintTop_toBottomOf="@id/imgViewHeader"
-        app:layout_constraintLeft_toLeftOf="parent" />
-
-    <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/chineserocksrg"
+        android:hint=" menu item name default"
+        android:textColor="@color/colorAccent"
+        android:textColorHint="@color/colorAccent"
         android:textSize="14dp"
-        android:hint="cuisine type default"
-        android:id="@+id/ev_cuisine_type"
-        app:layout_constraintTop_toBottomOf="@id/ev_item_name"
-        app:layout_constraintLeft_toLeftOf="parent" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="14dp"
-        android:hint="price default"
-        android:id="@+id/ev_item_price"
-        app:layout_constraintTop_toBottomOf="@id/ev_cuisine_type"
-        app:layout_constraintLeft_toLeftOf="parent" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="14dp"
-        android:hint="rating default"
-        android:id="@+id/ev_rating"
-        app:layout_constraintTop_toBottomOf="@id/ev_item_price"
-        app:layout_constraintLeft_toLeftOf="parent" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="14dp"
-        android:hint="review default"
-        android:id="@+id/ev_review"
-        app:layout_constraintTop_toBottomOf="@id/ev_rating"
-        app:layout_constraintLeft_toLeftOf="parent" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="submit"
-        android:id="@+id/btn_submit"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        />
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="delete"
-        android:id="@+id/btn_delete"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imgViewHeader" />
+
+    <EditText
+        android:textColorHint="@color/colorAccent"
+        android:id="@+id/ev_cuisine_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/chineserocksrg"
+        android:hint="cuisine type default"
+        android:textColor="@color/colorAccent"
+        android:textSize="14dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ev_item_name" />
+
+    <EditText
+        android:textColorHint="@color/colorAccent"
+        android:id="@+id/ev_item_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/chineserocksrg"
+        android:hint="price default"
+        android:textColor="@color/colorAccent"
+        android:textSize="14dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ev_cuisine_type" />
+
+    <EditText
+        android:textColorHint="@color/colorAccent"
+        android:id="@+id/ev_rating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/chineserocksrg"
+        android:hint="rating default"
+        android:textColor="@color/colorAccent"
+        android:textSize="14dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ev_item_price" />
+
+    <EditText
+        android:textColorHint="@color/colorAccent"
+        android:textColor="@color/colorAccent"
+        android:id="@+id/ev_review"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/chineserocksrg"
+        android:hint="review default"
+        android:textSize="14dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ev_rating" />
+
+
+    <Button
+        android:id="@+id/btn_submit"
+        android:layout_margin="15dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/chineserocksrg"
+        android:text="submit"
+        android:textColor="@color/colorAccent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btn_delete"
+        android:background="@drawable/btn_shape_capsule"
+        />
+
+    <Button
+        android:id="@+id/btn_delete"
+        android:layout_margin="15dp"
+        android:padding="15dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/chineserocksrg"
+        android:text="delete"
+        android:textColor="@color/colorAccent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btn_submit"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@drawable/btn_shape_capsule"
         />
 </androidx.constraintlayout.widget.ConstraintLayout>

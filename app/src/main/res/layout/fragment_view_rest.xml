@@ -55,6 +55,8 @@
         app:layout_constraintTop_toBottomOf="@id/ev_rest_location"
         app:layout_constraintLeft_toLeftOf="parent" />
 
+
+
     <Button
 
         android:layout_margin="15dp"
@@ -63,7 +65,7 @@
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:background="@drawable/btn_shape_capsule"
-        android:fontFamily="@font/chicamono"
+        android:fontFamily="@font/chineserocksrg"
         android:foreground="?android:attr/selectableItemBackground"
         android:text="@string/edit_entry"
         android:textAllCaps="false"
