@@ -19,6 +19,7 @@ class RestaurantActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        supportActionBar?.hide()
         setContentView(com.saucefan.stuff.foodiefunbw.R.layout.activity_restaurant)
         viewModel = ViewModelProviders.of(this).get(FoodieEntryViewModel::class.java)
        // ViewModelProvider(this).get(FoodieEntryViewModel::class.java)

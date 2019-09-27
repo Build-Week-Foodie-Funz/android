@@ -19,6 +19,7 @@ class ReviewsByRest : AppCompatActivity() {
     lateinit var adapter: ViewReviewAdapter
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+         supportActionBar?.hide()
         setContentView(R.layout.activity_reviews_by_rest)
 
 

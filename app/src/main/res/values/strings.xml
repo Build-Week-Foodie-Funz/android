@@ -4,10 +4,31 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="sign_in">SIGN IN</string>
-    <string name="password">Password</string>
     <string name="username">Username</string>
     <string name="edit_entry">Edit Entry</string>
     <string name="sign_up">Sign up</string>
+    <string name="id">id</string>
+    <string name="name">name</string>
+    <string name="spawn_rest_frag">spawn rest frag</string>
+    <string name="spawn_rev_frag">spawn rev frag</string>
+    <string name="foodie_fun">FOODIE FUN</string>
+    <string name="don_t_have_an_account_sign_up">Don\'t Have an Account? Sign Up</string>
+    <string name="password">Password</string>
+    <string name="already_have_an_account_sign_in">Already Have an Account? Sign in</string>
+    <string name="submit">submit</string>
+    <string name="delete">delete</string>
+    <string name="menu_item_name_default">menu item name default</string>
+    <string name="cuisine_type_default">cuisine type default</string>
+    <string name="price_default">price default</string>
+    <string name="review_default">review default</string>
+    <string name="name_default">name default</string>
+    <string name="rest_name_default">rest name default</string>
+    <string name="location_default">location default</string>
+    <string name="rating_default">rating default</string>
+    <string name="resturant_name">Resturant Name</string>
+    <string name="review_name">review Name</string>
+    <string name="username">Username</string>
+    <string name="email">Email</string>
 
 
     <string-array name="country_arrays">

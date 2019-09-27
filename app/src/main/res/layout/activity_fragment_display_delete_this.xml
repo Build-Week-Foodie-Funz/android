@@ -9,7 +9,7 @@
 <EditText
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:hint="id"
+    android:hint="@string/id"
     android:id="@+id/et"
     app:layout_constraintBottom_toBottomOf="parent"
     app:layout_constraintRight_toRightOf="parent"
@@ -17,7 +17,7 @@
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="name"
+        android:hint="@string/name"
         android:id="@+id/et2"
         app:layout_constraintBottom_toTopOf="@+id/et"
         app:layout_constraintRight_toRightOf="parent"
@@ -26,7 +26,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/btn_rest"
-        android:text="spawn rest frag"
+        android:text="@string/spawn_rest_frag"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         />
@@ -34,7 +34,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/btn_rev"
-        android:text="spawn rev frag"
+        android:text="@string/spawn_rev_frag"
         app:layout_constraintTop_toBottomOf="@id/btn_rest"
         app:layout_constraintLeft_toLeftOf="parent"
         />

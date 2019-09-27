@@ -5,28 +5,36 @@
     <application
         android:name=".FoodieFun"
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/ic_logo"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
 
-        <activity android:name=".ui.LoginActivity">
+        <activity android:name=".ui.LoginActivity"
+            >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ui.viewedit.RestaurantActivity">
+        <activity android:name=".ui.viewedit.RestaurantActivity"
+            >
 
         </activity>
         <activity android:name=".ui.viewedit.fragmentDisplayActivityDeleteThis"></activity>
         <activity android:name=".ui.search.SearchActivity"></activity>
-        <activity android:name=".ui.PrefsActivity"></activity>
-        <activity android:name=".ui.DashboardActivity" />
-        <activity android:name=".ui.viewedit.ReviewsByRest">
+        <activity android:name=".ui.PrefsActivity"
+           >
+        </activity>
+        <activity android:name=".ui.DashboardActivity"
+            />
+        <activity android:name=".ui.viewedit.ReviewsByRest"
+
+
+            >
         </activity>
 
 

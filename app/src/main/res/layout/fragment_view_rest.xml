@@ -20,49 +20,49 @@
         />
 
     <TextView
-        android:textSize="25dp"
+        android:textSize="25sp"
         android:layout_width="match_parent"
         android:textAlignment="center"
         android:fontFamily="@font/chineserocksrg"
         android:textColor="@color/colorAccent"
         android:layout_height="wrap_content"
-        android:text="name default"
+        android:text="@string/name_default"
         android:id="@+id/ev_rest_name"
         app:layout_constraintTop_toBottomOf="@id/imgViewHeader"
         app:layout_constraintLeft_toLeftOf="parent" />
 
     <TextView
-        android:textSize="25dp"
+        android:textSize="25sp"
         android:layout_width="match_parent"
         android:textAlignment="center"
         android:fontFamily="@font/chineserocksrg"
         android:textColor="@color/colorAccent"
         android:layout_height="wrap_content"
-        android:text="rest name default"
+        android:text="@string/rest_name_default"
         android:id="@+id/ev_rest_hours"
         app:layout_constraintTop_toBottomOf="@id/ev_rest_name"
         app:layout_constraintLeft_toLeftOf="parent" />
 
     <TextView
-        android:textSize="25dp"
+        android:textSize="25sp"
         android:layout_width="match_parent"
         android:textAlignment="center"
         android:fontFamily="@font/chineserocksrg"
         android:textColor="@color/colorAccent"
         android:layout_height="wrap_content"
-        android:text="location default"
+        android:text="@string/location_default"
         android:id="@+id/ev_rest_location"
         app:layout_constraintTop_toBottomOf="@id/ev_rest_hours"
         app:layout_constraintLeft_toLeftOf="parent" />
 
     <TextView
-        android:textSize="25dp"
+        android:textSize="25sp"
         android:layout_width="match_parent"
         android:textAlignment="center"
         android:fontFamily="@font/chineserocksrg"
         android:textColor="@color/colorAccent"
         android:layout_height="wrap_content"
-        android:text="rating default"
+        android:text="@string/rating_default"
         android:id="@+id/ev_rating"
         app:layout_constraintTop_toBottomOf="@id/ev_rest_location"
         app:layout_constraintLeft_toLeftOf="parent" />

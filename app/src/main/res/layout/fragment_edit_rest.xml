@@ -20,63 +20,63 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:textSize="25dp"
+        android:textSize="25sp"
         android:layout_width="match_parent"
         android:textAlignment="center"
         android:id="@+id/ev_rest_name"
         android:layout_height="wrap_content"
         android:fontFamily="@font/chineserocksrg"
-        android:text="name default"
+        android:text="@string/name_default"
         android:textColor="@color/colorAccent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@id/imgViewHeader" />
 
     <EditText
-        android:textSize="25dp"
+        android:textSize="25sp"
         android:layout_width="match_parent"
         android:textAlignment="center"
         android:id="@+id/ev_rest_hours"
         android:layout_height="wrap_content"
         android:fontFamily="@font/chineserocksrg"
-        android:text="rest name default"
+        android:text="@string/rest_name_default"
         android:textColor="@color/colorAccent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@id/ev_rest_name" />
 
     <EditText
-        android:textSize="25dp"
+        android:textSize="25sp"
         android:layout_width="match_parent"
         android:textAlignment="center"
         android:id="@+id/ev_rest_location"
         android:layout_height="wrap_content"
         android:fontFamily="@font/chineserocksrg"
-        android:text="location default"
+        android:text="@string/location_default"
         android:textColor="@color/colorAccent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@id/ev_rest_hours" />
 
     <EditText
-        android:textSize="25dp"
+        android:textSize="25sp"
         android:layout_width="match_parent"
         android:textAlignment="center"
         android:id="@+id/ev_rating"
         android:layout_height="wrap_content"
         android:fontFamily="@font/chineserocksrg"
-        android:text="rating default"
+        android:text="@string/rating_default"
         android:textColor="@color/colorAccent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@id/ev_rest_location" />
 
     <Button
+        android:textSize="25sp"
         android:id="@+id/btn_submit"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_margin="15dp"
-
         android:background="@drawable/btn_shape_capsule"
         android:fontFamily="@font/chineserocksrg"
         android:padding="15dp"
-        android:text="submit"
+        android:text="@string/submit"
         android:textColor="@color/colorAccent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -84,6 +84,7 @@
         app:layout_constraintStart_toEndOf="@+id/btn_delete" />
 
     <Button
+        android:textSize="25sp"
         android:id="@+id/btn_delete"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -91,7 +92,7 @@
         android:background="@drawable/btn_shape_capsule"
         android:fontFamily="@font/chineserocksrg"
         android:padding="15dp"
-        android:text="delete"
+        android:text="@string/delete"
         android:textColor="@color/colorAccent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/btn_submit"

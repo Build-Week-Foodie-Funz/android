@@ -23,6 +23,7 @@ import timber.log.Timber
 import java.time.LocalDateTime
 import java.time.format.DateTimeFormatter
 import android.app.AlertDialog
+import androidx.appcompat.app.AppCompatActivity
 
 
 private const val ARG_ResaurantID = "param1"
@@ -47,6 +48,7 @@ class EditRestFrag : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        (activity as AppCompatActivity).supportActionBar?.hide()
         viewModel = ViewModelProvider(this).get(FoodieEntryViewModel::class.java)
 
         arguments?.let {

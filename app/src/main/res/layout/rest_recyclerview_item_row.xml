@@ -28,7 +28,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:layout_margin="16dp"
-            android:text="Resturant Name"
+            android:text="@string/resturant_name"
             android:textSize="20sp" />
 
     </LinearLayout>

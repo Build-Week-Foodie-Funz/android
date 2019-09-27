@@ -18,59 +18,59 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:textSize="25dp"
+        android:textSize="25sp"
         android:layout_width="match_parent"
         android:textAlignment="center"
         android:id="@+id/ev_item_name"
         android:layout_height="wrap_content"
         android:fontFamily="@font/chineserocksrg"
-        android:hint=" menu item name default"
+        android:hint="@string/menu_item_name_default"
         android:textColor="@color/colorAccent"
         android:textColorHint="@color/colorAccent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@id/imgViewHeader" />
 
     <EditText
-        android:textSize="25dp"
+        android:textSize="25sp"
         android:layout_width="match_parent"
         android:textAlignment="center"
         android:textColorHint="@color/colorAccent"
         android:id="@+id/ev_cuisine_type"
         android:layout_height="wrap_content"
         android:fontFamily="@font/chineserocksrg"
-        android:hint="cuisine type default"
+        android:hint="@string/cuisine_type_default"
         android:textColor="@color/colorAccent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@id/ev_item_name" />
 
     <EditText
-        android:textSize="25dp"
+        android:textSize="25sp"
         android:layout_width="match_parent"
         android:textAlignment="center"
         android:textColorHint="@color/colorAccent"
         android:id="@+id/ev_item_price"
         android:layout_height="wrap_content"
         android:fontFamily="@font/chineserocksrg"
-        android:hint="price default"
+        android:hint="@string/price_default"
         android:textColor="@color/colorAccent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@id/ev_cuisine_type" />
 
     <EditText
-        android:textSize="25dp"
+        android:textSize="25sp"
         android:layout_width="match_parent"
         android:textAlignment="center"
         android:textColorHint="@color/colorAccent"
         android:id="@+id/ev_rating"
         android:layout_height="wrap_content"
         android:fontFamily="@font/chineserocksrg"
-        android:hint="rating default"
+        android:hint="@string/rating_default"
         android:textColor="@color/colorAccent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@id/ev_item_price" />
 
     <EditText
-        android:textSize="25dp"
+        android:textSize="25sp"
         android:layout_width="match_parent"
         android:textAlignment="center"
         android:textColorHint="@color/colorAccent"
@@ -78,18 +78,20 @@
         android:id="@+id/ev_review"
         android:layout_height="wrap_content"
         android:fontFamily="@font/chineserocksrg"
-        android:hint="review default"
+        android:hint="@string/review_default"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@id/ev_rating" />
 
 
     <Button
+        android:padding="15dp"
+        android:textSize="25sp"
         android:id="@+id/btn_submit"
         android:layout_margin="15dp"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:fontFamily="@font/chineserocksrg"
-        android:text="submit"
+        android:text="@string/submit"
         android:textColor="@color/colorAccent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -99,13 +101,14 @@
         />
 
     <Button
+        android:textSize="25sp"
         android:id="@+id/btn_delete"
         android:layout_margin="15dp"
         android:padding="15dp"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:fontFamily="@font/chineserocksrg"
-        android:text="delete"
+        android:text="@string/delete"
         android:textColor="@color/colorAccent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/btn_submit"
