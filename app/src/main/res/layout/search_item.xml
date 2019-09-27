@@ -7,10 +7,11 @@
     android:background="@color/colorBackground"
     >
     <TextView
+
         android:id="@+id/tvSearch"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/zrnic"
+        android:fontFamily="@font/chineserocksrg"
         android:textColor="@color/colorAccent"
         android:textSize="50sp"
         />

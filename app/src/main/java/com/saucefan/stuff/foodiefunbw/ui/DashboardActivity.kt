@@ -3,6 +3,7 @@ package com.saucefan.stuff.foodiefunbw.ui
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Window
 import androidx.fragment.app.FragmentManager
 import com.saucefan.stuff.foodiefunbw.Model.FoodieEntry
 import com.saucefan.stuff.foodiefunbw.R
@@ -21,6 +22,7 @@ class DashboardActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_dashboard)
+
 
         img_search.setOnClickListener {
             val intent = Intent(this, SearchActivity::class.java)

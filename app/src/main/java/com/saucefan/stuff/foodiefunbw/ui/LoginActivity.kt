@@ -3,6 +3,7 @@ package com.saucefan.stuff.foodiefunbw.ui
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
+import android.view.Window
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProviders
@@ -23,11 +24,13 @@ class LoginActivity : AppCompatActivity() { //Ronnie changed xml name to activit
     lateinit var handler : UserDatabaseHelper
     private lateinit var foodieEntryViewModel: FoodieEntryViewModel
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(com.saucefan.stuff.foodiefunbw.R.layout.activity_login)
-        if (supportActionBar != null)
-            supportActionBar?.hide()
+
+
+
 
 
         handler = UserDatabaseHelper(this)

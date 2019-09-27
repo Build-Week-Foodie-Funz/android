@@ -81,23 +81,19 @@
 
         <Button
 
-            android:fontFamily="@font/chicamono"
+            android:background="@drawable/btn_shape_capsule"
+            android:fontFamily="@font/chineserocksrg"
+            android:layout_margin="15dp"
+            android:padding="15dp"
             android:id="@+id/button_signin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/button"
             android:foreground="?android:attr/selectableItemBackground"
             android:text="@string/sign_in"
             android:textAllCaps="false"
             android:textColor="@color/colorAccent"
             android:textSize="17sp"
             />
-
-
-
-
-
-
 
         <TextView
             android:id="@+id/textView_signup"
