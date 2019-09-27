@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.saucefan.stuff.foodiefunbw.Model.FoodieEntry
 import com.saucefan.stuff.foodiefunbw.R
 import com.saucefan.stuff.foodiefunbw.viewmodel.FoodieEntryViewModel
+import kotlinx.android.synthetic.main.activity_restaurant.*
 import kotlinx.android.synthetic.main.activity_reviews_by_rest.*
 
 class ReviewsByRest : AppCompatActivity() {
