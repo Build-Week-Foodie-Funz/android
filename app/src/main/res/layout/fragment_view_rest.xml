@@ -20,6 +20,8 @@
         />
 
     <TextView
+        android:fontFamily="@font/chineserocksrg"
+        android:textColor="@color/colorAccent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="14dp"
@@ -29,6 +31,8 @@
         app:layout_constraintLeft_toLeftOf="parent" />
 
     <TextView
+        android:fontFamily="@font/chineserocksrg"
+        android:textColor="@color/colorAccent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="14dp"
@@ -38,6 +42,8 @@
         app:layout_constraintLeft_toLeftOf="parent" />
 
     <TextView
+        android:fontFamily="@font/chineserocksrg"
+        android:textColor="@color/colorAccent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="14dp"
@@ -47,6 +53,8 @@
         app:layout_constraintLeft_toLeftOf="parent" />
 
     <TextView
+        android:fontFamily="@font/chineserocksrg"
+        android:textColor="@color/colorAccent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="14dp"
