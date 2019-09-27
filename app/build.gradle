@@ -96,8 +96,6 @@ dependencies {
 
     //Needed for search
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    
-
 
 
 }
