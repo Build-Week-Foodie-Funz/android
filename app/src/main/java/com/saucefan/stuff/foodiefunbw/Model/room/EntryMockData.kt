@@ -16,7 +16,7 @@ object EntryMockData {
                     "url here",
                     null,
                     "1",
-                    "this 2",
+                    "mcdonalds",
                     "this place 2 bad"
             ),
             FoodieEntry(
@@ -28,7 +28,7 @@ object EntryMockData {
                     "url here",
                     null,
                     "2",
-                    "this 3",
+                    "mcdonalds",
                     "this place3 bad"
             ),
             FoodieEntry(
@@ -40,9 +40,82 @@ object EntryMockData {
                     "url here",
                     null,
                     "3",
-                    "this 4one4",
+                    "mcdonalds",
+                    "this place 4bad"
+            ),
+            FoodieEntry(
+                    0,
+                    "china2",
+                    2.22f,
+                    "2/2",
+                    "2 plate of 2",
+                    "url here",
+                    null,
+                    "1",
+                    "my friends house (he has eggs a lot)",
+                    "this place 2 bad"
+            ),
+            FoodieEntry(
+                    0,
+                    "japana",
+                    3.66f,
+                    "3/3",
+                    "3 plate of 3",
+                    "url here",
+                    null,
+                    "2",
+                    "the other mcdonalds",
+                    "this place3 bad"
+            ),
+            FoodieEntry(
+                    0,
+                    "notaican",
+                    46.466f,
+                    "41/41",
+                    "4one plate of 4one",
+                    "url here",
+                    null,
+                    "3",
+                    "my friends house (he has eggs a lot)",
+                    "this place 4bad"
+            ),
+            FoodieEntry(
+                    0,
+                    "china2",
+                    2.22f,
+                    "2/2",
+                    "2 plate of 2",
+                    "url here",
+                    null,
+                    "1",
+                    "the subway where they were rude to me",
+                    "this place 2 bad"
+            ),
+            FoodieEntry(
+                    0,
+                    "japana",
+                    3.66f,
+                    "3/3",
+                    "3 plate of 3",
+                    "url here",
+                    null,
+                    "2",
+                    "the other mcdonalds",
+                    "this place3 bad"
+            ),
+            FoodieEntry(
+                    0,
+                    "notaican",
+                    46.466f,
+                    "41/41",
+                    "4one plate of 4one",
+                    "url here",
+                    null,
+                    "3",
+                    "the subway where they were rude to me",
                     "this place 4bad"
             )
+
     )
     var stupidList = R.drawable.btn_shape_capsule.toString()
     var restList = mutableListOf<FoodieRestaurant>(
