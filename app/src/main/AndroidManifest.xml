@@ -2,8 +2,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.saucefan.stuff.foodiefunbw">
 
-    <uses-permission android:name="android.permission.INTERNET" />
-
     <application
         android:name=".FoodieFun"
         android:allowBackup="true"
@@ -12,26 +10,23 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.viewedit.RestaurantActivity">
+        <activity android:name=".ui.viewedit.ReviewsByRest">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ui.viewedit.fragmentDisplayActivityDeleteThis">
+        <activity android:name=".ui.viewedit.RestaurantActivity">
 
         </activity>
-        <activity android:name=".ui.search.SearchActivity">
-
-        </activity>
-        <activity android:name=".ui.PrefsActivity">
-
-        </activity>
+        <activity android:name=".ui.viewedit.fragmentDisplayActivityDeleteThis"></activity>
+        <activity android:name=".ui.search.SearchActivity"></activity>
+        <activity android:name=".ui.PrefsActivity"></activity>
         <activity android:name=".ui.DashboardActivity" />
-        <activity android:name=".ui.LoginActivity">
-
-        </activity>
+        <activity android:name=".ui.LoginActivity"></activity>
     </application>
+
+    <uses-permission android:name="android.permission.INTERNET" />
 
 </manifest>
