@@ -53,14 +53,19 @@ class ViewRestAdapter: androidx.recyclerview.widget.ListAdapter<FoodieRestaurant
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         return ViewHolder(LayoutInflater.from(parent.context)
-            .inflate(R.layout.fragment_view_rest, parent, false) as View)
+            .inflate(R.layout.rest_recyclerview_item_row, parent, false) as View)
+
     }
 
 
 
     override fun onBindViewHolder(holder: ViewRestAdapter.ViewHolder, position: Int) {
-        val restList: FoodieRestaurant = restList[position]
-        holder.restName.text = restList.restName
+        val restList: FoodieRestaurant
+        if (position != RecyclerView.NO_POSITION) {
+            restList=getItemAt(position)
+            holder.restName.text = restList.restName
+        }
+
 
     }
 

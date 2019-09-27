@@ -2,6 +2,8 @@ package com.saucefan.stuff.foodiefunbw.Model.room
 
 import com.saucefan.stuff.foodiefunbw.Model.FoodieEntry
 import com.saucefan.stuff.foodiefunbw.Model.FoodieRestaurant
+import com.saucefan.stuff.foodiefunbw.R
+import kotlinx.android.synthetic.main.activity_registration.view.*
 
 object EntryMockData {
     var entryList = mutableListOf(
@@ -42,7 +44,7 @@ object EntryMockData {
                     "this place 4bad"
             )
     )
-    var stupidList = listOf<String>("asdfa", "adfasdfas")
+    var stupidList = R.drawable.btn_shape_capsule.toString()
     var restList = mutableListOf<FoodieRestaurant>(
             FoodieRestaurant(
                     0,

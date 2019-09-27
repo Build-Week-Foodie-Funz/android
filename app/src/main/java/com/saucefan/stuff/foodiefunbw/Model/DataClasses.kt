@@ -28,7 +28,7 @@ data class FoodieRestaurant(
         @ColumnInfo(name = "rest_rating")
         var restRating:String="", // "restrating": "9/10",
         @ColumnInfo(name = "rest_photos")
-        var restPhotos:List<String>? = null, // "restphotos": "http://www.fnstatic.co.uk/images/content/recipe/three-egg-omelette.jpeg, http://www.fnstatic.co.uk/images/content/recipe/three-egg-omelette.jpeg",
+        var restPhotos:String? = null, // "restphotos": "http://www.fnstatic.co.uk/images/content/recipe/three-egg-omelette.jpeg, http://www.fnstatic.co.uk/images/content/recipe/three-egg-omelette.jpeg",
 
         // for the sake of the db we will be ignoring these often redudant objects
         //they exist here primarily:
@@ -110,10 +110,16 @@ class Converters {
     }
 
     @TypeConverter
-    fun jsonToList(value: String): List<String>? {
-
+    fun jsonToList(value: String?): List<String>? {
+        var list:List<String>
+    if (value!=null) {
         val objects = Gson().fromJson(value, Array<String>::class.java) as Array<String>
-        val list = objects.toList()
+
+         list = objects.toList()
+    }
+        else {
+         list = listOf(" "," ")
+    }
         return list
     }
 }
